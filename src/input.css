@@ -3,13 +3,21 @@
 @tailwind utilities;
 
 .btn {
-  @apply text-base font-medium rounded-lg p-3;
+  @apply rounded-lg px-10 py-2 font-rubik;
 }
 
 .btn--primary {
-  @apply bg-sky-500 text-white;
+  @apply bg-primary-softRed  text-white;
 }
 
 .btn--secondary {
-  @apply bg-slate-100 text-slate-900;
+  @apply bg-primary-softBlue text-white;
+}
+
+.btn--tertiary {
+  @apply bg-neutral-grayishBlue text-neutral-veryDarkBlue;
+}
+
+.spaced-center {
+  @apply flex justify-between items-center;
 }

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/*.html", "./public/*.css"],
+  content: ["./public/*.html"],
   theme: {
     extend: {
       colors: {
@@ -22,11 +22,6 @@ module.exports = {
         18: "1.8rem",
       },
     },
-  },
-  experimental: {
-    applyComplexClasses: true,
-    uniformColorPalette: true,
-    extendedSpacingScale: true,
   },
   plugins: [],
 };

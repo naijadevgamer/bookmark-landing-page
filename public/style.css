@@ -544,48 +544,45 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.visible {
-  visibility: visible;
+.flex {
+  display: flex;
 }
 
-.collapse {
-  visibility: collapse;
+.h-60 {
+  height: 15rem;
 }
 
-.relative {
-  position: relative;
+.cursor-pointer {
+  cursor: pointer;
 }
 
-.block {
-  display: block;
+.items-center {
+  align-items: center;
 }
 
-.table {
-  display: table;
+.justify-between {
+  justify-content: space-between;
 }
 
-.contents {
-  display: contents;
+.gap-4 {
+  gap: 1rem;
 }
 
-.hidden {
-  display: none;
+.gap-8 {
+  gap: 2rem;
 }
 
-.border-collapse {
-  border-collapse: collapse;
+.gap-10 {
+  gap: 2.5rem;
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.gap-20 {
+  gap: 5rem;
 }
 
-.resize {
-  resize: both;
-}
-
-.border {
-  border-width: 1px;
+.px-60 {
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .text-center {
@@ -594,10 +591,6 @@ video {
 
 .font-rubik {
   font-family: Rubik, sans-serif;
-}
-
-.text-18 {
-  font-size: 1.8rem;
 }
 
 .text-18\/\[1\.7\] {
@@ -613,37 +606,61 @@ video {
   font-size: 62.5%;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 .text-footerLink {
   --tw-text-opacity: 1;
   color: hsl(228 45% 44% / var(--tw-text-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
+.text-neutral-grayishBlue {
+  --tw-text-opacity: 1;
+  color: hsl(229 8% 60% / var(--tw-text-opacity));
 }
 
-.outline {
-  outline-style: solid;
+.text-neutral-veryDarkBlue {
+  --tw-text-opacity: 1;
+  color: hsl(229 31% 21% / var(--tw-text-opacity));
 }
 
 .btn {
   border-radius: 0.5rem;
-  padding: 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: Rubik, sans-serif;
 }
 
 .btn--primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+  background-color: hsl(0 94% 66% / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .btn--secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  background-color: hsl(231 69% 60% / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.btn--tertiary {
+  --tw-bg-opacity: 1;
+  background-color: hsl(229 8% 60% / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(229 31% 21% / var(--tw-text-opacity));
+}
+
+.spaced-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
