@@ -544,7 +544,15 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.size-8 {
-  width: 2rem;
-  height: 2rem;
+.font-rubik {
+  font-family: Rubik, sans-serif;
+}
+
+.text-18\/\[1\.7\] {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.text-html {
+  font-size: 62.5%;
 }
