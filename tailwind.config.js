@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/*.html"],
+  content: ["./public/*.html", "./public/*.css"],
   theme: {
     extend: {
       colors: {
@@ -12,6 +12,7 @@ module.exports = {
           grayishBlue: "hsl(229, 8%, 60%)",
           veryDarkBlue: "hsl(229, 31%, 21%)",
         },
+        footerLink: "hsl(228, 45%, 44%)",
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
@@ -21,6 +22,11 @@ module.exports = {
         18: "1.8rem",
       },
     },
+  },
+  experimental: {
+    applyComplexClasses: true,
+    uniformColorPalette: true,
+    extendedSpacingScale: true,
   },
   plugins: [],
 };
