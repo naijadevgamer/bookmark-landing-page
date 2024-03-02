@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg px-10 py-2 font-rubik;
+  @apply rounded-lg px-10 py-4 font-rubik shadow-lg;
 }
 
 .btn--primary {
@@ -15,7 +15,7 @@
 }
 
 .btn--tertiary {
-  @apply bg-neutral-grayishBlue text-neutral-veryDarkBlue;
+  @apply bg-slate-200 text-neutral-veryDarkBlue;
 }
 
 .spaced-center {

@@ -19,7 +19,7 @@ module.exports = {
       },
       fontSize: {
         html: "62.5%",
-        18: "1.8rem",
+        18: "18px",
       },
     },
   },
