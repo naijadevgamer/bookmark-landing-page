@@ -21,3 +21,6 @@
 .spaced-center {
   @apply flex justify-between items-center;
 }
+.h2 {
+  @apply text-neutral-veryDarkBlue font-medium text-7xl;
+}
