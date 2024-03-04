@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg px-10 py-4 font-rubik shadow-lg;
+  @apply rounded-lg px-8 py-4 font-rubik shadow-lg text-[1.6rem];
 }
 
 .btn--primary {
-  @apply bg-primary-softRed  text-white;
+  @apply bg-primary-softRed  text-white px-12;
 }
 
 .btn--secondary {
@@ -22,5 +22,5 @@
   @apply flex justify-between items-center;
 }
 .h2 {
-  @apply text-neutral-veryDarkBlue font-medium text-7xl;
+  @apply text-neutral-veryDarkBlue font-medium text-[3.5rem]/[normal];
 }
