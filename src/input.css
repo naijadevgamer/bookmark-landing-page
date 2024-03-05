@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg px-8 py-4 font-rubik shadow-lg text-[1.6rem];
+  @apply rounded-lg px-10 py-4 font-rubik shadow-lg text-[1.6rem];
 }
 
 .btn--primary {
@@ -12,6 +12,10 @@
 
 .btn--secondary {
   @apply bg-primary-softBlue text-white;
+}
+
+.btn--extension {
+  @apply bg-primary-softBlue text-white py-6;
 }
 
 .btn--tertiary {
@@ -23,4 +27,15 @@
 }
 .h2 {
   @apply text-neutral-veryDarkBlue font-medium text-[3.5rem]/[normal];
+}
+.h3 {
+  @apply font-medium text-4xl text-neutral-veryDarkBlue;
+}
+
+.card {
+  @apply w-[28rem] text-center overflow-hidden text-18/[normal] rounded-xl shadow-lg;
+}
+
+.dotted-line {
+  @apply w-max text-4xl text-slate-300 relative left-1/2 transform -translate-x-1/2 tracking-[1rem];
 }
