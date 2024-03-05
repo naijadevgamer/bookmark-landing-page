@@ -7,7 +7,7 @@
 }
 
 .btn--primary {
-  @apply bg-primary-softRed  text-white px-12;
+  @apply bg-primary-softRed text-white px-12;
 }
 
 .btn--secondary {
