@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg px-10 py-4 font-rubik shadow-lg text-[1.6rem];
+  @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem];
 }
 
 .btn--primary {
-  @apply bg-primary-softRed text-white px-12;
+  @apply bg-primary-softRed text-white;
 }
 
 .btn--secondary {
