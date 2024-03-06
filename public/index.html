@@ -27,19 +27,19 @@
       class="uppercase text-neutral-veryDarkBlue px-[15rem] spaced-center h-60"
     >
       <!-- Logo -->
-      <div>
-        <img src="./images/logo-bookmark.svg" alt="logo" />
-      </div>
+      <a href="#">
+        <img src="./images/logo-bookmark-header.svg" alt="logo" />
+      </a>
 
       <!-- Nav -->
-      <ul class="spaced-center gap-20 text-[1.6rem]">
-        <li class="cursor-pointer">
+      <ul class="spaced-center gap-20 text-[1.6rem] tracking-widest">
+        <li class="hover:text-primary-softRed duration-100">
           <a href="#">Features</a>
         </li>
-        <li class="cursor-pointer">
+        <li class="hover:text-primary-softRed duration-100">
           <a href="#">Pricing</a>
         </li>
-        <li class="cursor-pointer">
+        <li class="hover:text-primary-softRed duration-100">
           <a href="#">Contact</a>
         </li>
         <li>
@@ -103,7 +103,7 @@
           <!-- Tab-1 button -->
           <div class="relative">
             <button
-              class="px-14 py-8 font-medium relative text-neutral-veryDarkBlue"
+              class="px-14 py-8 font-medium relative hover:text-primary-softRed duration-100 text-neutral-veryDarkBlue"
             >
               Simple Bookmarking
             </button>
@@ -112,7 +112,9 @@
             ></div>
           </div>
           <div class="relative">
-            <button class="px-14 py-8 font-medium relative">
+            <button
+              class="px-14 py-8 font-medium relative hover:text-primary-softRed duration-100"
+            >
               Speedy Searching
             </button>
             <!-- <div
@@ -120,7 +122,9 @@
             ></div> -->
           </div>
           <div class="relative">
-            <button class="px-14 py-8 font-medium relative">
+            <button
+              class="px-14 py-8 font-medium relative hover:text-primary-softRed duration-100"
+            >
               Easy Sharing
             </button>
             <!-- <div
@@ -284,10 +288,16 @@
         class="mx-auto border-t-2 border-inherit w-[38%] text-neutral-veryDarkBlue"
       >
         <!-- Question 1 -->
-        <div class="border-b-2 border-inherit">
-          <div class="spaced-center py-8 mr-6">
-            <div class="font-medium">What is Bookmark?</div>
-            <img src="images/icon-arrow.svg" alt="arrow" />
+        <div class="cursor-pointer border-b-2 border-inherit">
+          <div class="group spaced-center py-8 mr-6">
+            <div
+              class="font-medium group-hover:text-primary-softRed duration-100"
+            >
+              What is Bookmark?
+            </div>
+            <svg class="w-[18px] h-[12px]">
+              <use xlink:href="images/sprite.svg#icon-arrow"></use>
+            </svg>
           </div>
           <p class="py-8 hidden">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -297,10 +307,16 @@
         </div>
 
         <!-- Question 2 -->
-        <div class="border-b-2 border-inherit overflow-hidden">
-          <div class="spaced-center py-8 mr-6">
-            <div class="font-medium">How can I request a new browser?</div>
-            <img src="images/icon-arrow.svg" alt="arrow" />
+        <div class="cursor-pointer border-b-2 border-inherit overflow-hidden">
+          <div class="group spaced-center py-8 mr-6">
+            <div
+              class="font-medium group-hover:text-primary-softRed duration-100"
+            >
+              How can I request a new browser?
+            </div>
+            <svg class="w-[18px] h-[12px]">
+              <use xlink:href="images/sprite.svg#icon-arrow"></use>
+            </svg>
           </div>
           <p class="py-8">
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
@@ -313,10 +329,16 @@
         </div>
 
         <!-- Question 3 -->
-        <div class="border-b-2 border-inherit">
-          <div class="spaced-center py-8 mr-6">
-            <div class="font-medium">Is there a mobile app?</div>
-            <img src="images/icon-arrow.svg" alt="arrow" />
+        <div class="cursor-pointer border-b-2 border-inherit">
+          <div class="group spaced-center py-8 mr-6">
+            <div
+              class="font-medium group-hover:text-primary-softRed duration-100"
+            >
+              Is there a mobile app?
+            </div>
+            <svg class="w-[18px] h-[12px]">
+              <use xlink:href="images/sprite.svg#icon-arrow"></use>
+            </svg>
           </div>
           <p class="py-8 hidden">
             Sed consectetur quam id neque fermentum accumsan. Praesent luctus
@@ -327,10 +349,16 @@
         </div>
 
         <!-- Question 4 -->
-        <div class="border-b-2 border-inherit">
-          <div class="spaced-center py-8 mr-6">
-            <div class="font-medium">What about other Chromium browsers?</div>
-            <img src="images/icon-arrow.svg" alt="arrow" />
+        <div class="cursor-pointer border-b-2 border-inherit">
+          <div class="group spaced-center py-8 mr-6">
+            <div
+              class="font-medium group-hover:text-primary-softRed duration-100"
+            >
+              What about other Chromium browsers?
+            </div>
+            <svg class="w-[18px] h-[12px]">
+              <use xlink:href="images/sprite.svg#icon-arrow"></use>
+            </svg>
           </div>
           <p class="py-8 hidden">
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
@@ -345,7 +373,6 @@
       </div>
     </section>
 
-    Features Pricing Contact
     <!-- Aside: contact  -->
     <aside class="mt-[10rem] py-24 text-white bg-primary-softBlue">
       <div class="w-[35%] mx-auto text-center">
@@ -368,9 +395,42 @@
     </aside>
 
     <!-- Footer  -->
-    <footer class="text-white bg-neutral-veryDarkBlue">
+    <footer class="text-white bg-neutral-veryDarkBlue px-[15rem]">
+      <!-- nav and socials -->
+      <div class="flex items-center py-10">
+        <!-- Logo -->
+        <a href="#" class="mr-[5rem]">
+          <img src="./images/logo-bookmark-footer.svg" alt="logo" />
+        </a>
+
+        <!-- nav  -->
+        <ul
+          class="spaced-center gap-20 text-[1.4rem] mr-auto uppercase tracking-widest"
+        >
+          <li class="hover:text-primary-softRed duration-100">
+            <a href="#">Features</a>
+          </li>
+          <li class="hover:text-primary-softRed duration-100">
+            <a href="#">Pricing</a>
+          </li>
+          <li class="hover:text-primary-softRed duration-100">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+
+        <!-- links  -->
+        <ul class="spaced-center gap-20">
+          <li>
+            <img src="./images/icon-facebook.svg" alt="" />
+          </li>
+          <li>
+            <img src="./images/icon-twitter.svg" alt="" />
+          </li>
+        </ul>
+      </div>
+
       <!-- Attribution -->
-      <p class="text-center text-[1.6rem]">
+      <p class="text-center text-xl">
         Challenge by
         <a
           href="https://www.frontendmentor.io?ref=challenge"

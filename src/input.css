@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem];
+  @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem] border-2 border-transparent hover:bg-white duration-100;
 }
 
 .btn--primary {
-  @apply bg-primary-softRed text-white;
+  @apply bg-primary-softRed text-white hover:border-primary-softRed hover:text-primary-softRed;
 }
 
 .btn--secondary {
-  @apply bg-primary-softBlue text-white;
+  @apply bg-primary-softBlue text-white hover:border-primary-softBlue hover:text-primary-softBlue;
 }
 
 .btn--extension {
-  @apply bg-primary-softBlue text-white py-6;
+  @apply bg-primary-softBlue text-white py-6 hover:border-primary-softBlue hover:text-primary-softBlue;
 }
 
 .btn--tertiary {
-  @apply bg-slate-200 text-neutral-veryDarkBlue;
+  @apply bg-slate-200 text-neutral-veryDarkBlue hover:border-neutral-veryDarkBlue hover:text-neutral-veryDarkBlue;
 }
 
 .spaced-center {
