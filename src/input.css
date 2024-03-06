@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem] border-2 border-transparent hover:bg-white duration-100;
+  @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem] border-2 border-b-[2.5px] border-transparent hover:bg-white duration-100;
 }
 
 .btn--primary {
