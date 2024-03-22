@@ -39,3 +39,7 @@
 .dotted-line {
   @apply w-max text-4xl text-slate-300 relative left-1/2 transform -translate-x-1/2 tracking-[1rem];
 }
+
+.icon-links {
+  @apply w-[2.4rem] fill-white hover:fill-primary-softRed cursor-pointer duration-100;
+}

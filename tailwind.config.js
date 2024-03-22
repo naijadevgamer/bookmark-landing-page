@@ -19,7 +19,16 @@ module.exports = {
       },
       fontSize: {
         html: "62.5%",
+        desktop: "75%",
+        land: "58%",
+        port: "53%",
         18: "18px",
+      },
+      screens: {
+        "large-desktop": "1800px", // 1800px
+        tl: "1200px", // tablet-landscape
+        tp: "900px", // tablet-portrait
+        sp: "300px", // small-phone
       },
     },
   },

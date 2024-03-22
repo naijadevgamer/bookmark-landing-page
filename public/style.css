@@ -666,14 +666,6 @@ video {
   margin-top: 25rem;
 }
 
-.mt-\[1rem\] {
-  margin-top: 1rem;
-}
-
-.mt-\[5px\] {
-  margin-top: 5px;
-}
-
 .flex {
   display: flex;
 }
@@ -696,6 +688,14 @@ video {
 
 .h-\[12px\] {
   height: 12px;
+}
+
+.h-\[20px\] {
+  height: 20px;
+}
+
+.h-\[24px\] {
+  height: 24px;
 }
 
 .w-\[100\%\] {
@@ -730,6 +730,10 @@ video {
   width: 45%;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
 .w-\[70\%\] {
   width: 70%;
 }
@@ -747,6 +751,11 @@ video {
 }
 
 .w-\[max-content\] {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.w-max {
   width: -moz-max-content;
   width: max-content;
 }
@@ -796,10 +805,6 @@ video {
 
 .gap-20 {
   gap: 5rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .overflow-hidden {
@@ -909,6 +914,11 @@ video {
   line-height: 1.7;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-\[1\.4rem\] {
   font-size: 1.4rem;
 }
@@ -941,11 +951,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -954,20 +959,12 @@ video {
   text-transform: uppercase;
 }
 
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
-
-.tracking-\[1rem\] {
-  letter-spacing: 1rem;
-}
-
-.tracking-\[5px\] {
-  letter-spacing: 5px;
-}
-
 .tracking-\[0\.5rem\] {
   letter-spacing: 0.5rem;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-footerLink {
@@ -988,14 +985,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-white\/90 {
-  color: rgb(255 255 255 / 0.9);
-}
-
-.text-white\/60 {
-  color: rgb(255 255 255 / 0.6);
 }
 
 .text-white\/70 {
@@ -1144,6 +1133,17 @@ video {
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
+.icon-links {
+  width: 2.4rem;
+  cursor: pointer;
+  fill: #fff;
+  transition-duration: 100ms;
+}
+
+.icon-links:hover {
+  fill: hsl(0, 94%, 66%);
+}
+
 .hover\:text-primary-softRed:hover {
   --tw-text-opacity: 1;
   color: hsl(0 94% 66% / var(--tw-text-opacity));
@@ -1156,4 +1156,41 @@ video {
 .group:hover .group-hover\:text-primary-softRed {
   --tw-text-opacity: 1;
   color: hsl(0 94% 66% / var(--tw-text-opacity));
+}
+
+@media not all and (min-width: 1200px) {
+  .max-tl\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .max-tl\:text-land {
+    font-size: 58%;
+  }
+}
+
+@media not all and (min-width: 900px) {
+  .max-tp\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .max-tp\:px-\[7rem\] {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  .max-tp\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .max-tp\:text-port {
+    font-size: 53%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .min-\[1800px\]\:text-desktop {
+    font-size: 75%;
+  }
 }

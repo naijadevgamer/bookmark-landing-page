@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="text-html">
+<html
+  lang="en"
+  class="text-html max-tp:text-port max-tl:text-land min-[1800px]:text-desktop"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +27,7 @@
   <body class="font-rubik text-18/[1.7] text-neutral-grayishBlue">
     <!-- Nav Header -->
     <header
-      class="uppercase text-neutral-veryDarkBlue px-[15rem] spaced-center h-60"
+      class="uppercase text-neutral-veryDarkBlue px-[15rem] spaced-center h-60 max-tl:px-40 max-tp:px-[7rem]"
     >
       <!-- Logo -->
       <a href="#">
@@ -32,7 +35,9 @@
       </a>
 
       <!-- Nav -->
-      <ul class="spaced-center gap-20 text-[1.6rem] tracking-widest">
+      <ul
+        class="spaced-center gap-20 max-tp:gap-10 text-[1.4rem] tracking-widest"
+      >
         <li class="hover:text-primary-softRed duration-100">
           <a href="#">Features</a>
         </li>
@@ -51,7 +56,9 @@
     </header>
 
     <!-- Section 1: Heading Section -->
-    <section class="py-40 px-[15rem] spaced-center">
+    <section
+      class="py-40 max-tp:py-20 px-[15rem] max-tl:px-40 max-tp:px-[7rem] spaced-center"
+    >
       <!-- Heading Sub-Section -->
       <div class="w-[45%]">
         <h1 class="text-neutral-veryDarkBlue font-medium text-[5rem]/[normal]">
@@ -61,7 +68,7 @@
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
-        <div>
+        <div class="w-max">
           <button class="btn btn--secondary mr-4">
             <a href="#">Get it on Chrome</a>
           </button>
@@ -137,7 +144,7 @@
         <div class="carousel">
           <!-- Features Tab-1 -->
           <div class="spaced-center">
-            <div class="relative">
+            <div class="relative w-[50%]">
               <div class="z-10 relative w-[100%] top-0 left-0">
                 <img
                   src="images/illustration-features-tab-1.svg"
@@ -425,10 +432,14 @@
         <!-- links  -->
         <ul class="spaced-center gap-20">
           <li>
-            <img src="./images/icon-facebook.svg" alt="" />
+            <svg class="h-[24px] icon-links">
+              <use xlink:href="images/sprite.svg#icon-facebook"></use>
+            </svg>
           </li>
           <li>
-            <img src="./images/icon-twitter.svg" alt="" />
+            <svg class="h-[20px] icon-links">
+              <use xlink:href="images/sprite.svg#icon-twitter"></use>
+            </svg>
           </li>
         </ul>
       </div>
