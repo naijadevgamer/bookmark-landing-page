@@ -1144,6 +1144,25 @@ video {
   fill: hsl(0, 94%, 66%);
 }
 
+.px {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+@media not all and (min-width: 1200px) {
+  .px {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media not all and (min-width: 900px) {
+  .px {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
 .hover\:text-primary-softRed:hover {
   --tw-text-opacity: 1;
   color: hsl(0 94% 66% / var(--tw-text-opacity));
@@ -1170,6 +1189,14 @@ video {
 }
 
 @media not all and (min-width: 900px) {
+  .max-tp\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
+  .max-tp\:mr-12 {
+    margin-right: 3rem;
+  }
+
   .max-tp\:gap-10 {
     gap: 2.5rem;
   }

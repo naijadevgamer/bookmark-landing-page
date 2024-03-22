@@ -43,3 +43,7 @@
 .icon-links {
   @apply w-[2.4rem] fill-white hover:fill-primary-softRed cursor-pointer duration-100;
 }
+
+.px {
+  @apply px-[15rem] max-tl:px-40 max-tp:px-[7rem];
+}

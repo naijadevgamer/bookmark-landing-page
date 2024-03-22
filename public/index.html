@@ -26,9 +26,7 @@
 
   <body class="font-rubik text-18/[1.7] text-neutral-grayishBlue">
     <!-- Nav Header -->
-    <header
-      class="uppercase text-neutral-veryDarkBlue px-[15rem] spaced-center h-60 max-tl:px-40 max-tp:px-[7rem]"
-    >
+    <header class="uppercase text-neutral-veryDarkBlue px spaced-center h-60">
       <!-- Logo -->
       <a href="#">
         <img src="./images/logo-bookmark-header.svg" alt="logo" />
@@ -56,9 +54,7 @@
     </header>
 
     <!-- Section 1: Heading Section -->
-    <section
-      class="py-40 max-tp:py-20 px-[15rem] max-tl:px-40 max-tp:px-[7rem] spaced-center"
-    >
+    <section class="px py-40 max-tp:py-20 spaced-center">
       <!-- Heading Sub-Section -->
       <div class="w-[45%]">
         <h1 class="text-neutral-veryDarkBlue font-medium text-[5rem]/[normal]">
@@ -92,14 +88,16 @@
     </section>
 
     <!-- Section 2: Features Section -->
-    <section class="py-40 px-[15rem]">
+    <section class="py-40">
       <!-- Features Section heading -->
-      <h2 class="h2 text-center">Features</h2>
-      <p class="my-10 text-center max-w-[53rem] w-[90%] mx-auto">
-        Our aim is to make it quick and easy for you to access your favourite
-        websites. Your bookmarks sync between your devices so you can access
-        them on the go.
-      </p>
+      <div class="px">
+        <h2 class="h2 text-center">Features</h2>
+        <p class="my-10 text-center max-w-[53rem] w-[90%] mx-auto">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+      </div>
 
       <!-- Features Tab Section  -->
       <div>
@@ -141,7 +139,7 @@
         </div>
 
         <!-- Features Section Tabs -->
-        <div class="carousel">
+        <div class="carousel px">
           <!-- Features Tab-1 -->
           <div class="spaced-center">
             <div class="relative w-[50%]">
@@ -406,17 +404,17 @@
     </aside>
 
     <!-- Footer  -->
-    <footer class="text-white bg-neutral-veryDarkBlue px-[15rem]">
+    <footer class="text-white bg-neutral-veryDarkBlue px">
       <!-- nav and socials -->
       <div class="flex items-center py-10">
         <!-- Logo -->
-        <a href="#" class="mr-[5rem]">
+        <a href="#" class="mr-[5rem] max-tp:mr-12">
           <img src="./images/logo-bookmark-footer.svg" alt="logo" />
         </a>
 
         <!-- nav  -->
         <ul
-          class="spaced-center gap-20 text-[1.4rem] mr-auto uppercase tracking-widest text-white/70"
+          class="spaced-center gap-20 max-tp:gap-10 text-[1.4rem] mr-auto uppercase tracking-widest text-white/70"
         >
           <li class="hover:text-primary-softRed/70 duration-100">
             <a href="#">Features</a>
@@ -430,7 +428,7 @@
         </ul>
 
         <!-- links  -->
-        <ul class="spaced-center gap-20">
+        <ul class="spaced-center gap-20 max-tp:gap-10">
           <li>
             <svg class="h-[24px] icon-links">
               <use xlink:href="images/sprite.svg#icon-facebook"></use>
