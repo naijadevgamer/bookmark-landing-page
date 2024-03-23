@@ -26,7 +26,9 @@
 
   <body class="font-rubik text-18/[1.7] text-neutral-grayishBlue">
     <!-- Nav Header -->
-    <header class="uppercase text-neutral-veryDarkBlue px spaced-center h-60">
+    <header
+      class="uppercase text-neutral-veryDarkBlue px spaced-center h-60 max-tl:h-52 max-sm:h-40"
+    >
       <!-- Logo -->
       <a href="#">
         <img src="./images/logo-bookmark-header.svg" alt="logo" />
@@ -34,7 +36,7 @@
 
       <!-- Nav -->
       <ul
-        class="spaced-center gap-20 max-tp:gap-10 text-[1.4rem] tracking-widest"
+        class="spaced-center gap-20 max-tp:gap-10 text-[1.4rem] tracking-widest max-sm:hidden"
       >
         <li class="hover:text-primary-softRed duration-100">
           <a href="#">Features</a>
@@ -52,6 +54,42 @@
         </li>
       </ul>
     </header>
+
+    <!-- Phone nav -->
+    <!-- <div>
+      <header></header>
+      <ul
+        class="spaced-center gap-20 max-tp:gap-10 text-[1.4rem] tracking-widest max-sm:hidden"
+      >
+        <li class="hover:text-primary-softRed duration-100">
+          <a href="#">Features</a>
+        </li>
+        <li class="hover:text-primary-softRed duration-100">
+          <a href="#">Pricing</a>
+        </li>
+        <li class="hover:text-primary-softRed duration-100">
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <button class="btn btn--primary uppercase">
+            <a href="#">Login</a>
+          </button>
+        </li>
+      </ul>
+
+      <ul class="spaced-center gap-20 max-tp:gap-16">
+        <li>
+          <svg class="h-[2.4rem] icon-links">
+            <use xlink:href="images/sprite.svg#icon-facebook"></use>
+          </svg>
+        </li>
+        <li>
+          <svg class="h-[2rem] icon-links">
+            <use xlink:href="images/sprite.svg#icon-twitter"></use>
+          </svg>
+        </li>
+      </ul>
+    </div> -->
 
     <!-- Section 1: Heading Section -->
     <section
@@ -81,7 +119,7 @@
       </div>
 
       <!-- Heading Sub-Section image part -->
-      <div class="relative max-tp:w-[100%] max-tp:mb-52">
+      <div class="relative max-tp:w-[100%] max-tp:mb-40">
         <div
           class="z-10 relative w-[100%] top-0 right-0 transform translate-x-36 max-tp:translate-x-0"
         >
@@ -98,7 +136,7 @@
     </section>
 
     <!-- Section 2: Features Section -->
-    <section class="py-40">
+    <section class="py-40 max-tp:py-32">
       <!-- Features Section heading -->
       <div class="px">
         <h2 class="h2 text-center">Features</h2>
@@ -142,7 +180,7 @@
         <div class="carousel px">
           <!-- Features Tab-1 -->
           <div class="spaced-center max-tp:flex-col">
-            <div class="relative w-[50%] max-tp:w-[100%] max-tp:mb-52">
+            <div class="relative w-[50%] max-tp:w-[100%] max-tp:mb-40">
               <div class="z-10 relative w-[100%] top-0 left-0">
                 <img
                   src="images/illustration-features-tab-1.svg"
@@ -229,7 +267,7 @@
     </section>
 
     <!-- Section 3: Download Section -->
-    <section class="text-center mt-40 px-[5%]">
+    <section class="text-center mt-40 px-[5%] max-sm:mt-28">
       <h2 class="h2">Download the extension</h2>
       <p class="my-8 w-[38%] mx-auto text-width">
         We’ve got more browsers in the pipeline. Please do let us know if you’ve
@@ -238,7 +276,7 @@
 
       <!-- Extension cards  -->
       <div
-        class="mx-auto my-48 flex justify-center gap-16 max-tp:flex-wrap max-tp:items-center max-sm:flex-col"
+        class="mx-auto my-48 flex justify-center gap-16 max-tp:flex-wrap max-tp:items-center max-tp:my-20 max-sm:flex-col"
       >
         <!-- Card-1 -->
         <div class="card transform -translate-y-12 max-tp:translate-y-0">
@@ -284,7 +322,7 @@
     </section>
 
     <!-- Section 4: FAQ Section  -->
-    <section class="mt-40 max-tl:mx-[5%]">
+    <section class="mt-60 max-tl:mx-[5%]">
       <div class="text-width">
         <h2 class="h2">Frequently Asked Questions</h2>
         <p class="my-10">
@@ -301,11 +339,11 @@
         <div class="border-b-2 border-inherit">
           <div class="cursor-pointer group spaced-center py-8 mr-6">
             <div
-              class="font-medium group-hover:text-primary-softRed duration-100"
+              class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               What is Bookmark?
             </div>
-            <svg class="w-[18px] h-[12px]">
+            <svg class="w-[1.8rem] h-[1.2rem]">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
           </div>
@@ -320,11 +358,11 @@
         <div class="border-b-2 border-inherit overflow-hidden">
           <div class="cursor-pointer group spaced-center py-8 mr-6">
             <div
-              class="font-medium group-hover:text-primary-softRed duration-100"
+              class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               How can I request a new browser?
             </div>
-            <svg class="w-[18px] h-[12px]">
+            <svg class="w-[1.8rem] h-[1.2rem]">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
           </div>
@@ -342,11 +380,11 @@
         <div class="border-b-2 border-inherit">
           <div class="cursor-pointer group spaced-center py-8 mr-6">
             <div
-              class="font-medium group-hover:text-primary-softRed duration-100"
+              class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               Is there a mobile app?
             </div>
-            <svg class="w-[18px] h-[12px]">
+            <svg class="w-[1.8rem] h-[1.2rem]">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
           </div>
@@ -362,11 +400,11 @@
         <div class="border-b-2 border-inherit">
           <div class="cursor-pointer group spaced-center py-8 mr-6">
             <div
-              class="font-medium group-hover:text-primary-softRed duration-100"
+              class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               What about other Chromium browsers?
             </div>
-            <svg class="w-[18px] h-[12px]">
+            <svg class="w-[1.8rem] h-[1.2rem]">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
           </div>
@@ -393,12 +431,27 @@
           Stay up-to-date with what we’re doing
         </h2>
 
-        <form class="spaced-center max-sm:flex-col">
-          <input
-            class="w-[70%] rounded-lg px-10 py-4 shadow-lg text-[1.6rem] text-neutral-grayishBlue outline-none max-sm:w-[100%] max-sm:mb-8"
-            type="email"
-            placeholder="Enter your email address"
-          />
+        <form class="flex justify-between max-sm:flex-col items-center">
+          <!-- items-start for form instead of items center when error-->
+          <!-- <div
+            class="w-[70%] rounded-lg shadow-lg bg-primary-softRed border-2 border-b-[2.5px] border-primary-softRed relative max-sm:w-[100%] max-sm:mb-4"
+          > -->
+          <div
+            class="w-[70%] rounded-lg bg-transparent border-2 border-b-[2.5px] border-transparent relative max-sm:w-[100%]"
+          >
+            <input
+              class="w-full rounded-lg px-10 py-4 shadow-lg text-[1.6rem] text-neutral-grayishBlue outline-none max-sm:mb-8"
+              type="email"
+              placeholder="Enter your email address"
+            />
+            <p class="text-xl italic py-2 px-6 text-start hidden">
+              Whoops, make sure it's an email
+            </p>
+            <div class="absolute top-4 right-6 hidden">
+              <img src="./images/icon-error.svg" alt="Error-icon" />
+            </div>
+          </div>
+
           <button
             class="btn btn--primary w-[27%] max-sm:w-[100%]"
             type="submit"
@@ -434,14 +487,14 @@
         </ul>
 
         <!-- links  -->
-        <ul class="spaced-center gap-20 max-tp:gap-10">
+        <ul class="spaced-center gap-20 max-tp:gap-16">
           <li>
-            <svg class="h-[24px] icon-links">
+            <svg class="h-[2.4rem] icon-links">
               <use xlink:href="images/sprite.svg#icon-facebook"></use>
             </svg>
           </li>
           <li>
-            <svg class="h-[20px] icon-links">
+            <svg class="h-[2rem] icon-links">
               <use xlink:href="images/sprite.svg#icon-twitter"></use>
             </svg>
           </li>

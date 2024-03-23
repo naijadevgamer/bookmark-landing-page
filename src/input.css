@@ -26,7 +26,7 @@
   @apply flex justify-between items-center;
 }
 .h2 {
-  @apply text-neutral-veryDarkBlue font-medium text-[3.5rem]/[normal];
+  @apply text-neutral-veryDarkBlue font-medium text-[3.5rem]/[normal] max-tp:text-[3.25rem]/[normal];
 }
 .h3 {
   @apply font-medium text-4xl text-neutral-veryDarkBlue;
@@ -41,7 +41,7 @@
 }
 
 .icon-links {
-  @apply w-[24px] fill-white hover:fill-primary-softRed cursor-pointer duration-100;
+  @apply w-[2.4rem] fill-white hover:fill-primary-softRed cursor-pointer duration-100;
 }
 
 .px {
