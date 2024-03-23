@@ -54,35 +54,43 @@
     </header>
 
     <!-- Section 1: Heading Section -->
-    <section class="px py-40 max-tp:py-20 spaced-center">
+    <section
+      class="px py-40 max-tp:py-20 spaced-center max-tp:flex-col-reverse"
+    >
       <!-- Heading Sub-Section -->
-      <div class="w-[45%]">
-        <h1 class="text-neutral-veryDarkBlue font-medium text-[5rem]/[normal]">
+      <div class="w-[45%] max-tp:w-[100%] max-tp:text-center text-width-port">
+        <h1
+          class="text-neutral-veryDarkBlue font-medium text-[5rem]/[normal] max-sm:text-[4rem]"
+        >
           A Simple Bookmark Manager
         </h1>
         <p class="my-10">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
-        <div class="w-max">
-          <button class="btn btn--secondary mr-4">
+        <div class="w-max max-tp:m-auto">
+          <button class="btn btn--secondary mr-4 max-tp:mr-2">
             <a href="#">Get it on Chrome</a>
           </button>
-          <button class="btn btn--tertiary">
+          <button class="btn btn--tertiary max-tp:ml-2">
             <a href="#">Get it on Firefox</a>
           </button>
         </div>
       </div>
 
       <!-- Heading Sub-Section image part -->
-      <div class="relative">
+      <div class="relative max-tp:w-[100%] max-tp:mb-52">
         <div
-          class="z-10 relative w-[100%] top-0 right-0 transform translate-x-36"
+          class="z-10 relative w-[100%] top-0 right-0 transform translate-x-36 max-tp:translate-x-0"
         >
-          <img src="images/illustration-hero.svg" alt="illustration-hero" />
+          <img
+            src="images/illustration-hero.svg"
+            alt="illustration-hero"
+            class="max-tp:m-auto"
+          />
         </div>
         <div
-          class="w-[80%] bg-primary-softBlue h-[100%] absolute bottom-0 right-0 -mr-[15rem] -mb-[15%] rounded-l-[38%]"
+          class="w-[80%] bg-primary-softBlue h-[100%] absolute bottom-0 right-0 -mr-[15rem] -mb-[15%] rounded-l-[38%] max-tl:-mr-[10rem] max-tp:-mr-[7rem] max-tp:w-[85%] max-tp:h-[80%] max-tp:-mb-[5%] max-sm:-mr-[5%]"
         ></div>
       </div>
     </section>
@@ -92,7 +100,7 @@
       <!-- Features Section heading -->
       <div class="px">
         <h2 class="h2 text-center">Features</h2>
-        <p class="my-10 text-center max-w-[53rem] w-[90%] mx-auto">
+        <p class="my-10 text-width">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
@@ -103,13 +111,11 @@
       <div>
         <!-- Features Section Tabs buttons -->
         <div
-          class="mb-28 flex justify-center border-b-[2px] border-slate-200 w-[max-content] mx-auto"
+          class="mb-28 flex justify-center border-b-[2px] border-slate-200 mx-auto w-max max-sm:w-[100%] max-sm:text-[1.8rem] max-sp:text-[1.4rem]"
         >
           <!-- Tab-1 button -->
           <div class="relative">
-            <button
-              class="px-14 py-8 font-medium relative hover:text-primary-softRed duration-100 text-neutral-veryDarkBlue"
-            >
+            <button class="feature-tab-btn text-neutral-veryDarkBlue">
               Simple Bookmarking
             </button>
             <div
@@ -117,21 +123,13 @@
             ></div>
           </div>
           <div class="relative">
-            <button
-              class="px-14 py-8 font-medium relative hover:text-primary-softRed duration-100"
-            >
-              Speedy Searching
-            </button>
+            <button class="feature-tab-btn">Speedy Searching</button>
             <!-- <div
               class="w-[100%] h-2 bg-primary-softRed absolute bottom-0"
             ></div> -->
           </div>
           <div class="relative">
-            <button
-              class="px-14 py-8 font-medium relative hover:text-primary-softRed duration-100"
-            >
-              Easy Sharing
-            </button>
+            <button class="feature-tab-btn">Easy Sharing</button>
             <!-- <div
               class="w-[100%] h-2 bg-primary-softRed absolute bottom-0"
             ></div> -->
@@ -141,19 +139,20 @@
         <!-- Features Section Tabs -->
         <div class="carousel px">
           <!-- Features Tab-1 -->
-          <div class="spaced-center">
-            <div class="relative w-[50%]">
+          <div class="spaced-center max-tp:flex-col">
+            <div class="relative w-[50%] max-tp:w-[100%] max-tp:mb-52">
               <div class="z-10 relative w-[100%] top-0 left-0">
                 <img
                   src="images/illustration-features-tab-1.svg"
                   alt="features-tab-1"
+                  class="max-tp:m-auto"
                 />
               </div>
               <div
-                class="w-[110%] bg-primary-softBlue h-[100%] absolute bottom-0 left-0 -ml-[15rem] -mb-[20%] rounded-r-[38%]"
+                class="w-[110%] bg-primary-softBlue h-[100%] absolute bottom-0 left-0 -ml-[15rem] -mb-[20%] rounded-r-[38%] max-tl:-ml-[10rem] max-tp:-ml-[7rem] max-tp:w-[90%] max-tp:-mb-[10%] max-sm:-ml-[5%]"
               ></div>
             </div>
-            <div class="w-[40%]">
+            <div class="w-[40%] text-width-port">
               <h2 class="h2">Bookmark in one click</h2>
               <p class="my-10">
                 Organize your bookmarks however you like. Our simple
@@ -230,7 +229,7 @@
     <!-- Section 3: Download Section -->
     <section class="text-center mt-60">
       <h2 class="h2">Download the extension</h2>
-      <p class="my-8 w-[38%] mx-auto">
+      <p class="my-8 w-[38%] mx-auto text-width">
         We’ve got more browsers in the pipeline. Please do let us know if you’ve
         got a favourite you’d like us to prioritize.
       </p>
@@ -282,7 +281,7 @@
 
     <!-- Section 4: FAQ Section  -->
     <section class="mt-[25rem]">
-      <div class="max-w-[53rem] w-[90%] mx-auto text-center">
+      <div class="text-width">
         <h2 class="h2">Frequently Asked Questions</h2>
         <p class="my-10">
           Here are some of our FAQs. If you have any other questions you’d like
@@ -382,7 +381,7 @@
 
     <!-- Aside: contact  -->
     <aside class="mt-[10rem] py-24 text-white bg-primary-softBlue">
-      <div class="max-w-[53rem] w-[90%] mx-auto text-center">
+      <div class="text-width">
         <p class="tracking-[0.5rem] text-2xl uppercase">
           35,000+ already joined
         </p>

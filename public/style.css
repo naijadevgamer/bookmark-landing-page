@@ -750,18 +750,9 @@ video {
   width: 90%;
 }
 
-.w-\[max-content\] {
-  width: -moz-max-content;
-  width: max-content;
-}
-
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.max-w-\[53rem\] {
-  max-width: 53rem;
 }
 
 .max-w-\[55rem\] {
@@ -864,16 +855,6 @@ video {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
-.px-\[15rem\] {
-  padding-left: 15rem;
-  padding-right: 15rem;
 }
 
 .py-10 {
@@ -1163,6 +1144,67 @@ video {
   }
 }
 
+@media not all and (min-width: 640px) {
+  .px {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.text-width {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 53rem;
+  text-align: center;
+}
+
+@media not all and (min-width: 900px) {
+  .text-width-port {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 70rem;
+    text-align: center;
+  }
+}
+
+.feature-tab-btn {
+  position: relative;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 500;
+  transition-duration: 100ms;
+}
+
+.feature-tab-btn:hover {
+  --tw-text-opacity: 1;
+  color: hsl(0 94% 66% / var(--tw-text-opacity));
+}
+
+@media not all and (min-width: 900px) {
+  .feature-tab-btn {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .feature-tab-btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media not all and (min-width: 300px) {
+  .feature-tab-btn {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
 .hover\:text-primary-softRed:hover {
   --tw-text-opacity: 1;
   color: hsl(0 94% 66% / var(--tw-text-opacity));
@@ -1178,9 +1220,12 @@ video {
 }
 
 @media not all and (min-width: 1200px) {
-  .max-tl\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
+  .max-tl\:-ml-\[10rem\] {
+    margin-left: -10rem;
+  }
+
+  .max-tl\:-mr-\[10rem\] {
+    margin-right: -10rem;
   }
 
   .max-tl\:text-land {
@@ -1189,21 +1234,73 @@ video {
 }
 
 @media not all and (min-width: 900px) {
-  .max-tp\:mr-10 {
-    margin-right: 2.5rem;
+  .max-tp\:m-auto {
+    margin: auto;
+  }
+
+  .max-tp\:-mb-\[10\%\] {
+    margin-bottom: -10%;
+  }
+
+  .max-tp\:-mb-\[5\%\] {
+    margin-bottom: -5%;
+  }
+
+  .max-tp\:-ml-\[7rem\] {
+    margin-left: -7rem;
+  }
+
+  .max-tp\:-mr-\[7rem\] {
+    margin-right: -7rem;
+  }
+
+  .max-tp\:mb-52 {
+    margin-bottom: 13rem;
+  }
+
+  .max-tp\:ml-2 {
+    margin-left: 0.5rem;
   }
 
   .max-tp\:mr-12 {
     margin-right: 3rem;
   }
 
-  .max-tp\:gap-10 {
-    gap: 2.5rem;
+  .max-tp\:mr-2 {
+    margin-right: 0.5rem;
   }
 
-  .max-tp\:px-\[7rem\] {
-    padding-left: 7rem;
-    padding-right: 7rem;
+  .max-tp\:h-\[80\%\] {
+    height: 80%;
+  }
+
+  .max-tp\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .max-tp\:w-\[85\%\] {
+    width: 85%;
+  }
+
+  .max-tp\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .max-tp\:translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .max-tp\:flex-col {
+    flex-direction: column;
+  }
+
+  .max-tp\:flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .max-tp\:gap-10 {
+    gap: 2.5rem;
   }
 
   .max-tp\:py-20 {
@@ -1211,8 +1308,64 @@ video {
     padding-bottom: 5rem;
   }
 
+  .max-tp\:text-center {
+    text-align: center;
+  }
+
   .max-tp\:text-port {
     font-size: 53%;
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .max-sm\:-ml-\[5\%\] {
+    margin-left: -5%;
+  }
+
+  .max-sm\:-mr-\[5\%\] {
+    margin-right: -5%;
+  }
+
+  .max-sm\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .max-sm\:text-\[14px\] {
+    font-size: 14px;
+  }
+
+  .max-sm\:text-\[4rem\] {
+    font-size: 4rem;
+  }
+
+  .max-sm\:text-\[1\.4rem\] {
+    font-size: 1.4rem;
+  }
+
+  .max-sm\:text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+
+  .max-sm\:text-\[1\.6rem\] {
+    font-size: 1.6rem;
+  }
+
+  .max-sm\:text-\[1\.8rem\] {
+    font-size: 1.8rem;
+  }
+}
+
+@media not all and (min-width: 300px) {
+  .max-sp\:text-\[12px\] {
+    font-size: 12px;
+  }
+
+  .max-sp\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
+  }
+
+  .max-sp\:text-\[1\.4rem\] {
+    font-size: 1.4rem;
   }
 }
 
