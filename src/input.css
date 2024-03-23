@@ -33,7 +33,7 @@
 }
 
 .card {
-  @apply w-[28rem] text-center overflow-hidden text-18/[normal] rounded-xl shadow-lg;
+  @apply max-w-[32rem] w-[100%] text-center overflow-hidden text-18/[normal] rounded-xl shadow-lg;
 }
 
 .dotted-line {
@@ -41,7 +41,7 @@
 }
 
 .icon-links {
-  @apply w-[2.4rem] fill-white hover:fill-primary-softRed cursor-pointer duration-100;
+  @apply w-[24px] fill-white hover:fill-primary-softRed cursor-pointer duration-100;
 }
 
 .px {

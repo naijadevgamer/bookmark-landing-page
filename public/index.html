@@ -68,11 +68,13 @@
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
-        <div class="w-max max-tp:m-auto">
-          <button class="btn btn--secondary mr-4 max-tp:mr-2">
+        <div
+          class="w-max max-tp:m-auto max-sm:w-fit max-sm:flex max-sm:flex-wrap max-sm:gap-4 max-sm:justify-center"
+        >
+          <button class="btn btn--secondary mr-4 max-tp:mr-0">
             <a href="#">Get it on Chrome</a>
           </button>
-          <button class="btn btn--tertiary max-tp:ml-2">
+          <button class="btn btn--tertiary">
             <a href="#">Get it on Firefox</a>
           </button>
         </div>
@@ -227,7 +229,7 @@
     </section>
 
     <!-- Section 3: Download Section -->
-    <section class="text-center mt-60">
+    <section class="text-center mt-40 px-[5%]">
       <h2 class="h2">Download the extension</h2>
       <p class="my-8 w-[38%] mx-auto text-width">
         We’ve got more browsers in the pipeline. Please do let us know if you’ve
@@ -235,9 +237,11 @@
       </p>
 
       <!-- Extension cards  -->
-      <div class="mx-auto my-48 flex justify-center gap-16">
+      <div
+        class="mx-auto my-48 flex justify-center gap-16 max-tp:flex-wrap max-tp:items-center max-sm:flex-col"
+      >
         <!-- Card-1 -->
-        <div class="card transform -translate-y-12">
+        <div class="card transform -translate-y-12 max-tp:translate-y-0">
           <img
             src="images/logo-chrome.svg"
             alt="Chrome"
@@ -267,7 +271,7 @@
         </div>
 
         <!-- Card-3 -->
-        <div class="card transform translate-y-12">
+        <div class="card transform translate-y-12 max-tp:translate-y-0">
           <img src="images/logo-opera.svg" alt="Chrome" class="mx-auto my-12" />
           <h3 class="mb-4 h3">Add to Opera</h3>
           <p class="mb-12 text-[1.6rem]">Minimum version 46</p>
@@ -280,7 +284,7 @@
     </section>
 
     <!-- Section 4: FAQ Section  -->
-    <section class="mt-[25rem]">
+    <section class="mt-40 max-tl:mx-[5%]">
       <div class="text-width">
         <h2 class="h2">Frequently Asked Questions</h2>
         <p class="my-10">
@@ -291,7 +295,7 @@
 
       <!-- Dropdown menu -->
       <div
-        class="mx-auto border-t-2 border-inherit max-w-[55rem] w-[90%] text-neutral-veryDarkBlue"
+        class="mx-auto border-t-2 border-inherit max-w-[55rem] w-[100%] text-neutral-veryDarkBlue"
       >
         <!-- Question 1 -->
         <div class="border-b-2 border-inherit">
@@ -380,7 +384,7 @@
     </section>
 
     <!-- Aside: contact  -->
-    <aside class="mt-[10rem] py-24 text-white bg-primary-softBlue">
+    <aside class="mt-[10rem] py-24 text-white bg-primary-softBlue px-[5%]">
       <div class="text-width">
         <p class="tracking-[0.5rem] text-2xl uppercase">
           35,000+ already joined
@@ -389,13 +393,16 @@
           Stay up-to-date with what we’re doing
         </h2>
 
-        <form class="spaced-center">
+        <form class="spaced-center max-sm:flex-col">
           <input
-            class="w-[70%] rounded-lg px-10 py-4 shadow-lg text-[1.6rem] text-neutral-grayishBlue outline-none"
+            class="w-[70%] rounded-lg px-10 py-4 shadow-lg text-[1.6rem] text-neutral-grayishBlue outline-none max-sm:w-[100%] max-sm:mb-8"
             type="email"
             placeholder="Enter your email address"
           />
-          <button class="btn btn--primary w-[27%]" type="submit">
+          <button
+            class="btn btn--primary w-[27%] max-sm:w-[100%]"
+            type="submit"
+          >
             Contact Us
           </button>
         </form>
@@ -405,7 +412,7 @@
     <!-- Footer  -->
     <footer class="text-white bg-neutral-veryDarkBlue px">
       <!-- nav and socials -->
-      <div class="flex items-center py-10">
+      <div class="flex items-center py-10 max-sm:flex-col">
         <!-- Logo -->
         <a href="#" class="mr-[5rem] max-tp:mr-12">
           <img src="./images/logo-bookmark-footer.svg" alt="logo" />
@@ -413,7 +420,7 @@
 
         <!-- nav  -->
         <ul
-          class="spaced-center gap-20 max-tp:gap-10 text-[1.4rem] mr-auto uppercase tracking-widest text-white/70"
+          class="spaced-center gap-20 max-tp:gap-10 text-[1.4rem] mr-auto uppercase tracking-widest text-white/70 max-sm:mr-0 max-sm:flex-col max-sm:py-10"
         >
           <li class="hover:text-primary-softRed/70 duration-100">
             <a href="#">Features</a>
