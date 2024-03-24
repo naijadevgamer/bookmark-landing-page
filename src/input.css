@@ -22,6 +22,10 @@
   @apply bg-slate-200 text-neutral-veryDarkBlue hover:border-neutral-veryDarkBlue hover:text-neutral-veryDarkBlue;
 }
 
+.btn--phone {
+  @apply text-white py-4 w-full border-white text-18 border-b-2 hover:text-neutral-veryDarkBlue;
+}
+
 .spaced-center {
   @apply flex justify-between items-center;
 }
