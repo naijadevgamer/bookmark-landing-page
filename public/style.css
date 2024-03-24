@@ -948,6 +948,11 @@ video {
   padding-right: 5%;
 }
 
+.px-\[7\.5\%\] {
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
