@@ -49,7 +49,7 @@
 }
 
 .px {
-  @apply px-[15rem] max-tl:px-40 max-tp:px-[7rem] max-sm:px-[5%];
+  @apply px-[15rem] max-tl:px-40 max-tp:px-[7rem] max-sm:px-[6%];
 }
 
 .text-width {

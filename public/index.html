@@ -27,7 +27,7 @@
   <body class="font-rubik text-18/[1.7] text-neutral-grayishBlue">
     <!-- Nav Header -->
     <header
-      class="uppercase text-neutral-veryDarkBlue px spaced-center h-60 max-tl:h-52 max-sm:h-40"
+      class="uppercase relative text-neutral-veryDarkBlue px spaced-center h-60 max-tl:h-52 max-sm:h-48 z-30"
     >
       <!-- Logo -->
       <a href="#">
@@ -53,11 +53,19 @@
           </button>
         </li>
       </ul>
+
+      <!-- Nav menu trigger bar -->
+      <div class="hidden relative max-sm:flex justify-center flex-col w-10 h-8">
+        <span
+          class="inline-block w-full h-[3.1px] bg-neutral-veryDarkBlue before:absolute before:top-0 before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full after:absolute after:bottom-0 after:left-0 after:h-[3px] after:bg-neutral-veryDarkBlue after:w-[80%]"
+        >
+        </span>
+      </div>
     </header>
 
     <!-- Phone nav -->
     <div
-      class="hidden fixed top-0 left-0 z-20 max-sm:flex bg-neutral-veryDarkBlue/90 h-[100vh] w-[100vw] px-[7.5%] pb-20 flex-col"
+      class="hidden fixed top-0 left-0 z-20 max-sm:hidden bg-neutral-veryDarkBlue/90 h-[100vh] w-[100vw] px-[6%] pb-20 flex-col"
     >
       <header class="spaced-center h-40">
         <!-- Logo -->
@@ -145,7 +153,7 @@
           />
         </div>
         <div
-          class="w-[80%] bg-primary-softBlue h-[100%] absolute bottom-0 right-0 -mr-[15rem] -mb-[15%] rounded-l-[38%] max-tl:-mr-[10rem] max-tp:-mr-[7rem] max-tp:w-[85%] max-tp:h-[80%] max-tp:-mb-[5%] max-sm:-mr-[5%]"
+          class="w-[80%] bg-primary-softBlue h-[100%] absolute bottom-0 right-0 -mr-[15rem] -mb-[15%] rounded-l-[38%] max-tl:-mr-[10rem] max-tp:-mr-[7rem] max-tp:w-[85%] max-tp:h-[80%] max-tp:-mb-[5%] max-sm:-mr-[6%]"
         ></div>
       </div>
     </section>
@@ -204,7 +212,7 @@
                 />
               </div>
               <div
-                class="w-[110%] bg-primary-softBlue h-[100%] absolute bottom-0 left-0 -ml-[15rem] -mb-[20%] rounded-r-[38%] max-tl:-ml-[10rem] max-tp:-ml-[7rem] max-tp:w-[90%] max-tp:-mb-[10%] max-sm:-ml-[5%]"
+                class="w-[110%] bg-primary-softBlue h-[100%] absolute bottom-0 left-0 -ml-[15rem] -mb-[20%] rounded-r-[38%] max-tl:-ml-[10rem] max-tp:-ml-[7rem] max-tp:w-[90%] max-tp:-mb-[10%] max-sm:-ml-[6%]"
               ></div>
             </div>
             <div class="w-[40%] text-width-port">
@@ -282,7 +290,7 @@
     </section>
 
     <!-- Section 3: Download Section -->
-    <section class="text-center mt-40 px-[5%] max-sm:mt-28">
+    <section class="text-center mt-40 px-[6%] max-sm:mt-28">
       <h2 class="h2">Download the extension</h2>
       <p class="my-8 w-[38%] mx-auto text-width">
         We’ve got more browsers in the pipeline. Please do let us know if you’ve
@@ -337,7 +345,7 @@
     </section>
 
     <!-- Section 4: FAQ Section  -->
-    <section class="mt-60 max-tl:mx-[5%]">
+    <section class="mt-60 max-tl:mx-[6%]">
       <div class="text-width">
         <h2 class="h2">Frequently Asked Questions</h2>
         <p class="my-10">
@@ -437,7 +445,7 @@
     </section>
 
     <!-- Aside: contact  -->
-    <aside class="mt-[10rem] py-24 text-white bg-primary-softBlue px-[5%]">
+    <aside class="mt-[10rem] py-24 text-white bg-primary-softBlue px-[6%]">
       <div class="text-width">
         <p class="tracking-[0.5rem] text-2xl uppercase">
           35,000+ already joined
