@@ -3,6 +3,38 @@ module.exports = {
   content: ["./public/*.html"],
   theme: {
     extend: {
+      keyframes: {
+        // goRight: {
+        //   from: { transform: "translateX(0%)" },
+        //   to: { transform: "translateX(100%)" },
+        // },
+        goBefore: {
+          from: { transform: "translateX(0%)" },
+          to: { transform: "translateX(100%)" },
+        },
+        goAfter: {
+          from: { transform: "translateX(0%)" },
+          to: { transform: "translateX(100%)" },
+        },
+        goUp: {
+          from: { bottom: "-100%", left: "-100%" },
+          to: { bottom: "50%", left: "0%" },
+        },
+        goUp2: {
+          from: {
+            bottom: "-100%",
+            right: "-100%",
+          },
+          to: { bottom: "50%", right: "0%" },
+        },
+      },
+      animation: {
+        // goRight: "goRight 1s ease infinite",
+        goBefore: "goBefore 1s ease-in-out",
+        goAfter: "goAfter 1s ease-in-out 0.5s",
+        goUp: "goUp 0.2s ease-in-out both",
+        goUp2: "goUp2 0.2s ease-in-out 0.1s both",
+      },
       colors: {
         primary: {
           softBlue: "hsl(231, 69%, 60%)",

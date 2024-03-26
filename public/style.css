@@ -702,10 +702,6 @@ video {
   display: none;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-2 {
   height: 0.5rem;
 }
@@ -716,6 +712,10 @@ video {
 
 .h-60 {
   height: 15rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-\[1\.2rem\] {
@@ -738,28 +738,12 @@ video {
   height: 2rem;
 }
 
-.h-\[3px\] {
-  height: 3px;
-}
-
-.h-\[4px\] {
-  height: 4px;
-}
-
-.h-\[3\.5px\] {
-  height: 3.5px;
-}
-
 .h-\[3\.1px\] {
   height: 3.1px;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
-.w-12 {
-  width: 3rem;
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-\[1\.8rem\] {
@@ -825,10 +809,6 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-10 {
-  width: 2.5rem;
 }
 
 .max-w-\[55rem\] {
@@ -983,14 +963,9 @@ video {
   padding-right: 1.5rem;
 }
 
-.px-\[5\%\] {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.px-\[7\.5\%\] {
-  padding-left: 7.5%;
-  padding-right: 7.5%;
+.px-\[6\%\] {
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .py-10 {
@@ -1021,11 +996,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-\[6\%\] {
-  padding-left: 6%;
-  padding-right: 6%;
 }
 
 .pb-20 {
@@ -1397,6 +1367,16 @@ video {
   position: absolute;
 }
 
+.before\:-bottom-full::before {
+  content: var(--tw-content);
+  bottom: -100%;
+}
+
+.before\:-left-full::before {
+  content: var(--tw-content);
+  left: -100%;
+}
+
 .before\:top-0::before {
   content: var(--tw-content);
   top: 0px;
@@ -1407,11 +1387,6 @@ video {
   display: inline-block;
 }
 
-.before\:h-2::before {
-  content: var(--tw-content);
-  height: 0.5rem;
-}
-
 .before\:h-\[3px\]::before {
   content: var(--tw-content);
   height: 3px;
@@ -1420,6 +1395,59 @@ video {
 .before\:w-full::before {
   content: var(--tw-content);
   width: 100%;
+}
+
+.before\:-translate-x-1\/2::before {
+  content: var(--tw-content);
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.before\:-rotate-45::before {
+  content: var(--tw-content);
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.before\:transform::before {
+  content: var(--tw-content);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes goBefore {
+  from {
+    content: var(--tw-content);
+    transform: translateX(0%);
+  }
+
+  to {
+    content: var(--tw-content);
+    transform: translateX(100%);
+  }
+}
+
+.before\:animate-goBefore::before {
+  content: var(--tw-content);
+  animation: goBefore 1s ease-in-out;
+}
+
+@keyframes goUp {
+  from {
+    content: var(--tw-content);
+    bottom: -100%;
+    left: -100%;
+  }
+
+  to {
+    content: var(--tw-content);
+    bottom: 50%;
+    left: 0%;
+  }
+}
+
+.before\:animate-goUp::before {
+  content: var(--tw-content);
+  animation: goUp 0.2s ease-in-out both;
 }
 
 .before\:bg-neutral-veryDarkBlue::before {
@@ -1433,6 +1461,16 @@ video {
   position: absolute;
 }
 
+.after\:-bottom-full::after {
+  content: var(--tw-content);
+  bottom: -100%;
+}
+
+.after\:-right-full::after {
+  content: var(--tw-content);
+  right: -100%;
+}
+
 .after\:bottom-0::after {
   content: var(--tw-content);
   bottom: 0px;
@@ -1443,19 +1481,14 @@ video {
   left: 0px;
 }
 
-.after\:inline-block::after {
-  content: var(--tw-content);
-  display: inline-block;
-}
-
-.after\:h-2::after {
-  content: var(--tw-content);
-  height: 0.5rem;
-}
-
 .after\:h-\[3px\]::after {
   content: var(--tw-content);
   height: 3px;
+}
+
+.after\:w-\[80\%\]::after {
+  content: var(--tw-content);
+  width: 80%;
 }
 
 .after\:w-full::after {
@@ -1463,9 +1496,57 @@ video {
   width: 100%;
 }
 
-.after\:w-\[80\%\]::after {
+.after\:-translate-x-1\/2::after {
   content: var(--tw-content);
-  width: 80%;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:rotate-45::after {
+  content: var(--tw-content);
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:transform::after {
+  content: var(--tw-content);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes goAfter {
+  from {
+    content: var(--tw-content);
+    transform: translateX(0%);
+  }
+
+  to {
+    content: var(--tw-content);
+    transform: translateX(100%);
+  }
+}
+
+.after\:animate-goAfter::after {
+  content: var(--tw-content);
+  animation: goAfter 1s ease-in-out 0.5s;
+}
+
+@keyframes goUp2 {
+  from {
+    content: var(--tw-content);
+    bottom: -100%;
+    right: -100%;
+  }
+
+  to {
+    content: var(--tw-content);
+    bottom: 50%;
+    right: 0%;
+  }
+}
+
+.after\:animate-goUp2::after {
+  content: var(--tw-content);
+  animation: goUp2 0.2s ease-in-out 0.1s both;
 }
 
 .after\:bg-neutral-veryDarkBlue::after {
@@ -1489,11 +1570,6 @@ video {
 }
 
 @media not all and (min-width: 1200px) {
-  .max-tl\:mx-\[5\%\] {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
   .max-tl\:mx-\[6\%\] {
     margin-left: 6%;
     margin-right: 6%;
@@ -1624,12 +1700,12 @@ video {
 }
 
 @media not all and (min-width: 640px) {
-  .max-sm\:-ml-\[5\%\] {
-    margin-left: -5%;
+  .max-sm\:-ml-\[6\%\] {
+    margin-left: -6%;
   }
 
-  .max-sm\:-mr-\[5\%\] {
-    margin-right: -5%;
+  .max-sm\:-mr-\[6\%\] {
+    margin-right: -6%;
   }
 
   .max-sm\:mb-4 {
@@ -1646,14 +1722,6 @@ video {
 
   .max-sm\:mt-28 {
     margin-top: 7rem;
-  }
-
-  .max-sm\:-ml-\[6\%\] {
-    margin-left: -6%;
-  }
-
-  .max-sm\:-mr-\[6\%\] {
-    margin-right: -6%;
   }
 
   .max-sm\:flex {

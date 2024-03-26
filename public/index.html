@@ -55,12 +55,19 @@
       </ul>
 
       <!-- Nav menu trigger bar -->
-      <div class="hidden relative max-sm:flex justify-center flex-col w-10 h-8">
+      <label
+        class="hidden relative max-sm:flex justify-center flex-col w-10 h-8 animate-goRight"
+        for="check"
+      >
+        <!-- <span
+          class="inline-block w-full h-[3.1px] bg-neutral-veryDarkBlue animate-goRight before:absolute before:top-0 before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full before:animate-goBefore after:absolute after:bottom-0 after:left-0 after:h-[3px] after:bg-neutral-veryDarkBlue after:w-[80%] after:animate-goAfter"
+        > -->
         <span
-          class="inline-block w-full h-[3.1px] bg-neutral-veryDarkBlue before:absolute before:top-0 before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full after:absolute after:bottom-0 after:left-0 after:h-[3px] after:bg-neutral-veryDarkBlue after:w-[80%]"
+          class="before:absolute before:-bottom-full before:-left-full before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full before:transform before:-rotate-45 before:-translate-x-1/2 before:animate-goUp after:absolute after:-bottom-full after:-right-full after:h-[3px] after:bg-neutral-veryDarkBlue after:w-full after:transform after:rotate-45 after:-translate-x-1/2 after:animate-goUp2"
         >
         </span>
-      </div>
+      </label>
+      <input type="checkbox" id="check" class="hidden" />
     </header>
 
     <!-- Phone nav -->
