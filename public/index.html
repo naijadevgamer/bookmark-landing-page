@@ -29,10 +29,18 @@
     <header
       class="uppercase relative text-neutral-veryDarkBlue px spaced-center h-60 max-tl:h-52 max-sm:h-40 max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:w-full z-20"
     >
+      <input type="checkbox" id="check" class="hidden opacity-0" />
       <!-- Logo -->
-      <a href="#" class="">
+      <a href="#" class="logo-header duration-1000 delay-500">
         <img
           src="./images/logo-bookmark-header.svg"
+          alt="logo"
+          class="relative"
+        />
+      </a>
+      <a href="#" class="logo-phone hidden opacity-0 duration-1000 delay-500">
+        <img
+          src="./images/logo-bookmark-phone.svg"
           alt="logo"
           class="z-30 relative"
         />
@@ -58,7 +66,6 @@
         </li>
       </ul>
 
-      <input type="checkbox" id="check" class="hidden" />
       <!-- Nav menu trigger bar -->
       <label
         class="hidden max-sm:flex relative justify-center flex-col w-10 h-8 z-30 overflow-hidden"

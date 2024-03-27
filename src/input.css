@@ -65,14 +65,15 @@
 
 /* Custom CSS */
 
-input[type="checkbox"]:checked ~ label .close {
+/* input[type="checkbox"]:checked ~ label .close {
   @apply inline-block;
-}
+} */
 
 /* input[type="checkbox"]:checked ~ label .open {
   @apply hidden;
 } */
 
+/* Menu trigger bar checked  */
 input[type="checkbox"]:checked ~ label .open .first-line {
   @apply animate-go;
 }
@@ -98,6 +99,7 @@ input[type="checkbox"]:not(:checked) ~ label .open .third-line {
   @apply animate-goBack3;
 }
 
+/* Close menu  */
 input[type="checkbox"]::before:checked ~ label .close {
   @apply top-0 left-0 delay-500;
 }
@@ -105,6 +107,15 @@ input[type="checkbox"]::after:checked ~ label .close {
   @apply bottom-0 right-0 delay-500;
 }
 
+/* Display menu dropdown */
 input[type="checkbox"]:checked ~ .phone-nav {
   @apply max-sm:block h-[100vh];
+}
+
+/* Logo functionality  */
+input[type="checkbox"]:checked ~ .logo-header {
+  @apply hidden opacity-0 delay-500;
+}
+input[type="checkbox"]:checked ~ .logo-phone {
+  @apply block opacity-100 delay-500;
 }
