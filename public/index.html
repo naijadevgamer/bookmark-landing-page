@@ -61,7 +61,7 @@
       <input type="checkbox" id="check" class="hidden" />
       <!-- Nav menu trigger bar -->
       <label
-        class="flex relative justify-center flex-col w-10 h-8 z-30"
+        class="hidden max-sm:flex relative justify-center flex-col w-10 h-8 z-30"
         for="check"
       >
         <!-- Bar: menu trigger -->
@@ -91,9 +91,11 @@
         class="phone-nav hidden fixed top-0 left-0 z-20 max-sm:block bg-neutral-veryDarkBlue/90 h-[0vh] w-[100vw] overflow-hidden duration-300"
       >
         <!-- Container -->
-        <div class="flex flex-col justify-between mx-[6%] mb-20">
+        <div
+          class="flex flex-col justify-between px-[6%] pb-20 pt-40 h-full bg-red-800"
+        >
           <ul
-            class="text-18 font-medium text-white tracking-widest uppercase mb-auto mt-40"
+            class="text-18 font-medium text-white tracking-widest uppercase mb-auto"
           >
             <li
               class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
@@ -117,7 +119,7 @@
             </li>
           </ul>
 
-          <ul class="flex justify-center items-center gap-20 max-tp:gap-16">
+          <ul class="flex justify-center items-center gap-16">
             <li>
               <svg class="h-[2.4rem] icon-links">
                 <use xlink:href="images/sprite.svg#icon-facebook"></use>
