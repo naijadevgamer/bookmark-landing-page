@@ -88,46 +88,48 @@
 
       <!-- Phone nav -->
       <div
-        class="phone-nav hidden fixed top-0 left-0 z-20 max-sm:flex bg-neutral-veryDarkBlue/90 h-[0%] w-[100vw] flex-col overflow-hidden duration-300"
+        class="phone-nav hidden fixed top-0 left-0 z-20 max-sm:block bg-neutral-veryDarkBlue/90 h-[0vh] w-[100vw] overflow-hidden duration-300"
       >
-        <div></div>
-        <ul
-          class="text-18 font-medium text-white tracking-widest uppercase mb-auto mt-40"
-        >
-          <li
-            class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+        <!-- Container -->
+        <div class="flex flex-col justify-between mx-[6%] mb-20">
+          <ul
+            class="text-18 font-medium text-white tracking-widest uppercase mb-auto mt-40"
           >
-            <a href="#">Features</a>
-          </li>
-          <li
-            class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
-          >
-            <a href="#">Pricing</a>
-          </li>
-          <li
-            class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
-          >
-            <a href="#">Contact</a>
-          </li>
-          <li class="py-10 border-t border-slate-300/70">
-            <button class="btn btn--phone uppercase">
-              <a href="#">Login</a>
-            </button>
-          </li>
-        </ul>
+            <li
+              class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+            >
+              <a href="#">Features</a>
+            </li>
+            <li
+              class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+            >
+              <a href="#">Pricing</a>
+            </li>
+            <li
+              class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+            >
+              <a href="#">Contact</a>
+            </li>
+            <li class="py-10 border-t border-slate-300/70">
+              <button class="btn btn--phone uppercase">
+                <a href="#">Login</a>
+              </button>
+            </li>
+          </ul>
 
-        <ul class="flex justify-center items-center gap-20 max-tp:gap-16">
-          <li>
-            <svg class="h-[2.4rem] icon-links">
-              <use xlink:href="images/sprite.svg#icon-facebook"></use>
-            </svg>
-          </li>
-          <li>
-            <svg class="h-[2rem] icon-links">
-              <use xlink:href="images/sprite.svg#icon-twitter"></use>
-            </svg>
-          </li>
-        </ul>
+          <ul class="flex justify-center items-center gap-20 max-tp:gap-16">
+            <li>
+              <svg class="h-[2.4rem] icon-links">
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </li>
+            <li>
+              <svg class="h-[2rem] icon-links">
+                <use xlink:href="images/sprite.svg#icon-twitter"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 

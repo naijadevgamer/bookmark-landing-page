@@ -74,5 +74,5 @@ input[type="checkbox"]:checked ~ label .open {
 }
 
 input[type="checkbox"]:checked ~ .phone-nav {
-  @apply max-sm:flex h-[100vh] px-[6%] pb-20;
+  @apply max-sm:block h-[100vh];
 }
