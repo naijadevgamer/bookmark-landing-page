@@ -6,26 +6,20 @@ module.exports = {
       keyframes: {
         go: {
           from: { transform: "translateX(0%)" },
-          to: { transform: "translateX(100%)" },
+          to: { transform: "translateX(105%)" },
         },
-        goUp: {
-          from: { bottom: "-100%", left: "-100%" },
-          to: { bottom: "50%", left: "0%" },
-        },
-        goUp2: {
-          from: {
-            bottom: "-100%",
-            right: "-100%",
-          },
-          to: { bottom: "50%", right: "0%" },
+        goBack: {
+          from: { transform: "translateX(105%)" },
+          to: { transform: "translateX(0%)" },
         },
       },
       animation: {
-        go: "go 0.3s ease-in-out 0.1s both",
-        goBefore: "go 0.3s ease-in-out both",
-        goAfter: "go 0.3s ease-in-out 0.2s both",
-        goUp: "goUp 0.3s ease-in-out both",
-        goUp2: "goUp2 0.3s ease-in-out 0.15s both",
+        go: "go 0.3s ease-in-out both",
+        goBack: "goBack 0.3s ease-in-out 0.6s both",
+        go2: "go 0.3s ease-in-out 0.05s both",
+        goBack2: "goBack 0.3s ease-in-out 0.65s both",
+        go3: "go 0.3s ease-in-out 0.15s both",
+        goBack3: "goBack 0.3s ease-in-out 0.75s both",
       },
       colors: {
         primary: {

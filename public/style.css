@@ -823,6 +823,10 @@ video {
   max-width: 55rem;
 }
 
+.origin-center {
+  transform-origin: center;
+}
+
 .-translate-y-12 {
   --tw-translate-y: -3rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1127,12 +1131,20 @@ video {
   outline-offset: 2px;
 }
 
+.delay-300 {
+  transition-delay: 300ms;
+}
+
 .duration-100 {
   transition-duration: 100ms;
 }
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn {
@@ -1388,9 +1400,18 @@ input[type="checkbox"]:checked ~ label .close {
   @apply hidden;
 } */
 
+@keyframes go {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(105%);
+  }
+}
+
 input[type="checkbox"]:checked ~ label .open .first-line {
-  --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  animation: go 0.3s ease-in-out both;
 }
 
 @keyframes go {
@@ -1399,12 +1420,12 @@ input[type="checkbox"]:checked ~ label .open .first-line {
   }
 
   to {
-    transform: translateX(100%);
+    transform: translateX(105%);
   }
 }
 
 input[type="checkbox"]:checked ~ label .open .sec-line {
-  animation: go 0.3s ease-in-out 0.1s both;
+  animation: go 0.3s ease-in-out 0.05s both;
 }
 
 @keyframes go {
@@ -1413,49 +1434,72 @@ input[type="checkbox"]:checked ~ label .open .sec-line {
   }
 
   to {
-    transform: translateX(100%);
+    transform: translateX(105%);
   }
 }
 
 input[type="checkbox"]:checked ~ label .open .third-line {
-  animation: go 0.3s ease-in-out 0.2s both;
+  animation: go 0.3s ease-in-out 0.15s both;
 }
 
-@keyframes goUp {
+/* Not checked  */
+
+@keyframes goBack {
   from {
-    bottom: -100%;
-    left: -100%;
+    transform: translateX(105%);
   }
 
   to {
-    bottom: 50%;
-    left: 0%;
+    transform: translateX(0%);
   }
+}
+
+input[type="checkbox"]:not(:checked) ~ label .open .first-line {
+  animation: goBack 0.3s ease-in-out 0.6s both;
+}
+
+@keyframes goBack {
+  from {
+    transform: translateX(105%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+input[type="checkbox"]:not(:checked) ~ label .open .sec-line {
+  animation: goBack 0.3s ease-in-out 0.65s both;
+}
+
+@keyframes goBack {
+  from {
+    transform: translateX(105%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+input[type="checkbox"]:not(:checked) ~ label .open .third-line {
+  animation: goBack 0.3s ease-in-out 0.75s both;
 }
 
 input[type="checkbox"]:checked ~ label .close::before {
-  animation: goUp 0.3s ease-in-out both;
-}
-
-@keyframes goUp2 {
-  from {
-    bottom: -100%;
-    right: -100%;
-  }
-
-  to {
-    bottom: 50%;
-    right: 0%;
-  }
+  top: 0px;
+  left: 0px;
+  transition-delay: 500ms;
 }
 
 input[type="checkbox"]:checked ~ label .close::after {
-  animation: goUp2 0.3s ease-in-out 0.15s both;
+  bottom: 0px;
+  right: 0px;
+  transition-delay: 500ms;
 }
 
 input[type="checkbox"]:checked ~ .phone-nav {
   height: 100vh;
-  transition-delay: 500ms;
 }
 
 @media not all and (min-width: 640px) {
@@ -1469,14 +1513,14 @@ input[type="checkbox"]:checked ~ .phone-nav {
   position: absolute;
 }
 
-.before\:-bottom-full::before {
+.before\:-top-full::before {
   content: var(--tw-content);
-  bottom: -100%;
+  top: -100%;
 }
 
-.before\:-left-full::before {
+.before\:left-full::before {
   content: var(--tw-content);
-  left: -100%;
+  left: 100%;
 }
 
 .before\:inline-block::before {
@@ -1500,6 +1544,12 @@ input[type="checkbox"]:checked ~ .phone-nav {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.before\:translate-y-\[7px\]::before {
+  content: var(--tw-content);
+  --tw-translate-y: 7px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .before\:-rotate-45::before {
   content: var(--tw-content);
   --tw-rotate: -45deg;
@@ -1517,19 +1567,24 @@ input[type="checkbox"]:checked ~ .phone-nav {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.before\:duration-300::before {
+  content: var(--tw-content);
+  transition-duration: 300ms;
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
 }
 
-.after\:-bottom-full::after {
+.after\:bottom-full::after {
   content: var(--tw-content);
-  bottom: -100%;
+  bottom: 100%;
 }
 
-.after\:-right-full::after {
+.after\:right-full::after {
   content: var(--tw-content);
-  right: -100%;
+  right: 100%;
 }
 
 .after\:h-\[3px\]::after {
@@ -1548,6 +1603,12 @@ input[type="checkbox"]:checked ~ .phone-nav {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.after\:-translate-y-\[7px\]::after {
+  content: var(--tw-content);
+  --tw-translate-y: -7px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .after\:rotate-45::after {
   content: var(--tw-content);
   --tw-rotate: 45deg;
@@ -1563,6 +1624,11 @@ input[type="checkbox"]:checked ~ .phone-nav {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.after\:duration-300::after {
+  content: var(--tw-content);
+  transition-duration: 300ms;
 }
 
 .hover\:text-primary-softRed:hover {

@@ -74,24 +74,37 @@ input[type="checkbox"]:checked ~ label .close {
 } */
 
 input[type="checkbox"]:checked ~ label .open .first-line {
-  @apply transform translate-x-full;
-}
-
-input[type="checkbox"]:checked ~ label .open .sec-line {
   @apply animate-go;
 }
 
+input[type="checkbox"]:checked ~ label .open .sec-line {
+  @apply animate-go2;
+}
+
 input[type="checkbox"]:checked ~ label .open .third-line {
-  @apply animate-goAfter;
+  @apply animate-go3;
+}
+
+/* Not checked  */
+input[type="checkbox"]:not(:checked) ~ label .open .first-line {
+  @apply animate-goBack;
+}
+
+input[type="checkbox"]:not(:checked) ~ label .open .sec-line {
+  @apply animate-goBack2;
+}
+
+input[type="checkbox"]:not(:checked) ~ label .open .third-line {
+  @apply animate-goBack3;
 }
 
 input[type="checkbox"]::before:checked ~ label .close {
-  @apply animate-goUp;
+  @apply top-0 left-0 delay-500;
 }
 input[type="checkbox"]::after:checked ~ label .close {
-  @apply animate-goUp2;
+  @apply bottom-0 right-0 delay-500;
 }
 
 input[type="checkbox"]:checked ~ .phone-nav {
-  @apply max-sm:block h-[100vh] delay-500;
+  @apply max-sm:block h-[100vh];
 }
