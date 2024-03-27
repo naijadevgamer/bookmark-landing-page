@@ -62,3 +62,17 @@
 .feature-tab-btn {
   @apply px-14 py-8 font-medium relative hover:text-primary-softRed duration-100 max-tp:px-10  max-sm:px-4 max-sp:px-1;
 }
+
+/* Custom CSS */
+
+input[type="checkbox"]:checked ~ label .close {
+  @apply inline-block;
+}
+
+input[type="checkbox"]:checked ~ label .open {
+  @apply hidden;
+}
+
+input[type="checkbox"]:checked ~ .phone-nav {
+  @apply max-sm:flex h-[100vh] px-[6%] pb-20;
+}

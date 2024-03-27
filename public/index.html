@@ -27,11 +27,15 @@
   <body class="font-rubik text-18/[1.7] text-neutral-grayishBlue">
     <!-- Nav Header -->
     <header
-      class="uppercase relative text-neutral-veryDarkBlue px spaced-center h-60 max-tl:h-52 max-sm:h-48 z-30"
+      class="uppercase relative text-neutral-veryDarkBlue px spaced-center h-60 max-tl:h-52 max-sm:h-40 max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:w-full z-20"
     >
       <!-- Logo -->
-      <a href="#">
-        <img src="./images/logo-bookmark-header.svg" alt="logo" />
+      <a href="#" class="">
+        <img
+          src="./images/logo-bookmark-header.svg"
+          alt="logo"
+          class="z-30 relative"
+        />
       </a>
 
       <!-- Nav -->
@@ -54,76 +58,82 @@
         </li>
       </ul>
 
+      <input type="checkbox" id="check" class="hidden" />
       <!-- Nav menu trigger bar -->
       <label
-        class="hidden relative max-sm:flex justify-center flex-col w-10 h-8 animate-goRight"
+        class="flex relative justify-center flex-col w-10 h-8 z-30"
         for="check"
       >
-        <!-- <span
-          class="inline-block w-full h-[3.1px] bg-neutral-veryDarkBlue animate-goRight before:absolute before:top-0 before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full before:animate-goBefore after:absolute after:bottom-0 after:left-0 after:h-[3px] after:bg-neutral-veryDarkBlue after:w-[80%] after:animate-goAfter"
-        > -->
+        <!-- Bar: menu trigger -->
+        <div
+          class="open flex relative justify-center flex-col w-full h-full overflow-hidden"
+        >
+          <span
+            class="absolute top-0 h-[3px] inline-block bg-neutral-veryDarkBlue w-full animate-goBefore"
+          ></span>
+          <span
+            class="inline-block w-full h-[3.1px] bg-neutral-veryDarkBlue animate-go"
+          ></span>
+          <span
+            class="absolute bottom-0 left-0 h-[3px] bg-neutral-veryDarkBlue w-full animate-goAfter"
+          ></span>
+        </div>
+
+        <!-- Close menu trigger -->
         <span
-          class="before:absolute before:-bottom-full before:-left-full before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full before:transform before:-rotate-45 before:-translate-x-1/2 before:animate-goUp after:absolute after:-bottom-full after:-right-full after:h-[3px] after:bg-neutral-veryDarkBlue after:w-full after:transform after:rotate-45 after:-translate-x-1/2 after:animate-goUp2"
+          class="close hidden before:absolute before:-bottom-full before:-left-full before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full before:transform before:-rotate-45 before:-translate-x-1/2 before:animate-goUp after:absolute after:-bottom-full after:-right-full after:h-[3px] after:bg-neutral-veryDarkBlue after:w-full after:transform after:rotate-45 after:-translate-x-1/2 after:animate-goUp2 overflow-hidden"
         >
         </span>
       </label>
-      <input type="checkbox" id="check" class="hidden" />
-    </header>
 
-    <!-- Phone nav -->
-    <div
-      class="hidden fixed top-0 left-0 z-20 max-sm:hidden bg-neutral-veryDarkBlue/90 h-[100vh] w-[100vw] px-[6%] pb-20 flex-col"
-    >
-      <header class="spaced-center h-40">
-        <!-- Logo -->
-        <a href="#">
-          <img src="./images/logo-bookmark-phone.svg" alt="logo" />
-        </a>
-        <img src="./images/icon-close.svg" alt="" />
-      </header>
-
-      <ul
-        class="text-18 font-medium text-white tracking-widest uppercase mb-auto"
+      <!-- Phone nav -->
+      <div
+        class="phone-nav hidden fixed top-0 left-0 z-20 max-sm:flex bg-neutral-veryDarkBlue/90 h-[0%] w-[100vw] flex-col overflow-hidden duration-300"
       >
-        <li
-          class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+        <div></div>
+        <ul
+          class="text-18 font-medium text-white tracking-widest uppercase mb-auto mt-40"
         >
-          <a href="#">Features</a>
-        </li>
-        <li
-          class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
-        >
-          <a href="#">Pricing</a>
-        </li>
-        <li
-          class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
-        >
-          <a href="#">Contact</a>
-        </li>
-        <li class="py-10 border-t border-slate-300/70">
-          <button class="btn btn--phone uppercase">
-            <a href="#">Login</a>
-          </button>
-        </li>
-      </ul>
+          <li
+            class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+          >
+            <a href="#">Features</a>
+          </li>
+          <li
+            class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+          >
+            <a href="#">Pricing</a>
+          </li>
+          <li
+            class="hover:text-primary-softRed duration-100 py-10 border-t border-slate-300/70 text-center"
+          >
+            <a href="#">Contact</a>
+          </li>
+          <li class="py-10 border-t border-slate-300/70">
+            <button class="btn btn--phone uppercase">
+              <a href="#">Login</a>
+            </button>
+          </li>
+        </ul>
 
-      <ul class="flex justify-center items-center gap-20 max-tp:gap-16">
-        <li>
-          <svg class="h-[2.4rem] icon-links">
-            <use xlink:href="images/sprite.svg#icon-facebook"></use>
-          </svg>
-        </li>
-        <li>
-          <svg class="h-[2rem] icon-links">
-            <use xlink:href="images/sprite.svg#icon-twitter"></use>
-          </svg>
-        </li>
-      </ul>
-    </div>
+        <ul class="flex justify-center items-center gap-20 max-tp:gap-16">
+          <li>
+            <svg class="h-[2.4rem] icon-links">
+              <use xlink:href="images/sprite.svg#icon-facebook"></use>
+            </svg>
+          </li>
+          <li>
+            <svg class="h-[2rem] icon-links">
+              <use xlink:href="images/sprite.svg#icon-twitter"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </header>
 
     <!-- Section 1: Heading Section -->
     <section
-      class="px py-40 max-tp:py-20 spaced-center max-tp:flex-col-reverse"
+      class="px py-40 max-tp:py-20 spaced-center max-tp:flex-col-reverse max-sm:pt-60"
     >
       <!-- Heading Sub-Section -->
       <div class="w-[45%] max-tp:w-[100%] max-tp:text-center text-width-port">
