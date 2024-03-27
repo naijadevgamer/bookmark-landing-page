@@ -23,9 +23,9 @@ module.exports = {
       animation: {
         go: "go 0.3s ease-in-out 0.1s both",
         goBefore: "go 0.3s ease-in-out both",
-        goAfter: "go 0.3s ease-in-out 0.15s both",
-        goUp: "goUp 0.2s ease-in-out both",
-        goUp2: "goUp2 0.2s ease-in-out 0.1s both",
+        goAfter: "go 0.3s ease-in-out 0.2s both",
+        goUp: "goUp 0.3s ease-in-out both",
+        goUp2: "goUp2 0.3s ease-in-out 0.15s both",
       },
       colors: {
         primary: {

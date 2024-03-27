@@ -61,27 +61,25 @@
       <input type="checkbox" id="check" class="hidden" />
       <!-- Nav menu trigger bar -->
       <label
-        class="hidden max-sm:flex relative justify-center flex-col w-10 h-8 z-30"
+        class="hidden max-sm:flex relative justify-center flex-col w-10 h-8 z-30 overflow-hidden"
         for="check"
       >
         <!-- Bar: menu trigger -->
-        <div
-          class="open flex relative justify-center flex-col w-full h-full overflow-hidden"
-        >
+        <div class="open flex relative justify-center flex-col w-full h-full">
           <span
-            class="absolute top-0 h-[3px] inline-block bg-neutral-veryDarkBlue w-full animate-goBefore"
+            class="first-line absolute top-0 h-[3px] inline-block bg-neutral-veryDarkBlue w-full duration-300"
           ></span>
           <span
-            class="inline-block w-full h-[3.1px] bg-neutral-veryDarkBlue animate-go"
+            class="sec-line inline-block w-full h-[3.1px] bg-neutral-veryDarkBlue"
           ></span>
           <span
-            class="absolute bottom-0 left-0 h-[3px] bg-neutral-veryDarkBlue w-full animate-goAfter"
+            class="third-line absolute bottom-0 left-0 h-[3px] bg-neutral-veryDarkBlue w-full"
           ></span>
         </div>
 
         <!-- Close menu trigger -->
         <span
-          class="close hidden before:absolute before:-bottom-full before:-left-full before:h-[3px] before:inline-block before:bg-neutral-veryDarkBlue before:w-full before:transform before:-rotate-45 before:-translate-x-1/2 before:animate-goUp after:absolute after:-bottom-full after:-right-full after:h-[3px] after:bg-neutral-veryDarkBlue after:w-full after:transform after:rotate-45 after:-translate-x-1/2 after:animate-goUp2 overflow-hidden"
+          class="close block before:absolute before:-bottom-full before:-left-full before:h-[3px] before:inline-block before:bg-white before:w-full before:transform before:-rotate-45 before:-translate-x-1/2 after:absolute after:-bottom-full after:-right-full after:h-[3px] after:bg-white after:w-full after:transform after:rotate-45 after:-translate-x-1/2"
         >
         </span>
       </label>
@@ -91,9 +89,7 @@
         class="phone-nav hidden fixed top-0 left-0 z-20 max-sm:block bg-neutral-veryDarkBlue/90 h-[0vh] w-[100vw] overflow-hidden duration-300"
       >
         <!-- Container -->
-        <div
-          class="flex flex-col justify-between px-[6%] pb-20 pt-40 h-full bg-red-800"
-        >
+        <div class="flex flex-col justify-between px-[6%] pb-20 pt-40 h-full">
           <ul
             class="text-18 font-medium text-white tracking-widest uppercase mb-auto"
           >

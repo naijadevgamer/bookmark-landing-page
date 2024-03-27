@@ -69,10 +69,29 @@ input[type="checkbox"]:checked ~ label .close {
   @apply inline-block;
 }
 
-input[type="checkbox"]:checked ~ label .open {
+/* input[type="checkbox"]:checked ~ label .open {
   @apply hidden;
+} */
+
+input[type="checkbox"]:checked ~ label .open .first-line {
+  @apply transform translate-x-full;
+}
+
+input[type="checkbox"]:checked ~ label .open .sec-line {
+  @apply animate-go;
+}
+
+input[type="checkbox"]:checked ~ label .open .third-line {
+  @apply animate-goAfter;
+}
+
+input[type="checkbox"]::before:checked ~ label .close {
+  @apply animate-goUp;
+}
+input[type="checkbox"]::after:checked ~ label .close {
+  @apply animate-goUp2;
 }
 
 input[type="checkbox"]:checked ~ .phone-nav {
-  @apply max-sm:block h-[100vh];
+  @apply max-sm:block h-[100vh] delay-500;
 }
