@@ -113,9 +113,10 @@ input[type="checkbox"]:checked ~ .phone-nav {
 }
 
 /* Logo functionality  */
-input[type="checkbox"]:checked ~ .logo-header {
-  @apply hidden opacity-0 delay-500;
+input[type="checkbox"]:checked ~ .wrap .logo-header {
+  @apply opacity-0 delay-0;
 }
-input[type="checkbox"]:checked ~ .logo-phone {
-  @apply block opacity-100 delay-500;
+
+input[type="checkbox"]:checked ~ .wrap .logo-phone {
+  @apply opacity-100 delay-300;
 }

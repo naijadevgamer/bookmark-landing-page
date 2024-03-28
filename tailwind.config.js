@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        // Menu bar
         go: {
           from: { transform: "translateX(0%)" },
           to: { transform: "translateX(105%)" },
@@ -12,14 +13,20 @@ module.exports = {
           from: { transform: "translateX(105%)" },
           to: { transform: "translateX(0%)" },
         },
+        // showLogo: {
+        //   "0%": { opacity: "0", display: "block" },
+        //   "100%": { opacity: "1", display: "block" },
+        // },
       },
       animation: {
+        // Menu bar animations
         go: "go 0.3s ease-in-out both",
         goBack: "goBack 0.3s ease-in-out 0.6s both",
         go2: "go 0.3s ease-in-out 0.05s both",
         goBack2: "goBack 0.3s ease-in-out 0.65s both",
         go3: "go 0.3s ease-in-out 0.15s both",
         goBack3: "goBack 0.3s ease-in-out 0.75s both",
+        showLogo: "showLogo 0.3s ease-in-out 0.3s both",
       },
       colors: {
         primary: {
