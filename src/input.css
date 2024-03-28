@@ -65,14 +65,6 @@
 
 /* Custom CSS */
 
-/* input[type="checkbox"]:checked ~ label .close {
-  @apply inline-block;
-} */
-
-/* input[type="checkbox"]:checked ~ label .open {
-  @apply hidden;
-} */
-
 /* Menu trigger bar checked  */
 input[type="checkbox"]:checked ~ label .open .first-line {
   @apply animate-go;
@@ -101,22 +93,26 @@ input[type="checkbox"]:not(:checked) ~ label .open .third-line {
 
 /* Close menu  */
 input[type="checkbox"]::before:checked ~ label .close {
-  @apply top-0 left-0 delay-500;
+  @apply top-0 left-0 delay-700;
 }
 input[type="checkbox"]::after:checked ~ label .close {
-  @apply bottom-0 right-0 delay-500;
+  @apply bottom-0 right-0 delay-700;
 }
 
 /* Display menu dropdown */
 input[type="checkbox"]:checked ~ .phone-nav {
-  @apply max-sm:block h-[100vh];
+  @apply max-sm:block h-[100vh] delay-[0.4s];
 }
 
 /* Logo functionality  */
 input[type="checkbox"]:checked ~ .wrap .logo-header {
   @apply opacity-0 delay-0;
 }
-
 input[type="checkbox"]:checked ~ .wrap .logo-phone {
-  @apply opacity-100 delay-300;
+  @apply opacity-100 delay-700;
+}
+
+/* Transition timing function  */
+.ease-custom {
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
