@@ -710,6 +710,10 @@ video {
   display: none;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-2 {
   height: 0.5rem;
 }
@@ -1413,7 +1417,7 @@ video {
 
 /* Custom CSS */
 
-/* Menu trigger bar checked  */
+/*=============== Menu trigger bar checked =============== */
 
 @keyframes go {
   from {
@@ -1425,7 +1429,7 @@ video {
   }
 }
 
-input[type="checkbox"]:checked ~ label .open .first-line {
+#header-checkbox:checked ~ label .open .first-line {
   animation: go 0.3s cubic-bezier(1, 0, 0, 1) both;
 }
 
@@ -1439,7 +1443,7 @@ input[type="checkbox"]:checked ~ label .open .first-line {
   }
 }
 
-input[type="checkbox"]:checked ~ label .open .sec-line {
+#header-checkbox:checked ~ label .open .sec-line {
   animation: go 0.3s cubic-bezier(1, 0, 0, 1) 0.05s both;
 }
 
@@ -1453,7 +1457,7 @@ input[type="checkbox"]:checked ~ label .open .sec-line {
   }
 }
 
-input[type="checkbox"]:checked ~ label .open .third-line {
+#header-checkbox:checked ~ label .open .third-line {
   animation: go 0.3s cubic-bezier(1, 0, 0, 1) 0.1s both;
 }
 
@@ -1469,7 +1473,7 @@ input[type="checkbox"]:checked ~ label .open .third-line {
   }
 }
 
-input[type="checkbox"]:not(:checked) ~ label .open .first-line {
+#header-checkbox:not(:checked) ~ label .open .first-line {
   animation: goBack 0.3s cubic-bezier(1, 0, 0, 1) 0.6s both;
 }
 
@@ -1483,7 +1487,7 @@ input[type="checkbox"]:not(:checked) ~ label .open .first-line {
   }
 }
 
-input[type="checkbox"]:not(:checked) ~ label .open .sec-line {
+#header-checkbox:not(:checked) ~ label .open .sec-line {
   animation: goBack 0.3s cubic-bezier(1, 0, 0, 1) 0.65s both;
 }
 
@@ -1497,19 +1501,19 @@ input[type="checkbox"]:not(:checked) ~ label .open .sec-line {
   }
 }
 
-input[type="checkbox"]:not(:checked) ~ label .open .third-line {
+#header-checkbox:not(:checked) ~ label .open .third-line {
   animation: goBack 0.3s cubic-bezier(1, 0, 0, 1) 0.7s both;
 }
 
 /* Close menu  */
 
-input[type="checkbox"]:checked ~ label .close::before {
+#header-checkbox:checked ~ label .close::before {
   top: 0px;
   left: 0px;
   transition-delay: 700ms;
 }
 
-input[type="checkbox"]:checked ~ label .close::after {
+#header-checkbox:checked ~ label .close::after {
   bottom: 0px;
   right: 0px;
   transition-delay: 700ms;
@@ -1517,25 +1521,25 @@ input[type="checkbox"]:checked ~ label .close::after {
 
 /* Display menu dropdown */
 
-input[type="checkbox"]:checked ~ .phone-nav {
+#header-checkbox:checked ~ .phone-nav {
   height: 100vh;
   transition-delay: 0.4s;
 }
 
 @media not all and (min-width: 640px) {
-  input[type="checkbox"]:checked ~ .phone-nav {
+  #header-checkbox:checked ~ .phone-nav {
     display: block;
   }
 }
 
 /* Logo functionality  */
 
-input[type="checkbox"]:checked ~ .wrap .logo-header {
+#header-checkbox:checked ~ .wrap .logo-header {
   opacity: 0;
   transition-delay: 0s;
 }
 
-input[type="checkbox"]:checked ~ .wrap .logo-phone {
+#header-checkbox:checked ~ .wrap .logo-phone {
   opacity: 1;
   transition-delay: 700ms;
 }
@@ -1544,6 +1548,18 @@ input[type="checkbox"]:checked ~ .wrap .logo-phone {
 
 .ease-custom {
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*=============== Question dropdown functionality =============== */
+
+#question-checkbox:checked + label svg {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+#question-checkbox:checked ~ .answer {
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .before\:absolute::before {

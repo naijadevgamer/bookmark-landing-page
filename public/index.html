@@ -29,7 +29,7 @@
     <header
       class="uppercase relative text-neutral-veryDarkBlue px spaced-center h-60 max-tl:h-52 max-sm:h-40 max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:w-full z-20"
     >
-      <input type="checkbox" id="check" class="hidden" />
+      <input type="checkbox" id="header-checkbox" class="hidden" />
       <!-- Logo -->
       <div class="wrap relative w-[80%] h-full">
         <a
@@ -69,7 +69,7 @@
       <!-- Nav menu trigger bar -->
       <label
         class="hidden max-sm:flex relative justify-center flex-col w-10 h-8 z-30 overflow-hidden"
-        for="check"
+        for="header-checkbox"
       >
         <!-- Bar: menu trigger -->
         <div class="open flex relative justify-between flex-col w-full h-full">
@@ -403,24 +403,30 @@
 
         <!-- Question 2 -->
         <div class="border-b-2 border-inherit overflow-hidden">
-          <div class="cursor-pointer group spaced-center py-8 mr-6">
+          <input type="checkbox" id="question-checkbox" class="hidden" />
+          <label
+            for="question-checkbox"
+            class="cursor-pointer group spaced-center py-8 mr-6"
+          >
             <div
               class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               How can I request a new browser?
             </div>
-            <svg class="w-[1.8rem] h-[1.2rem]">
+            <svg class="w-[1.8rem] h-[1.2rem] duration-300">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
+          </label>
+          <div class="answer h-0 duration-300">
+            <p class="py-8">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdie tVivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
           </div>
-          <p class="py-8">
-            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-            ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
-            aliquet convallis ultricies. Mauris augue massa, ultricies non
-            ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis
-            ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
-            imperdiet.
-          </p>
         </div>
 
         <!-- Question 3 -->

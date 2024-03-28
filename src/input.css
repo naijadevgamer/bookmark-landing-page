@@ -65,54 +65,62 @@
 
 /* Custom CSS */
 
-/* Menu trigger bar checked  */
-input[type="checkbox"]:checked ~ label .open .first-line {
+/*=============== Menu trigger bar checked =============== */
+#header-checkbox:checked ~ label .open .first-line {
   @apply animate-go;
 }
 
-input[type="checkbox"]:checked ~ label .open .sec-line {
+#header-checkbox:checked ~ label .open .sec-line {
   @apply animate-go2;
 }
 
-input[type="checkbox"]:checked ~ label .open .third-line {
+#header-checkbox:checked ~ label .open .third-line {
   @apply animate-go3;
 }
 
 /* Not checked  */
-input[type="checkbox"]:not(:checked) ~ label .open .first-line {
+#header-checkbox:not(:checked) ~ label .open .first-line {
   @apply animate-goBack;
 }
 
-input[type="checkbox"]:not(:checked) ~ label .open .sec-line {
+#header-checkbox:not(:checked) ~ label .open .sec-line {
   @apply animate-goBack2;
 }
 
-input[type="checkbox"]:not(:checked) ~ label .open .third-line {
+#header-checkbox:not(:checked) ~ label .open .third-line {
   @apply animate-goBack3;
 }
 
 /* Close menu  */
-input[type="checkbox"]::before:checked ~ label .close {
+#header-checkbox::before:checked ~ label .close {
   @apply top-0 left-0 delay-700;
 }
-input[type="checkbox"]::after:checked ~ label .close {
+#header-checkbox::after:checked ~ label .close {
   @apply bottom-0 right-0 delay-700;
 }
 
 /* Display menu dropdown */
-input[type="checkbox"]:checked ~ .phone-nav {
+#header-checkbox:checked ~ .phone-nav {
   @apply max-sm:block h-[100vh] delay-[0.4s];
 }
 
 /* Logo functionality  */
-input[type="checkbox"]:checked ~ .wrap .logo-header {
+#header-checkbox:checked ~ .wrap .logo-header {
   @apply opacity-0 delay-0;
 }
-input[type="checkbox"]:checked ~ .wrap .logo-phone {
+#header-checkbox:checked ~ .wrap .logo-phone {
   @apply opacity-100 delay-700;
 }
 
 /* Transition timing function  */
 .ease-custom {
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*=============== Question dropdown functionality =============== */
+#question-checkbox:checked + label svg {
+  @apply rotate-180;
+}
+#question-checkbox:checked ~ .answer {
+  @apply h-max;
 }
