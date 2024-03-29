@@ -706,12 +706,12 @@ video {
   display: flex;
 }
 
-.hidden {
-  display: none;
+.grid {
+  display: grid;
 }
 
-.h-0 {
-  height: 0px;
+.hidden {
+  display: none;
 }
 
 .h-2 {
@@ -861,6 +861,14 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.grid-rows-\[0fr\] {
+  grid-template-rows: 0fr;
+}
+
+.grid-rows-\[0\] {
+  grid-template-rows: 0;
 }
 
 .flex-col {
@@ -1558,8 +1566,7 @@ video {
 }
 
 #question-checkbox:checked ~ .answer {
-  height: -moz-max-content;
-  height: max-content;
+  grid-template-rows: 1fr;
 }
 
 .before\:absolute::before {

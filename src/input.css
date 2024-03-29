@@ -122,5 +122,5 @@
   @apply rotate-180;
 }
 #question-checkbox:checked ~ .answer {
-  @apply h-max;
+  @apply grid-rows-[1fr];
 }

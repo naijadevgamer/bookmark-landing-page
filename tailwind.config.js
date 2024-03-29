@@ -13,6 +13,11 @@ module.exports = {
           from: { transform: "translateX(105%)" },
           to: { transform: "translateX(0%)" },
         },
+        // FAQ Dropdown
+        dropDown: {
+          "0%": { height: "0" },
+          "100%": { height: "50px" },
+        },
       },
       animation: {
         // Menu bar animations
@@ -22,6 +27,8 @@ module.exports = {
         goBack2: "goBack 0.3s cubic-bezier(1, 0, 0, 1) 0.65s both",
         go3: "go 0.3s cubic-bezier(1, 0, 0, 1) 0.1s both",
         goBack3: "goBack 0.3s cubic-bezier(1, 0, 0, 1) 0.7s both",
+        dropDown:
+          "dropDown 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards",
       },
       colors: {
         primary: {
