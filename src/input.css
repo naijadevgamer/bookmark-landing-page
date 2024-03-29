@@ -118,9 +118,15 @@
 }
 
 /*=============== Question dropdown functionality =============== */
-#question-checkbox:checked + label svg {
-  @apply rotate-180;
+#question-checkbox1:checked + label svg,
+#question-checkbox2:checked + label svg,
+#question-checkbox3:checked + label svg,
+#question-checkbox4:checked + label svg {
+  @apply rotate-180 stroke-primary-softRed;
 }
-#question-checkbox:checked ~ .answer {
+#question-checkbox1:checked ~ .answer,
+#question-checkbox2:checked ~ .answer,
+#question-checkbox3:checked ~ .answer,
+#question-checkbox4:checked ~ .answer {
   @apply grid-rows-[1fr];
 }

@@ -384,28 +384,36 @@
       >
         <!-- Question 1 -->
         <div class="border-b-2 border-inherit">
-          <div class="cursor-pointer group spaced-center py-8 mr-6">
+          <input type="checkbox" id="question-checkbox1" class="hidden" />
+          <label
+            for="question-checkbox1"
+            class="cursor-pointer group spaced-center py-8 mr-6"
+          >
             <div
               class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               What is Bookmark?
             </div>
-            <svg class="w-[1.8rem] h-[1.2rem]">
+            <svg class="w-[1.8rem] h-[1.2rem] duration-300 stroke-arrow">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
+          </label>
+          <div class="answer grid grid-rows-[0fr] duration-300">
+            <div class="overflow-hidden">
+              <p class="py-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
+              </p>
+            </div>
           </div>
-          <p class="py-8 hidden">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
-            quis quam ornare mattis.
-          </p>
         </div>
 
         <!-- Question 2 -->
         <div class="border-b-2 border-inherit overflow-hidden">
-          <input type="checkbox" id="question-checkbox" class="hidden" />
+          <input type="checkbox" id="question-checkbox2" class="hidden" />
           <label
-            for="question-checkbox"
+            for="question-checkbox2"
             class="cursor-pointer group spaced-center py-8 mr-6"
           >
             <div
@@ -413,7 +421,7 @@
             >
               How can I request a new browser?
             </div>
-            <svg class="w-[1.8rem] h-[1.2rem] duration-300">
+            <svg class="w-[1.8rem] h-[1.2rem] duration-300 stroke-arrow">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
           </label>
@@ -433,41 +441,57 @@
 
         <!-- Question 3 -->
         <div class="border-b-2 border-inherit">
-          <div class="cursor-pointer group spaced-center py-8 mr-6">
+          <input type="checkbox" id="question-checkbox3" class="hidden" />
+          <label
+            for="question-checkbox3"
+            class="cursor-pointer group spaced-center py-8 mr-6"
+          >
             <div
               class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               Is there a mobile app?
             </div>
-            <svg class="w-[1.8rem] h-[1.2rem]">
+            <svg class="w-[1.8rem] h-[1.2rem] duration-300 stroke-arrow">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
+          </label>
+          <div class="answer grid grid-rows-[0fr] duration-300">
+            <div class="overflow-hidden">
+              <p class="py-8">
+                Sed consectetur quam id neque fermentum accumsan. Praesent
+                luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                Cras in ligula quis est pharetra mattis sit amet pharetra purus.
+                Sed sollicitudin ex et ultricies bibendum.
+              </p>
+            </div>
           </div>
-          <p class="py-8 hidden">
-            Sed consectetur quam id neque fermentum accumsan. Praesent luctus
-            vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
-            quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin
-            ex et ultricies bibendum.
-          </p>
         </div>
 
         <!-- Question 4 -->
         <div class="border-b-2 border-inherit">
-          <div class="cursor-pointer group spaced-center py-8 mr-6">
+          <input type="checkbox" id="question-checkbox4" class="hidden" />
+          <label
+            for="question-checkbox4"
+            class="cursor-pointer group spaced-center py-8 mr-6"
+          >
             <div
               class="font-medium group-hover:text-primary-softRed duration-100 w-[90%]"
             >
               What about other Chromium browsers?
             </div>
-            <svg class="w-[1.8rem] h-[1.2rem]">
+            <svg class="w-[1.8rem] h-[1.2rem] duration-300 stroke-arrow">
               <use xlink:href="images/sprite.svg#icon-arrow"></use>
             </svg>
+          </label>
+          <div class="answer grid grid-rows-[0fr] duration-300">
+            <div class="overflow-hidden">
+              <p class="py-8">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit.
+              </p>
+            </div>
           </div>
-          <p class="py-8 hidden">
-            Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
-            mi, at euismod dui. Aliquam vitae neque eget nisl gravida
-            pellentesque non ut velit.
-          </p>
         </div>
       </div>
 

@@ -40,6 +40,7 @@ module.exports = {
           veryDarkBlue: "hsl(229, 31%, 21%)",
         },
         footerLink: "hsl(228, 45%, 44%)",
+        arrow: "#5267DF",
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],

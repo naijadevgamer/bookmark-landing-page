@@ -867,10 +867,6 @@ video {
   grid-template-rows: 0fr;
 }
 
-.grid-rows-\[0\] {
-  grid-template-rows: 0;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -984,6 +980,10 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.stroke-arrow {
+  stroke: #5267DF;
 }
 
 .px-10 {
@@ -1560,12 +1560,19 @@ video {
 
 /*=============== Question dropdown functionality =============== */
 
-#question-checkbox:checked + label svg {
+#question-checkbox1:checked + label svg,
+#question-checkbox2:checked + label svg,
+#question-checkbox3:checked + label svg,
+#question-checkbox4:checked + label svg {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  stroke: hsl(0, 94%, 66%);
 }
 
-#question-checkbox:checked ~ .answer {
+#question-checkbox1:checked ~ .answer,
+#question-checkbox2:checked ~ .answer,
+#question-checkbox3:checked ~ .answer,
+#question-checkbox4:checked ~ .answer {
   grid-template-rows: 1fr;
 }
 
