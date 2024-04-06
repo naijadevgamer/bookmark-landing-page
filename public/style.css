@@ -1055,11 +1055,6 @@ video {
   font-size: 18px;
 }
 
-.text-18\/\[1\.7\] {
-  font-size: 18px;
-  line-height: 1.7;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1071,6 +1066,11 @@ video {
 
 .text-\[1\.6rem\] {
   font-size: 1.6rem;
+}
+
+.text-\[1\.8rem\]\/\[1\.7\] {
+  font-size: 1.8rem;
+  line-height: 1.7;
 }
 
 .text-\[3\.5rem\]\/\[normal\] {
