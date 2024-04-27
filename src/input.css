@@ -130,3 +130,14 @@
 #question-checkbox4:checked ~ .answer {
   @apply grid-rows-[1fr];
 }
+
+.answer p {
+  @apply transform translate-y-10 duration-300;
+}
+
+#question-checkbox1:checked ~ .answer p,
+#question-checkbox2:checked ~ .answer p,
+#question-checkbox3:checked ~ .answer p,
+#question-checkbox4:checked ~ .answer p {
+  @apply translate-y-0 delay-100;
+}
