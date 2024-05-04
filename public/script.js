@@ -1,5 +1,8 @@
 "use strict";
 
+const header = document.querySelector("header");
+const section = document.querySelector("#section1");
+
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION
 const scrollToView = function (navsParent) {
@@ -22,3 +25,42 @@ scrollToView(".phone-nav ul");
 
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION
+
+const sectionHeight = section.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  console.log(entries);
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    header.classList.add("nav-stick");
+  } else header.classList.remove("nav-stick");
+};
+
+const sectionObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${sectionHeight + 20}px`,
+});
+
+sectionObserver.observe(section);
+
+// nav-Scroll
+let lastScroll = window.scrollY;
+
+const stickyNavScroll = function () {
+  window.addEventListener("scroll", function () {
+    // down
+    if (this.scrollY > lastScroll) {
+      header.classList.remove("nav-scroll-up");
+      lastScroll = this.scrollY;
+    }
+
+    //
+    if (this.scrollY < lastScroll) {
+      header.classList.add("nav-scroll-up");
+      lastScroll = this.scrollY;
+    }
+  });
+};
+
+stickyNavScroll();

@@ -63,8 +63,12 @@
   @apply px-14 py-8 font-medium relative hover:text-primary-softRed duration-100 max-tp:px-10  max-sm:px-4 max-sp:px-1;
 }
 
-.nav-scroll {
-  @apply shadow-md bg-white bg-neutral-veryDarkBlue/90 text-white h-32 sticky top-0;
+.nav-stick {
+  @apply shadow-md bg-white bg-neutral-veryDarkBlue/90 text-white h-32 sticky top-0 invisible opacity-0 -translate-y-full;
+}
+
+.nav-scroll-up {
+  @apply opacity-100 visible translate-y-0 duration-300;
 }
 /* Custom CSS */
 
