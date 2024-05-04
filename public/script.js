@@ -52,14 +52,12 @@ const stickyNavScroll = function () {
     // down
     if (this.scrollY > lastScroll) {
       header.classList.remove("nav-scroll-up");
-      lastScroll = this.scrollY;
     }
-
-    //
+    // up
     if (this.scrollY < lastScroll) {
       header.classList.add("nav-scroll-up");
-      lastScroll = this.scrollY;
     }
+    lastScroll = this.scrollY;
   });
 };
 

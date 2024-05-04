@@ -55,6 +55,7 @@
 .text-width {
   @apply max-w-[53rem] w-[100%] mx-auto text-center;
 }
+
 .text-width-port {
   @apply max-tp:max-w-[70rem] max-tp:w-[100%] max-tp:mx-auto max-tp:text-center;
 }
@@ -64,7 +65,7 @@
 }
 
 .nav-stick {
-  @apply shadow-md bg-white bg-neutral-veryDarkBlue/90 text-white h-32 sticky top-0 invisible opacity-0 -translate-y-full;
+  @apply shadow-md bg-white bg-neutral-veryDarkBlue/90 text-white h-32 sticky top-0 invisible opacity-0 -translate-y-full duration-300;
 }
 
 .nav-scroll-up {
