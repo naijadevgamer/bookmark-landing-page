@@ -1,6 +1,8 @@
+"use strict";
+
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION
-document.querySelector(".nav-link").addEventListener("click", function (e) {
+document.querySelector(".nav-links").addEventListener("click", function (e) {
   e.preventDefault();
 
   // Matching strategy
