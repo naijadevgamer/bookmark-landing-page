@@ -65,10 +65,10 @@
 }
 
 .nav-stick {
-  @apply shadow-md bg-white bg-neutral-veryDarkBlue/90 text-white h-32 sticky top-0 invisible opacity-0 -translate-y-full duration-300;
+  @apply shadow-md bg-neutral-veryDarkBlue text-white h-32 sticky top-0 invisible opacity-0 -translate-y-full duration-300;
 }
 
-.nav-scroll-up {
+.nav-show {
   @apply opacity-100 visible translate-y-0 duration-300;
 }
 /* Custom CSS */

@@ -2,6 +2,8 @@
 
 const header = document.querySelector("header");
 const section = document.querySelector("#section1");
+const sectionHeight = section.getBoundingClientRect().height;
+let lastScroll = 0;
 
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION
@@ -26,39 +28,76 @@ scrollToView(".phone-nav ul");
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION
 
-const sectionHeight = section.getBoundingClientRect().height;
+// const stickyNav = function (entries) {
+//   console.log(entries);
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) {
+//     header.classList.add("nav-stick");
+//   } else header.classList.remove("nav-stick");
+// };
 
+// const sectionObserver = new IntersectionObserver(stickyNav, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `-${sectionHeight + 20}px`,
+// });
+
+// sectionObserver.observe(section);
+
+// // nav-Scroll
+// let lastScroll = window.scrollY;
+
+// const stickyNavScroll = function () {
+//   window.addEventListener("scroll", function () {
+//     // down
+//     if (this.scrollY > lastScroll) {
+//       header.classList.remove("nav-scroll-up");
+//     }
+//     // up
+//     if (this.scrollY < lastScroll) {
+//       header.classList.add("nav-scroll-up");
+//     }
+//     lastScroll = this.scrollY;
+//   });
+// };
+
+// stickyNavScroll();
+
+// Intersection Observer callback
 const stickyNav = function (entries) {
-  console.log(entries);
   const [entry] = entries;
   if (!entry.isIntersecting) {
     header.classList.add("nav-stick");
-  } else header.classList.remove("nav-stick");
+  } else {
+    header.classList.remove("nav-stick");
+  }
 };
 
 const sectionObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${sectionHeight + 20}px`,
+  rootMargin: `-${sectionHeight}px`,
 });
 
 sectionObserver.observe(section);
 
-// nav-Scroll
-let lastScroll = window.scrollY;
+// Function to handle scroll events
+const handleScroll = function () {
+  const currentScroll = window.scrollY;
 
-const stickyNavScroll = function () {
-  window.addEventListener("scroll", function () {
-    // down
-    if (this.scrollY > lastScroll) {
-      header.classList.remove("nav-scroll-up");
+  if (currentScroll > lastScroll) {
+    // Scroll down
+    header.classList.remove("nav-show");
+  } else {
+    // Scroll up
+    if (!sectionObserver.takeRecords().length) {
+      // If the section is fully passed, show the navigation bar
+      header.classList.add("nav-show");
     }
-    // up
-    if (this.scrollY < lastScroll) {
-      header.classList.add("nav-scroll-up");
-    }
-    lastScroll = this.scrollY;
-  });
+  }
+
+  lastScroll = currentScroll;
 };
 
-stickyNavScroll();
+// Attach scroll event listener
+window.addEventListener("scroll", handleScroll);
