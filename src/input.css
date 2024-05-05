@@ -65,12 +65,20 @@
 }
 
 .nav-stick {
-  @apply shadow-md bg-neutral-veryDarkBlue text-white h-32 sticky top-0 invisible opacity-0 -translate-y-full duration-300;
+  @apply h-32 sticky top-0 -translate-y-full invisible opacity-0 duration-300;
+}
+
+.nav-color {
+  @apply shadow-md bg-neutral-veryDarkBlue text-white;
+}
+.nav-color {
+  @apply shadow-none bg-white text-neutral-veryDarkBlue;
 }
 
 .nav-show {
   @apply opacity-100 visible translate-y-0 duration-300;
 }
+
 /* Custom CSS */
 
 /*=============== Menu trigger bar checked =============== */

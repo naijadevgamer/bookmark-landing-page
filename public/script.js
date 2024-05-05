@@ -67,9 +67,9 @@ scrollToView(".phone-nav ul");
 const stickyNav = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) {
-    header.classList.add("nav-stick");
+    header.classList.add("nav-color");
   } else {
-    header.classList.remove("nav-stick");
+    header.classList.add("nav-color2");
   }
 };
 
@@ -87,13 +87,11 @@ const handleScroll = function () {
 
   if (currentScroll > lastScroll) {
     // Scroll down
+    header.classList.add("nav-stick");
     header.classList.remove("nav-show");
   } else {
     // Scroll up
-    if (!sectionObserver.takeRecords().length) {
-      // If the section is fully passed, show the navigation bar
-      header.classList.add("nav-show");
-    }
+    header.classList.add("nav-show");
   }
 
   lastScroll = currentScroll;
