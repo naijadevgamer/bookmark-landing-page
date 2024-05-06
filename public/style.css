@@ -1447,7 +1447,6 @@ video {
 @media not all and (min-width: 640px) {
   .nav-stick {
     height: 6rem;
-    background-color: hsl(229 31% 21% / 0.9);
   }
 }
 

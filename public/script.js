@@ -3,12 +3,22 @@
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
 const section = document.querySelector("#section1");
-const navToggle = document.querySelector("#nav-toggle");
 const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
 
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
+
+// Function to handle checkbox change in phone nav
+const checkChange = function () {
+  if (checkHeader.checked) {
+    document.body.style.overflow = "hidden";
+    header.style.backgroundColor = "transparent";
+  } else {
+    document.body.style.overflow = "auto";
+    if (window.scrollY > 100) header.style.backgroundColor = "#252b46e6";
+  }
+};
 
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION
@@ -16,8 +26,10 @@ const scrollToView = function (navsParent) {
   document.querySelector(navsParent).addEventListener("click", function (e) {
     e.preventDefault();
     // Check if Phone nav
-    if (navsParent === ".phone-nav ul")
+    if (navsParent === ".phone-nav ul") {
       document.querySelector("#header-checkbox").checked = false;
+      checkChange();
+    }
 
     // Matching strategy
     if (e.target.classList.contains("nav-link")) {
@@ -30,17 +42,8 @@ const scrollToView = function (navsParent) {
 scrollToView(".nav-links");
 scrollToView(".phone-nav ul");
 
-// navToggle.addEventListener("click", function () {
-if (checkHeader.checked) {
-  console.log("yes");
-  document.body.style.overflow = "hidden";
-  // document.body.classList.toggle("overflow-hidden");
-} else {
-  console.log("no");
-  document.body.style.overflow = "auto";
-}
-// document.body.style.overflow = "hidden";
-// });
+checkHeader.addEventListener("change", checkChange);
+
 /////////////////////////////////////////////////////
 // STICKY NAVIGATION FUNCTIONALITY
 
@@ -52,10 +55,12 @@ const stickyNav = function (entries) {
     header.classList.add("nav-stick");
     logoHeader.style.opacity = 0;
     logoPhone.style.opacity = 1;
+    if (window.innerWidth <= 640) header.style.backgroundColor = "#252b46e6";
   } else {
     header.classList.remove("nav-stick");
     logoHeader.style.opacity = 1;
     logoPhone.style.opacity = 0;
+    if (window.innerWidth <= 640) header.style.backgroundColor = "transparent";
   }
 };
 
