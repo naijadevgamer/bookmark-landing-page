@@ -68,6 +68,9 @@
   @apply sticky top-0 h-32 shadow-md bg-neutral-veryDarkBlue text-white -translate-y-full invisible opacity-0  max-sm:bg-neutral-veryDarkBlue/90 max-sm:h-24;
 }
 
+.nav-stick label span {
+  @apply bg-white;
+}
 /* .nav-color {
   @apply shadow-md bg-neutral-veryDarkBlue text-white;
 }
@@ -121,13 +124,19 @@
 }
 
 /* Logo functionality  */
-#header-checkbox:checked ~ .wrap .logo-header {
-  @apply opacity-0 delay-0;
+header #header-checkbox:checked ~ .wrap .logo-header {
+  @apply !opacity-0 delay-0;
 }
-#header-checkbox:checked ~ .wrap .logo-phone {
-  @apply opacity-100 delay-700;
+header #header-checkbox:checked ~ .wrap .logo-phone {
+  @apply !opacity-100 delay-700;
 }
 
+/* .nav-stick #header-checkbox:checked ~ .wrap .logo-header {
+  @apply opacity-100;
+} */
+/* .nav-stick #header-checkbox:checked ~ .wrap .logo-phone {
+  @apply opacity-100 z-50;
+} */
 /* Transition timing function  */
 .ease-custom {
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);

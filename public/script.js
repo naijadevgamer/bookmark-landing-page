@@ -4,6 +4,8 @@ const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
 const section = document.querySelector("#section1");
 const navToggle = document.querySelector("#nav-toggle");
+const logoHeader = document.querySelector(".logo-header");
+const logoPhone = document.querySelector(".logo-phone");
 
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
@@ -48,9 +50,12 @@ const stickyNav = function (entries) {
   console.log(entry);
   if (!entry.isIntersecting) {
     header.classList.add("nav-stick");
+    logoHeader.style.opacity = 0;
+    logoPhone.style.opacity = 1;
   } else {
     header.classList.remove("nav-stick");
-    // document.querySelector("header").scrollIntoView({ behavior: "smooth" });
+    logoHeader.style.opacity = 1;
+    logoPhone.style.opacity = 0;
   }
 };
 
