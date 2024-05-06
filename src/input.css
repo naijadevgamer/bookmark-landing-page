@@ -65,7 +65,7 @@
 }
 
 .nav-stick {
-  @apply sticky top-0 h-32 shadow-md bg-neutral-veryDarkBlue text-white -translate-y-full invisible opacity-0 max-sm:bg-white max-sm:h-24;
+  @apply sticky top-0 h-32 shadow-md bg-neutral-veryDarkBlue text-white -translate-y-full invisible opacity-0  max-sm:bg-neutral-veryDarkBlue/90 max-sm:h-24;
 }
 
 /* .nav-color {

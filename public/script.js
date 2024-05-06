@@ -1,8 +1,10 @@
 "use strict";
 
 const header = document.querySelector("header");
+const checkHeader = document.querySelector("#header-checkbox");
 const section = document.querySelector("#section1");
-const navi = document.querySelector(".nav-stick");
+const navToggle = document.querySelector("#nav-toggle");
+
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
 
@@ -26,43 +28,19 @@ const scrollToView = function (navsParent) {
 scrollToView(".nav-links");
 scrollToView(".phone-nav ul");
 
-/////////////////////////////////////////////////////
-// PAGE NAVIGATION
-
-// const stickyNav = function (entries) {
-//   console.log(entries);
-//   const [entry] = entries;
-//   if (!entry.isIntersecting) {
-//     header.classList.add("nav-stick");
-//   } else header.classList.remove("nav-stick");
-// };
-
-// const sectionObserver = new IntersectionObserver(stickyNav, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-${sectionHeight + 20}px`,
+// navToggle.addEventListener("click", function () {
+if (checkHeader.checked) {
+  console.log("yes");
+  document.body.style.overflow = "hidden";
+  // document.body.classList.toggle("overflow-hidden");
+} else {
+  console.log("no");
+  document.body.style.overflow = "auto";
+}
+// document.body.style.overflow = "hidden";
 // });
-
-// sectionObserver.observe(section);
-
-// // nav-Scroll
-// let lastScroll = window.scrollY;
-
-// const stickyNavScroll = function () {
-//   window.addEventListener("scroll", function () {
-//     // down
-//     if (this.scrollY > lastScroll) {
-//       header.classList.remove("nav-scroll-up");
-//     }
-//     // up
-//     if (this.scrollY < lastScroll) {
-//       header.classList.add("nav-scroll-up");
-//     }
-//     lastScroll = this.scrollY;
-//   });
-// };
-
-// stickyNavScroll();
+/////////////////////////////////////////////////////
+// STICKY NAVIGATION FUNCTIONALITY
 
 // Intersection Observer callback
 const stickyNav = function (entries) {
@@ -76,11 +54,33 @@ const stickyNav = function (entries) {
   }
 };
 
-const sectionObserver = new IntersectionObserver(stickyNav, {
+// Function to calculate rootMargin based on screen width
+const calculateRootMargin = () => {
+  const screenWidth = window.innerWidth;
+  let rootMargin = "";
+
+  // Compare breakpoints
+  if (screenWidth > 900) {
+    // For larger screens
+    rootMargin = `-${sectionHeight + 50}px 0px 0px 0px`;
+  } else if (screenWidth > 640) {
+    // For medium screens
+    rootMargin = `-${sectionHeight + 43}px 0px 0px 0px`;
+  } else {
+    // For smaller screens (e.g., mobile)
+    rootMargin = `-${sectionHeight + 33}px 0px 0px 0px`;
+  }
+
+  return rootMargin;
+};
+
+const option = {
   root: null,
   threshold: 0,
-  rootMargin: `-${sectionHeight - 100}px`,
-});
+  rootMargin: calculateRootMargin(),
+};
+
+const sectionObserver = new IntersectionObserver(stickyNav, option);
 
 sectionObserver.observe(section);
 
@@ -93,6 +93,7 @@ const handleScroll = function () {
   // Scroll up
   else header.classList.add("nav-show");
 
+  // Add transition when nav is passed
   if (currentScroll > 300) header.classList.add("duration-300");
   else header.classList.remove("duration-300");
 
@@ -101,3 +102,13 @@ const handleScroll = function () {
 
 // Attach scroll event listener
 window.addEventListener("scroll", handleScroll);
+
+// Update rootMargin on resize
+window.addEventListener("resize", () => {
+  option.rootMargin = calculateRootMargin();
+});
+
+// Update rootMargin on orientation change
+window.addEventListener("orientationchange", () => {
+  option.rootMargin = calculateRootMargin();
+});
