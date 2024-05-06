@@ -2,6 +2,7 @@
 
 const header = document.querySelector("header");
 const section = document.querySelector("#section1");
+const navi = document.querySelector(".nav-stick");
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
 
@@ -66,17 +67,19 @@ scrollToView(".phone-nav ul");
 // Intersection Observer callback
 const stickyNav = function (entries) {
   const [entry] = entries;
+  console.log(entry);
   if (!entry.isIntersecting) {
-    header.classList.add("nav-color");
+    header.classList.add("nav-stick");
   } else {
-    header.classList.add("nav-color2");
+    header.classList.remove("nav-stick");
+    // document.querySelector("header").scrollIntoView({ behavior: "smooth" });
   }
 };
 
 const sectionObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${sectionHeight}px`,
+  rootMargin: `-${sectionHeight - 100}px`,
 });
 
 sectionObserver.observe(section);
@@ -85,14 +88,13 @@ sectionObserver.observe(section);
 const handleScroll = function () {
   const currentScroll = window.scrollY;
 
-  if (currentScroll > lastScroll) {
-    // Scroll down
-    header.classList.add("nav-stick");
-    header.classList.remove("nav-show");
-  } else {
-    // Scroll up
-    header.classList.add("nav-show");
-  }
+  // Scroll down
+  if (currentScroll > lastScroll) header.classList.remove("nav-show");
+  // Scroll up
+  else header.classList.add("nav-show");
+
+  if (currentScroll > 300) header.classList.add("duration-300");
+  else header.classList.remove("duration-300");
 
   lastScroll = currentScroll;
 };
