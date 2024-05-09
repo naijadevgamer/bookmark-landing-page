@@ -71,12 +71,6 @@
 .nav-stick label span {
   @apply bg-white;
 }
-/* .nav-color {
-  @apply shadow-md bg-neutral-veryDarkBlue text-white;
-}
-.nav-color {
-  @apply shadow-none bg-white text-neutral-veryDarkBlue;
-} */
 
 .nav-show {
   @apply opacity-100 visible translate-y-0 duration-700;
@@ -131,12 +125,6 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
   @apply !opacity-100 delay-700;
 }
 
-/* .nav-stick #header-checkbox:checked ~ .wrap .logo-header {
-  @apply opacity-100;
-} */
-/* .nav-stick #header-checkbox:checked ~ .wrap .logo-phone {
-  @apply opacity-100 z-50;
-} */
 /* Transition timing function  */
 .ease-custom {
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
