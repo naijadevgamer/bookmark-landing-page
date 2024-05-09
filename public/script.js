@@ -70,16 +70,14 @@ const calculateRootMargin = () => {
   let rootMargin = "";
 
   // Compare breakpoints
-  if (screenWidth > 900) {
+  if (screenWidth > 900)
     // For larger screens
     rootMargin = `-${sectionHeight + 50}px 0px 0px 0px`;
-  } else if (screenWidth > 640) {
+  else if (screenWidth > 640)
     // For medium screens
     rootMargin = `-${sectionHeight + 43}px 0px 0px 0px`;
-  } else {
-    // For smaller screens (e.g., mobile)
-    rootMargin = `-${sectionHeight + 33}px 0px 0px 0px`;
-  }
+  // For smaller screens (e.g., mobile)
+  else rootMargin = `-${sectionHeight + 33}px 0px 0px 0px`;
 
   return rootMargin;
 };
@@ -98,14 +96,11 @@ sectionObserver.observe(section);
 const handleScroll = function () {
   const currentScroll = window.scrollY;
 
-  // Scroll down
-  if (currentScroll > lastScroll) header.classList.remove("nav-show");
-  // Scroll up
-  else header.classList.add("nav-show");
+  // Scroll direction functionality
+  header.classList.toggle("nav-show", currentScroll <= lastScroll);
 
   // Add transition when nav is passed
-  if (currentScroll > 300) header.classList.add("duration-300");
-  else header.classList.remove("duration-300");
+  header.classList.toggle("duration-300", currentScroll > 300);
 
   lastScroll = currentScroll;
 };
