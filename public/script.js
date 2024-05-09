@@ -5,8 +5,9 @@ const checkHeader = document.querySelector("#header-checkbox");
 const section = document.querySelector("#section1");
 const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
-const navLinks = document.querySelectorAll(".nav-links, .phone-nav ul");
+const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
 
+// console.log(logoHeader, navLinks);
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
 
@@ -27,10 +28,9 @@ const checkChange = function () {
 const scrollToView = function (navsParent) {
   navsParent.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log("check");
+
     // Check if Phone nav
-    if (navsParent.classList.contains(".phone-nav ul")) {
-      console.log("check");
+    if (navsParent.classList.contains("phone-nav-list")) {
       checkHeader.checked = false;
       checkChange();
     }
