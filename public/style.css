@@ -883,7 +883,7 @@ video {
   animation: loadNav 2s cubic-bezier(0.62, 0.15, 0.85, 1.55);
 }
 
-@keyframes showFromSide {
+@keyframes show {
   0% {
     opacity: 0;
   }
@@ -894,7 +894,7 @@ video {
 }
 
 .animate-showDiagram {
-  animation: showFromSide 2s ease 2.5s both;
+  animation: show 2s ease 3s both;
 }
 
 @keyframes showFromUp {
@@ -913,20 +913,20 @@ video {
   animation: showFromUp 2s ease 2s both;
 }
 
-@keyframes showFromUp {
+@keyframes scaleUp {
   0% {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: scale(0.6);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
   }
 }
 
 .animate-showImg {
-  animation: showFromUp 2s ease 2s both;
+  animation: scaleUp 2s ease 2s both;
 }
 
 @keyframes showFromUp {
@@ -943,6 +943,38 @@ video {
 
 .animate-showPara {
   animation: showFromUp 2s ease 2.5s both;
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-btn1 {
+  animation: scaleUp 2s ease 2s both;
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-btn2 {
+  animation: scaleUp 2s ease 3s both;
 }
 
 .cursor-pointer {
@@ -1509,7 +1541,7 @@ video {
   }
 }
 
-@keyframes loadNavLink {
+@keyframes show {
   0% {
     opacity: 0;
   }
@@ -1520,7 +1552,7 @@ video {
 }
 
 .nav-link {
-  animation: loadNavLink 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 2s both;
+  animation: show 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 2s both;
 }
 
 .nav-stick {
