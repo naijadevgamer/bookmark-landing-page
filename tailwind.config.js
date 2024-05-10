@@ -31,7 +31,7 @@ module.exports = {
           "100%": { opacity: "1" },
         },
         // Nav-links
-        show: {
+        showFromUp: {
           "0%": {
             opacity: "0",
             transform: "translateY(-10%)",
@@ -40,6 +40,19 @@ module.exports = {
           "100%": {
             opacity: "1",
             transform: "translateY(0)",
+            // transform: "translateX(0)",
+          },
+        },
+
+        showFromSide: {
+          "0%": {
+            opacity: "0",
+            // transform: "translateX(20%)",
+            // transform: "translateX(-10%)",
+          },
+          "100%": {
+            opacity: "1",
+            // transform: "translateX(0)",
             // transform: "translateX(0)",
           },
         },
@@ -53,12 +66,14 @@ module.exports = {
         go3: "go 0.3s cubic-bezier(1, 0, 0, 1) 0.1s both",
         goBack3: "goBack 0.3s cubic-bezier(1, 0, 0, 1) 0.7s both",
         dropDown:
-          "dropDown 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards",
+          "dropDown 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards",
         loadNav: "loadNav 2s cubic-bezier(0.62, 0.15, 0.85, 1.55)",
         loadNavLink:
           "loadNavLink 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 2s both",
-        showHeading: "show 2s ease 0.5s both",
-        showPara: "show 2s ease 1s both",
+        showHeading: "showFromUp 2s ease 2s both",
+        showPara: "showFromUp 2s ease 2.5s both",
+        showImg: "showFromUp 2s ease 2s both",
+        showDiagram: "showFromSide 2s ease 2.5s both",
       },
       colors: {
         primary: {

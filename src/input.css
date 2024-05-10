@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem] border-2 border-b-[2.5px] border-transparent hover:bg-white duration-100;
+  @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem] border-2 border-b-[2.5px] border-transparent hover:bg-white duration-500;
 }
 
 .btn--primary {
@@ -45,7 +45,7 @@
 }
 
 .icon-links {
-  @apply w-[2.4rem] fill-white hover:fill-primary-softRed cursor-pointer duration-100;
+  @apply w-[2.4rem] fill-white hover:fill-primary-softRed cursor-pointer duration-500;
 }
 
 .px {
@@ -61,7 +61,7 @@
 }
 
 .feature-tab-btn {
-  @apply px-14 py-8 font-medium relative hover:text-primary-softRed duration-100 max-tp:px-10  max-sm:px-4 max-sp:px-1;
+  @apply px-14 py-8 font-medium relative hover:text-primary-softRed duration-500 max-tp:px-10  max-sm:px-4 max-sp:px-1;
 }
 
 .nav-link {
@@ -149,7 +149,7 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 }
 
 .answer p {
-  @apply transform translate-y-10 duration-300;
+  @apply transform translate-y-10 duration-500;
 }
 
 #question-checkbox1:checked ~ .answer p,

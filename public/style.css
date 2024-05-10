@@ -883,7 +883,21 @@ video {
   animation: loadNav 2s cubic-bezier(0.62, 0.15, 0.85, 1.55);
 }
 
-@keyframes show {
+@keyframes showFromSide {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-showDiagram {
+  animation: showFromSide 2s ease 2.5s both;
+}
+
+@keyframes showFromUp {
   0% {
     opacity: 0;
     transform: translateY(-10%);
@@ -896,10 +910,26 @@ video {
 }
 
 .animate-showHeading {
-  animation: show 2s ease 0.5s both;
+  animation: showFromUp 2s ease 2s both;
 }
 
-@keyframes show {
+@keyframes showFromUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-showImg {
+  animation: showFromUp 2s ease 2s both;
+}
+
+@keyframes showFromUp {
   0% {
     opacity: 0;
     transform: translateY(-10%);
@@ -912,7 +942,7 @@ video {
 }
 
 .animate-showPara {
-  animation: show 2s ease 1s both;
+  animation: showFromUp 2s ease 2.5s both;
 }
 
 .cursor-pointer {
@@ -1224,12 +1254,12 @@ video {
   transition-delay: 0.6s;
 }
 
-.duration-100 {
-  transition-duration: 100ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .duration-\[0\.4s\] {
@@ -1249,7 +1279,7 @@ video {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-duration: 100ms;
+  transition-duration: 500ms;
 }
 
 .btn:hover {
@@ -1392,7 +1422,7 @@ video {
   width: 2.4rem;
   cursor: pointer;
   fill: #fff;
-  transition-duration: 100ms;
+  transition-duration: 500ms;
 }
 
 .icon-links:hover {
@@ -1450,7 +1480,7 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-weight: 500;
-  transition-duration: 100ms;
+  transition-duration: 500ms;
 }
 
 .feature-tab-btn:hover {
@@ -1685,7 +1715,7 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 .answer p {
   --tw-translate-y: 2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  transition-duration: 300ms;
+  transition-duration: 500ms;
 }
 
 #question-checkbox1:checked ~ .answer p,
