@@ -64,6 +64,10 @@
   @apply px-14 py-8 font-medium relative hover:text-primary-softRed duration-100 max-tp:px-10  max-sm:px-4 max-sp:px-1;
 }
 
+.nav-link {
+  @apply animate-loadNavLink;
+}
+
 .nav-stick {
   @apply sticky top-0 h-32 shadow-md bg-neutral-veryDarkBlue text-white -translate-y-full invisible opacity-0 max-sm:h-24;
 }

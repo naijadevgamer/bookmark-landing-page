@@ -18,6 +18,31 @@ module.exports = {
           "0%": { height: "0" },
           "100%": { height: "50px" },
         },
+
+        // Nav
+        loadNav: {
+          "0%": { opacity: "0", transform: "translateY(-60%)" },
+          "40%": { opacity: "0" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        // Nav-links
+        loadNavLink: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        // Nav-links
+        show: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-10%)",
+            // transform: "translateX(-10%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+            // transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         // Menu bar animations
@@ -29,6 +54,11 @@ module.exports = {
         goBack3: "goBack 0.3s cubic-bezier(1, 0, 0, 1) 0.7s both",
         dropDown:
           "dropDown 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards",
+        loadNav: "loadNav 2s cubic-bezier(0.62, 0.15, 0.85, 1.55)",
+        loadNavLink:
+          "loadNavLink 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 2s both",
+        showHeading: "show 2s ease 0.5s both",
+        showPara: "show 2s ease 1s both",
       },
       colors: {
         primary: {

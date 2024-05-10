@@ -863,6 +863,58 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes loadNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-loadNav {
+  animation: loadNav 2s cubic-bezier(0.62, 0.15, 0.85, 1.55);
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-showHeading {
+  animation: show 2s ease 0.5s both;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-showPara {
+  animation: show 2s ease 1s both;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1425,6 +1477,20 @@ video {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
+}
+
+@keyframes loadNavLink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-link {
+  animation: loadNavLink 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 2s both;
 }
 
 .nav-stick {
