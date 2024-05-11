@@ -158,3 +158,5 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 #question-checkbox4:checked ~ .answer p {
   @apply translate-y-0 delay-100;
 }
+
+/* npm-run-all --parallel devserver watch:tailwind */
