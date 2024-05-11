@@ -584,19 +584,16 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"2OD7o":[function(require,module,exports) {
-// import gsap from "../node_modules/gsap";
 var _gsap = require("gsap");
 var _textPlugin = require("gsap/TextPlugin");
 "use strict";
 (0, _gsap.gsap).registerPlugin((0, _textPlugin.TextPlugin));
-(0, _gsap.gsap).registerPlugin(ScrambleTextPlugin);
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
 const section = document.querySelector("#section1");
 const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
 const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
-// console.log(logoHeader, navLinks);
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
 /////////////////////////////////////////////////////
@@ -674,21 +671,14 @@ window.addEventListener("resize", ()=>{
 window.addEventListener("orientationchange", ()=>{
     option.rootMargin = calculateRootMargin();
 });
-(0, _gsap.gsap).to(document.querySelector("#section-1 h1"), {
-    duration: 5,
-    scrambleText: "A Simple Bookmark Manager"
-}); //or customize things:
-// gsap.to(document.querySelector("#section1 h1"), {
-//   duration: 3,
-//   scrambleText: {
-//     text: "THIS IS NEW TEXT",
-//     chars: "XO",
-//     revealDelay: 3,
-//     speed: 1,
-//     newClass: "myClass",
-//   },
-// });
-console.log(document.querySelector("#section1 h1").textContent);
+/////////////////////////////////////////////////////
+// TEXT TRICK FUNCTIONALITY
+(0, _gsap.gsap).to("#demo", {
+    duration: 2,
+    delay: 3,
+    text: "A Simple Bookmark Manager",
+    ease: "none"
+});
 
 },{"gsap":"fPSuC","gsap/TextPlugin":"9TeAU"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

@@ -1,12 +1,9 @@
 "use strict";
 
 import { gsap } from "gsap";
-
 import { TextPlugin } from "gsap/TextPlugin";
-import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
 
 gsap.registerPlugin(TextPlugin);
-gsap.registerPlugin(ScrambleTextPlugin);
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
@@ -15,7 +12,6 @@ const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
 const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
 
-// console.log(logoHeader, navLinks);
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
 
@@ -118,20 +114,11 @@ window.addEventListener("orientationchange", () => {
   option.rootMargin = calculateRootMargin();
 });
 
-gsap.to(document.querySelector("#section-1 h1"), {
-  duration: 5,
-  scrambleText: "A Simple Bookmark Manager",
-}); //or customize things:
-
-// gsap.to(document.querySelector("#section1 h1"), {
-//   duration: 3,
-//   scrambleText: {
-//     text: "THIS IS NEW TEXT",
-//     chars: "XO",
-//     revealDelay: 3,
-//     speed: 1,
-//     newClass: "myClass",
-//   },
-// });
-
-console.log(document.querySelector("#section1 h1").textContent);
+/////////////////////////////////////////////////////
+// TEXT TRICK FUNCTIONALITY
+gsap.to("#demo", {
+  duration: 2,
+  delay: 3,
+  text: "A Simple Bookmark Manager",
+  ease: "none",
+});

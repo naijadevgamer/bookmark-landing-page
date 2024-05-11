@@ -1,10 +1,7 @@
 14103
-114C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@mischnic133598974362747388 1
-143C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\terser-webpack-plugin\types\utils.d.ts133598972377330891 0
-141C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2021\Number\bitwiseOR.js133536405298547145 0
-135C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2017\IsWordChar.js133536405315240620 0
-104C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\package.json133598978380860491 0
-121C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\has-symbols\test133536405290011314 1
+133C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\postcss\lib\map-generator.js133534810653653234 0
+125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\wrap-ansi\index.d.ts133534810638821789 0
+125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\is-weakref\README.md133536405289413820 0
 168C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\entities\lib\generated\encode-html.d.ts133598974618281707 0
 111C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@lezer133598974362843497 1
 140C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\update-browserslist-db\package.json133598972333170461 0
@@ -115,7 +112,7 @@
 138C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\lib\util\parseGlob.js133534810712053607 0
 147C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\jest-worker\build\workers\messageParent.js133598972350465264 0
 133C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2019\ToObject.js133536405346239291 0
-96C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist133598984796842619 1
+96C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist133599202104472473 1
 169C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\schemas\plugins\ids\OccurrenceModuleIdsPlugin.check.d.ts133598972534168001 0
 131C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\js-yaml\lib\schema\json.js133598974519019463 0
 140C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2018\SetFunctionName.js133536405332546086 0
@@ -124,6 +121,12 @@
 135C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack-merge\dist\unique.d.ts133598972391128395 0
 136C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\diagnostic\package.json133598974471542318 0
 123C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\.package-lock.json133598975682493320 0
+114C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@mischnic133598974362747388 1
+143C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\terser-webpack-plugin\types\utils.d.ts133598972377330891 0
+141C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2021\Number\bitwiseOR.js133536405298547145 0
+135C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2017\IsWordChar.js133536405315240620 0
+104C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\package.json133598978380860491 0
+121C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\has-symbols\test133536405290011314 1
 169C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@swc\helpers\_\_class_static_private_field_spec_get\package.json133598974698518798 0
 98C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\public133538781239928867 1
 138C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\workers\src\WorkerFarm.js133598974602083631 0
@@ -216,11 +219,11 @@
 132C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\postcss-nested\package.json133534810630529714 0
 105C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\public\images133557609452343844 1
 134C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\defaultTheme.d.ts133534810727430101 0
-109C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\public\index.html133598988851544045 0
+109C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\public\index.html133599198793719086 0
 138C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2018\ToPropertyKey.js133536405347306421 0
 160C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\transformer-babel\node_modules\semver\range.bnf133598974447406817 0
 110C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\p-try133598972321187974 1
-108C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\public\script.js133598985900671327 0
+108C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\public\script.js133599202098708406 0
 148C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\helpers\getSymbolDescription.js133536405309643370 0
 171C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\css\types.schema.json133598974540565994 0
 134C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\ModuleTemplate.js133598972491760246 0
@@ -1813,7 +1816,7 @@
 128C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\typed-array-byte-offset133536405291467418 1
 128C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\unbox-primitive\LICENSE133536405240165306 0
 167C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\schemas\plugins\asset\AssetInlineGeneratorOptions.json133598972525394302 0
-120C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-opera.8e8131ff.svg133598984796222374 0
+120C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-opera.8e8131ff.svg133599199208743609 0
 137C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2022\WeakRefDeref.js133536405350757291 0
 144C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\yaml\browser\dist\schema\core\schema.js133534810693696478 0
 130C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\5\ToUint32.js133536405347884865 0
@@ -1821,7 +1824,7 @@
 138C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\object-inspect\test\quoteStyle.js133536405296151831 0
 116C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\hot133598972500755447 1
 135C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\util\TupleQueue.js133598972503302279 0
-127C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\illustration-hero.0a778844.svg133598984796222374 0
+127C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\illustration-hero.0a778844.svg133599199208733643 0
 144C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2020\IsSharedArrayBuffer.js133536405314795069 0
 123C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\read-pkg\readme.md133536405241250371 0
 129C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\csso\lib\clean\Atrule.js133598974612743450 0
@@ -2671,8 +2674,6 @@
 152C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\wrap-ansi-cjs\node_modules\ansi-regex\readme.md133534810635251190 0
 136C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\caniuse-lite\data\regions\SI.js133598972503692200 0
 134C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\utility-types\dist\index.d.ts133598974513637933 0
-133C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\postcss\lib\map-generator.js133534810653653234 0
-125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\wrap-ansi\index.d.ts133534810638821789 0
 127C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\neo-async\package.json133598972429206286 0
 141C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\resolve\test\module_dir\ymodules\aaa133534810667021678 1
 123C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\wrap-ansi\index.js133534810624561107 0
@@ -2821,10 +2822,10 @@
 125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\electron133598972466949290 1
 136C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\ModuleParseError.js133598972491570758 0
 123C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\which\CHANGELOG.md133534810641195869 0
-153C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\src\postcss-plugins\nesting\index.js133534810704622491 0
-125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\which\bin\node-which133534810627599710 0
 116C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\js-yaml\lib133598974546925528 1
 122C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\type-fest\license133598974398083417 0
+125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\which\bin\node-which133534810627599710 0
+153C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\src\postcss-plugins\nesting\index.js133534810704622491 0
 131C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@webassemblyjs\wasm-parser133598972381320903 1
 140C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack-sources\lib\CachedSource.js133598972310325601 0
 143C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2020\CreateDataProperty.js133536405300749946 0
@@ -3089,7 +3090,6 @@
 157C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\schemas\plugins\LoaderOptionsPlugin.check.js133598972487280511 0
 128C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\postcss-load-config\src133534810647333178 1
 153C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\schemas\plugins\LoaderOptionsPlugin.json133598972527516607 0
-137C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\LibManifestPlugin.js133598972487031175 0
 145C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\dependencies\ImportPlugin.js133598972481887626 0
 154C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\schemas\plugins\ProgressPlugin.check.d.ts133598972534857705 0
 140C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\config\normalization.js133598972493499901 0
@@ -3417,6 +3417,7 @@
 140C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-tree\lib\syntax\atrule\media.js133598974694667153 0
 141C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\resolve\test\precedence\aaa\index.js133534810669096348 0
 139C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\string.prototype.trimend\.eslintrc133536405231811349 0
+137C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\LibManifestPlugin.js133598972487031175 0
 124C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\library133598972503411925 1
 154C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\normalize-package-data\lib\extract_description.js133536405246751189 0
 145C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2020\ToPropertyDescriptor.js133536405347017194 0
@@ -3743,10 +3744,10 @@
 183C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node\Combinator.js133598974515349290 0
 124C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\stable\package.json133598974397528389 0
 138C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\util\smartGrouping.js133598972500945394 0
+160C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Operator.cjs133598974637326339 0
 138C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\sucrase\dist\esm\HelperManager.js133534810673675563 0
 136C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\util\SortableSet.js133598972500975326 0
 128C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\dlv\dist\dlv.umd.js.map133534810648332667 0
-160C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Operator.cjs133598974637326339 0
 140C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\webpack\lib\util\StackedCacheMap.js133598972501649426 0
 150C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\caniuse-lite\data\features\wasm-tail-calls.js133598972533139100 0
 122C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\svgo\lib\style.js133598974553409531 0
@@ -5034,7 +5035,7 @@
 148C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\src\lib\setupTrackingContext.js133534810721364707 0
 133C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\sucrase\dist\esm\register.js133534810696966719 0
 139C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\src\lib\sharedState.js133534810721799472 0
-122C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-firefox.5290cd9d.svg133598984796132589 0
+122C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-firefox.5290cd9d.svg133599199207910070 0
 132C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\src\css\LICENSE133534810647412920 0
 138C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\tailwindcss\src\css\preflight.css133534810656856640 0
 162C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\050-modules.md133598974623239054 0
@@ -5985,7 +5986,7 @@
 126C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\side-channel\index.js133536405246352174 0
 167C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\mdn-data\css\syntaxes.json133598974533496172 0
 150C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2019\CreateDataPropertyOrThrow.js133536405301272810 0
-120C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\icon-error.e326e571.svg133598984796132589 0
+120C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\icon-error.e326e571.svg133599199207910070 0
 127C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@swc\core\package.json133598974503128176 0
 125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\side-channel\LICENSE133536405240549721 0
 130C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\side-channel\package.json133536405288735663 0
@@ -6155,7 +6156,7 @@
 125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\resolve-from\license133598972320250436 0
 120C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\reusify\LICENSE133534810634660101 0
 144C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2019\IsSharedArrayBuffer.js133536405314775108 0
-121C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-chrome.d94bcba9.svg133598984796222374 0
+121C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-chrome.d94bcba9.svg133599199208743609 0
 122C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\reusify\README.md133534810639288578 0
 130C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\js-yaml\lib\type\pairs.js133598974535529065 0
 146C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\reusify\benchmarks\reuseNoCodeFunction.js133534810649718658 0
@@ -7621,7 +7622,7 @@
 156C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_dump.1133598974535575853 0
 187C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\function\expression.js133598974602422796 0
 156C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_dump.c133598974596468248 0
-130C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-bookmark-header.92dcdffc.svg133598984796132589 0
+130C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-bookmark-header.92dcdffc.svg133599199207910070 0
 156C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_stat.1133598974544728524 0
 159C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\midl-sparse.c133598974618381367 0
 152C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\midl.c133598974619761238 0
@@ -7910,7 +7911,6 @@
 184C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\restructure\4-restructShorthand.js133598974461248162 0
 128C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\is-weakref\package.json133536405253045387 0
 137C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\es-abstract\2023\IteratorNext.js133536405316865563 0
-125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\is-weakref\README.md133536405289413820 0
 120C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\is-weakref\test133536405248143154 1
 126C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-what\lib\commonjs133598974534304018 1
 129C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\is-weakref\test\index.js133536405248591870 0
@@ -11002,7 +11002,7 @@
 125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\README.md133598974621882480 0
 143C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\dom-serializer133598974496910422 1
 139C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\domhandler133598974498681240 1
-116C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\sprite.e3f3f821.svg133598984796132589 0
+116C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\sprite.e3f3f821.svg133599199207910070 0
 137C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\domutils133598974604171613 1
 150C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-htmlnano\src\svgMappings.js133598974459967946 0
 141C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\entities\lib133598974621593338 1
@@ -11105,7 +11105,7 @@
 152C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\domhandler\lib\index.js133598974447782275 0
 158C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\domhandler\lib\esm\index.d.ts133598974503417381 0
 161C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\domhandler\lib\esm\node.d.ts.map133598974494640397 0
-118C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.3b06b0f7.js.map133598984796362006 0
+118C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.3b06b0f7.js.map133599202104442181 0
 155C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\domhandler\lib\esm\node.js133598974457676418 0
 140C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@swc\helpers\_\_array_without_holes133598974695544818 1
 160C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\css-select\node_modules\domhandler\lib\esm\package.json133598974474789572 0
@@ -12782,7 +12782,7 @@
 155C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\utils\test\replaceBundleReferences.test.js133598974621872554 0
 136C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\utils\test\input\config133598974651885046 1
 139C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\utils\test\input\sourcemap133598974650998165 1
-115C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.83d9161e.css133598984796545725 0
+115C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.83d9161e.css133599199207919977 0
 148C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\utils\test\input\config\config.json133598974634817927 0
 163C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\transformer-html\node_modules\semver\ranges\ltr.js133598974536754709 0
 147C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\utils\test\input\config\empty.toml133598974651885046 0
@@ -13455,7 +13455,7 @@
 170C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\generic.js133598974615413626 0
 168C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\index.js133598974621294173 0
 168C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\Lexer.js133598974633732666 0
-119C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.83d9161e.css.map133598984796565675 0
+119C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.83d9161e.css.map133599199208069574 0
 177C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\prepare-tokens.js133598974649483660 0
 169C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\search.js133598974653770511 0
 172C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\structure.js133598974655436046 0
@@ -14093,12 +14093,12 @@
 117C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\.bin\webpack133598972541642558 0
 125C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\.bin\webpack-cli.cmd133598972541785729 0
 118C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\node_modules\.bin\yaml.ps1133534810730388630 0
-123C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\favicon-32x32.60a50b4d.png133598984796232352 0
-137C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\illustration-features-tab-1.1512489a.svg133598984796132589 0
-114C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.3b06b0f7.js133598984796322111 0
-107C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.html133598984796132589 0
-130C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-bookmark-footer.60e1ada2.svg133598984796222374 0
-129C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-bookmark-phone.4531c601.svg133598984796222374 0
 117C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\design\desktop-design.jpg133373673300000000 0
 118C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\design\desktop-preview.jpg133373673300000000 0
 115C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\design\tab-3-design.jpg133373673300000000 0
+137C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\illustration-features-tab-1.1512489a.svg133599199207910070 0
+107C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.html133599199207910070 0
+123C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\favicon-32x32.60a50b4d.png133599199208049635 0
+129C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-bookmark-phone.4531c601.svg133599199208733643 0
+130C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\logo-bookmark-footer.60e1ada2.svg133599199208743609 0
+114C:\Users\Abdullahi\Documents\Web dev - amateur\Frontend mentor\bookmark-landing-page-master\dist\index.3b06b0f7.js133599202104222768 0
