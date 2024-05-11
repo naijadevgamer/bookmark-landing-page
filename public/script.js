@@ -1,5 +1,13 @@
 "use strict";
 
+import gsap from "../node_modules/gsap";
+
+// import gsap from "gsap";
+
+import { TextPlugin } from "../node_modules/gsap/TextPlugin";
+
+gsap.registerPlugin(TextPlugin);
+
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
 const section = document.querySelector("#section1");
@@ -109,3 +117,21 @@ window.addEventListener("resize", () => {
 window.addEventListener("orientationchange", () => {
   option.rootMargin = calculateRootMargin();
 });
+
+// gsap.to(document.querySelector("#section-1 h1"), {
+//   duration: 1,
+//   scrambleText: "A Simple Bookmark Manager",
+// }); //or customize things:
+
+gsap.to(document.querySelector("#section1 h1"), {
+  duration: 3,
+  scrambleText: {
+    text: "THIS IS NEW TEXT",
+    chars: "XO",
+    revealDelay: 3,
+    speed: 1,
+    newClass: "myClass",
+  },
+});
+
+console.log(document.querySelector("#section1 h1").textContent);
