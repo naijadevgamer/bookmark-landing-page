@@ -15,6 +15,11 @@ const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
 const sectionHeight = section.getBoundingClientRect().height;
 let lastScroll = 0;
 
+// Parcel config to maintain state
+if (module.hot) {
+  module.hot.accept();
+}
+
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION SMOOTH SCROLL
 
