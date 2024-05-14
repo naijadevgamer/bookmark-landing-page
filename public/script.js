@@ -7,12 +7,13 @@ gsap.registerPlugin(TextPlugin);
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
-const section = document.querySelector("#section1");
+const section1 = document.querySelector("#section1");
+const section2 = document.querySelector("#features");
 const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
 const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
 
-const sectionHeight = section.getBoundingClientRect().height;
+const section1Height = section1.getBoundingClientRect().height;
 let lastScroll = 0;
 
 // Parcel config to maintain state
@@ -56,6 +57,21 @@ checkHeader.addEventListener("change", checkChange);
 
 /////////////////////////////////////////////////////
 // STICKY NAVIGATION FUNCTIONALITY
+// Function to calculate rootMargin based on screen width
+const calculateRootMargin = () => {
+  const screenWidth = window.innerWidth;
+  let rootMargin = "";
+  // Compare breakpoints
+  if (screenWidth > 900)
+    // For larger screens
+    rootMargin = `-${section1Height + 50}px 0px 0px 0px`;
+  else if (screenWidth > 640)
+    // For medium screens
+    rootMargin = `-${section1Height + 43}px 0px 0px 0px`;
+  // For smaller screens (e.g., mobile)
+  else rootMargin = `-${section1Height + 33}px 0px 0px 0px`;
+  return rootMargin;
+};
 
 // Intersection Observer callback
 const stickyNav = function (entries) {
@@ -71,32 +87,14 @@ const stickyNav = function (entries) {
       : "";
 };
 
-// Function to calculate rootMargin based on screen width
-const calculateRootMargin = () => {
-  const screenWidth = window.innerWidth;
-  let rootMargin = "";
-
-  // Compare breakpoints
-  if (screenWidth > 900)
-    // For larger screens
-    rootMargin = `-${sectionHeight + 50}px 0px 0px 0px`;
-  else if (screenWidth > 640)
-    // For medium screens
-    rootMargin = `-${sectionHeight + 43}px 0px 0px 0px`;
-  // For smaller screens (e.g., mobile)
-  else rootMargin = `-${sectionHeight + 33}px 0px 0px 0px`;
-
-  return rootMargin;
-};
-
 const option = {
   root: null,
   threshold: 0,
   rootMargin: calculateRootMargin(),
 };
-const sectionObserver = new IntersectionObserver(stickyNav, option);
+const section1Observer = new IntersectionObserver(stickyNav, option);
 
-sectionObserver.observe(section);
+section1Observer.observe(section1);
 
 // Function to handle scrolling up and down
 const handleScroll = function () {
@@ -121,9 +119,33 @@ window.addEventListener("orientationchange", () => {
 
 /////////////////////////////////////////////////////
 // TEXT TRICK FUNCTIONALITY
-gsap.to("#demo", {
+gsap.to("#section1-header", {
   duration: 2,
   delay: 3,
   text: "A Simple Bookmark Manager",
   ease: "none",
 });
+
+//////////////////////////////////////////////////
+// REVEAL SECTION
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  console.log("hello", entry);
+
+  if (!entry.isIntersecting) return;
+  // entry.target.classList.remove("section--hidden");
+  // observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.2,
+});
+
+sectionObserver.observe(section2);
+
+// allSections.forEach(function (section) {
+//   sectionObserver.observe(section);
+//   section.classList.add("section--hidden");
+// });

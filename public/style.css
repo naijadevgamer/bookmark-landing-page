@@ -1096,8 +1096,18 @@ video {
   background-color: hsl(0 94% 66% / var(--tw-bg-opacity));
 }
 
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .stroke-arrow {
@@ -1193,11 +1203,6 @@ video {
 
 .text-\[3\.5rem\]\/\[normal\] {
   font-size: 3.5rem;
-  line-height: normal;
-}
-
-.text-\[4rem\]\/\[normal\] {
-  font-size: 4rem;
   line-height: normal;
 }
 
