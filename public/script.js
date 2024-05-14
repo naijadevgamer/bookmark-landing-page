@@ -7,11 +7,12 @@ gsap.registerPlugin(TextPlugin);
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
-const section1 = document.querySelector("#section1");
+const section1 = document.querySelector("#section--1");
 const section2 = document.querySelector("#features");
 const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
 const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
+const allRevealSection = document.querySelectorAll(".sect");
 
 const section1Height = section1.getBoundingClientRect().height;
 let lastScroll = 0;
@@ -119,7 +120,7 @@ window.addEventListener("orientationchange", () => {
 
 /////////////////////////////////////////////////////
 // TEXT TRICK FUNCTIONALITY
-gsap.to("#section1-header", {
+gsap.to("#section--1__header", {
   duration: 2,
   delay: 3,
   text: "A Simple Bookmark Manager",
@@ -131,21 +132,14 @@ gsap.to("#section1-header", {
 const revealSection = function (entries, observer) {
   const [entry] = entries;
 
-  console.log("hello", entry);
-
   if (!entry.isIntersecting) return;
-  // entry.target.classList.remove("section--hidden");
-  // observer.unobserve(entry.target);
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
 };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
+const revealSectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.2,
+  threshold: 0,
 });
 
-sectionObserver.observe(section2);
-
-// allSections.forEach(function (section) {
-//   sectionObserver.observe(section);
-//   section.classList.add("section--hidden");
-// });
+allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));

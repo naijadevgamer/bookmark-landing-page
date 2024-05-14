@@ -80,6 +80,9 @@
   @apply opacity-100 visible translate-y-0 duration-700;
 }
 
+.section--hidden {
+  @apply opacity-0 translate-y-1/4;
+}
 /* Custom CSS */
 
 /*=============== Menu trigger bar checked =============== */
