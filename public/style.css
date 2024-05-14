@@ -876,7 +876,7 @@ video {
 }
 
 .animate-btn1 {
-  animation: scaleUp 2s ease 2s both;
+  animation: scaleUp 2s ease 3s both;
 }
 
 @keyframes scaleUp {
@@ -892,7 +892,7 @@ video {
 }
 
 .animate-btn2 {
-  animation: scaleUp 2s ease 3s both;
+  animation: scaleUp 2s ease 4s both;
 }
 
 @keyframes loadNav {
@@ -932,7 +932,7 @@ video {
 @keyframes showFromUp {
   0% {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(-20%);
   }
 
   100% {
@@ -964,7 +964,7 @@ video {
 @keyframes showFromUp {
   0% {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(-20%);
   }
 
   100% {
@@ -1552,7 +1552,7 @@ video {
 }
 
 .nav-link {
-  animation: show 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 2s both;
+  animation: show 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 4s both;
 }
 
 .nav-stick {

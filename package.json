@@ -6,7 +6,8 @@
   "scripts": {
     "watch:tailwind": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
     "devserver": "live-server public",
-    "start": "parcel public/index.html"
+    "start": "parcel public/index.html",
+    "start2": "npm-run-all --parallel devserver watch:tailwind"
   },
   "author": "naijadevgamer",
   "license": "ISC",

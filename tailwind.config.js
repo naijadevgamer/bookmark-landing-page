@@ -34,7 +34,7 @@ module.exports = {
         showFromUp: {
           "0%": {
             opacity: "0",
-            transform: "translateY(-10%)",
+            transform: "translateY(-20%)",
           },
           "100%": {
             opacity: "1",
@@ -63,13 +63,13 @@ module.exports = {
         dropDown:
           "dropDown 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards",
         loadNav: "loadNav 2s cubic-bezier(0.62, 0.15, 0.85, 1.55)",
-        loadNavLink: "show 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 2s both",
+        loadNavLink: "show 1s cubic-bezier(0.62, 0.15, 0.85, 1.55) 4s both",
         showHeading: "showFromUp 2s ease 2s both",
         showPara: "showFromUp 2s ease 2.5s both",
         showImg: "scaleUp 2s ease 2s both",
         showDiagram: "show 2s ease 3s both",
-        btn1: "scaleUp 2s ease 2s both",
-        btn2: "scaleUp 2s ease 3s both",
+        btn1: "scaleUp 2s ease 3s both",
+        btn2: "scaleUp 2s ease 4s both",
       },
       colors: {
         primary: {
