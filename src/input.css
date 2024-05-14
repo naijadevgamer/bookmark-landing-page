@@ -26,6 +26,10 @@
   @apply text-white py-4 w-full border-white text-18 border-b-2 hover:text-neutral-veryDarkBlue;
 }
 
+.btn--observe {
+  transition: background-color 0.5s, border 0.5s, opacity 3s;
+}
+
 .spaced-center {
   @apply flex justify-between items-center;
 }

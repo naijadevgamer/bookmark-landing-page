@@ -143,3 +143,23 @@ const revealSectionObserver = new IntersectionObserver(revealSection, {
 });
 
 allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
+
+//////////////////////////////////////////////////
+// REVEAL BUTTONS
+const revealButton = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("opacity-0");
+  observer.unobserve(entry.target);
+};
+
+const revealButtonObserver = new IntersectionObserver(revealButton, {
+  root: null,
+  threshold: 1,
+  rootMargin: "-100px",
+});
+
+revealButtonObserver.observe(document.querySelector(".btn--observe"));
+
+// allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));

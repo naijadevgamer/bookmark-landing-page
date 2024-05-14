@@ -1393,6 +1393,10 @@ video {
   color: hsl(229 31% 21% / var(--tw-text-opacity));
 }
 
+.btn--observe {
+  transition: background-color 0.5s, border 0.5s, opacity 3s;
+}
+
 .spaced-center {
   display: flex;
   align-items: center;
