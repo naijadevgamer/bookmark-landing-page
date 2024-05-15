@@ -849,11 +849,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-12 {
-  --tw-translate-y: 3rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1771,11 +1766,11 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 }
 
 .reveal-card--2 {
-  animation: revealCard2 2s ease forwards;
+  animation: revealCard2 2s ease 0.5s forwards;
 }
 
 .reveal-card--3 {
-  animation: revealCard2 2s ease forwards;
+  animation: revealCard3 2s ease 1s forwards;
 }
 
 @keyframes revealCard1 {
@@ -2027,11 +2022,6 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 
   .max-tp\:translate-y-0 {
     --tw-translate-y: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .max-tp\:translate-y-12 {
-    --tw-translate-y: 3rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 

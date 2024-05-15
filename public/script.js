@@ -13,6 +13,7 @@ const logoPhone = document.querySelector(".logo-phone");
 const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
 const allRevealSection = document.querySelectorAll(".sect");
 const allRevealButtons = document.querySelectorAll(".btn--observe");
+const allRevealCards = document.querySelectorAll(".card");
 
 const section1Height = section1.getBoundingClientRect().height;
 let lastScroll = 0;
@@ -142,7 +143,12 @@ const reveal = function (entries, observer) {
 const revealCard = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  entry.target.classList.add("reveal-card--1");
+  entry.target.classList.contains("card--1") &&
+    entry.target.classList.add("reveal-card--1");
+  entry.target.classList.contains("card--2") &&
+    entry.target.classList.add("reveal-card--2");
+  entry.target.classList.contains("card--3") &&
+    entry.target.classList.add("reveal-card--3");
   observer.unobserve(entry.target);
 };
 
@@ -164,4 +170,4 @@ const revealCardObserver = new IntersectionObserver(revealCard, {
   threshold: 0,
 });
 
-revealCardObserver.observe(document.querySelector(".card"));
+allRevealCards.forEach((card) => revealCardObserver.observe(card));
