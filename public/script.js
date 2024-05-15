@@ -13,6 +13,7 @@ const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
 const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
 const allRevealSection = document.querySelectorAll(".sect");
+const allRevealButtons = document.querySelectorAll(".btn--observe");
 
 const section1Height = section1.getBoundingClientRect().height;
 let lastScroll = 0;
@@ -157,9 +158,7 @@ const revealButton = function (entries, observer) {
 const revealButtonObserver = new IntersectionObserver(revealButton, {
   root: null,
   threshold: 1,
-  rootMargin: "-100px",
+  rootMargin: "-50px",
 });
 
-revealButtonObserver.observe(document.querySelector(".btn--observe"));
-
-// allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
+allRevealButtons.forEach((btn) => revealButtonObserver.observe(btn));
