@@ -129,36 +129,28 @@ gsap.to("#section--1__header", {
 });
 
 //////////////////////////////////////////////////
-// REVEAL SECTION
-const revealSection = function (entries, observer) {
+// REVEAL SECTION & BUTTONS FUNCTIONALITY
+// Reveal function
+const reveal = function (entries, observer) {
   const [entry] = entries;
-
   if (!entry.isIntersecting) return;
-  entry.target.classList.remove("section--hidden");
+  const target = entry.target.classList;
+  target.contains("section--hidden") && target.remove("section--hidden");
+  target.contains("btn--observe") && target.remove("opacity-0");
   observer.unobserve(entry.target);
 };
 
-const revealSectionObserver = new IntersectionObserver(revealSection, {
+const revealSectionObserver = new IntersectionObserver(reveal, {
   root: null,
   threshold: 0,
 });
 
-allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
-
-//////////////////////////////////////////////////
-// REVEAL BUTTONS
-const revealButton = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-  entry.target.classList.remove("opacity-0");
-  observer.unobserve(entry.target);
-};
-
-const revealButtonObserver = new IntersectionObserver(revealButton, {
+const revealButtonObserver = new IntersectionObserver(reveal, {
   root: null,
   threshold: 1,
   rootMargin: "-50px",
 });
+
+allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
 
 allRevealButtons.forEach((btn) => revealButtonObserver.observe(btn));
