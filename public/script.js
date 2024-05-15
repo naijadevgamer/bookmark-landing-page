@@ -1,14 +1,13 @@
 "use strict";
 
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
+// import { gsap } from "gsap";
+// import { TextPlugin } from "gsap/TextPlugin";
 
-gsap.registerPlugin(TextPlugin);
+// gsap.registerPlugin(TextPlugin);
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
 const section1 = document.querySelector("#section--1");
-const section2 = document.querySelector("#features");
 const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
 const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
@@ -19,9 +18,9 @@ const section1Height = section1.getBoundingClientRect().height;
 let lastScroll = 0;
 
 // Parcel config to maintain state
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 /////////////////////////////////////////////////////
 // PAGE NAVIGATION SMOOTH SCROLL
@@ -121,16 +120,16 @@ window.addEventListener("orientationchange", () => {
 
 /////////////////////////////////////////////////////
 // TEXT TRICK FUNCTIONALITY
-gsap.to("#section--1__header", {
-  duration: 2,
-  delay: 3,
-  text: "A Simple Bookmark Manager",
-  ease: "none",
-});
+// gsap.to("#section--1__header", {
+//   duration: 2,
+//   delay: 3,
+//   text: "A Simple Bookmark Manager",
+//   ease: "none",
+// });
 
 //////////////////////////////////////////////////
-// REVEAL SECTION & BUTTONS FUNCTIONALITY
-// Reveal function
+// REVEAL FUNCTIONALITY
+// Reveal button and section function
 const reveal = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
@@ -140,17 +139,29 @@ const reveal = function (entries, observer) {
   observer.unobserve(entry.target);
 };
 
+const revealCard = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.add("reveal-card--1");
+  observer.unobserve(entry.target);
+};
+
 const revealSectionObserver = new IntersectionObserver(reveal, {
   root: null,
   threshold: 0,
 });
+allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
 
 const revealButtonObserver = new IntersectionObserver(reveal, {
   root: null,
   threshold: 1,
   rootMargin: "-50px",
 });
-
-allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
-
 allRevealButtons.forEach((btn) => revealButtonObserver.observe(btn));
+
+const revealCardObserver = new IntersectionObserver(revealCard, {
+  root: null,
+  threshold: 0,
+});
+
+revealCardObserver.observe(document.querySelector(".card"));

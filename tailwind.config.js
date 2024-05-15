@@ -51,6 +51,18 @@ module.exports = {
             transform: "scale(1)",
           },
         },
+
+        // Cards
+        revealCard: {
+          "0%": {
+            // opacity: "0",
+            transform: "translateY(0%)",
+          },
+          "100%": {
+            // opacity: "1",
+            transform: "translateY(-25%)",
+          },
+        },
       },
       animation: {
         // Menu bar animations

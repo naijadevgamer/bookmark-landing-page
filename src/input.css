@@ -41,7 +41,7 @@
 }
 
 .card {
-  @apply max-w-[32rem] w-[100%] text-center overflow-hidden text-18/[normal] rounded-xl shadow-lg;
+  @apply max-w-[32rem] w-[100%] text-center overflow-hidden text-18/[normal] rounded-xl shadow-lg duration-1000;
 }
 
 .dotted-line {
@@ -166,4 +166,42 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
   @apply translate-y-0 delay-100;
 }
 
+/* revealcard: "revealCard 2s ease both"; */
+
+.reveal-card--1 {
+  animation: revealCard1 2s ease forwards;
+}
+
+.reveal-card--2 {
+  animation: revealCard2 2s ease forwards;
+}
+.reveal-card--3 {
+  animation: revealCard2 2s ease forwards;
+}
+@keyframes revealCard1 {
+  from {
+    transform: translateY(20%);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes revealCard2 {
+  from {
+    transform: translateY(30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes revealCard3 {
+  from {
+    transform: translateY(40%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
 /* npm-run-all --parallel devserver watch:tailwind */
