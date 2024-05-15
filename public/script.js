@@ -130,25 +130,16 @@ window.addEventListener("orientationchange", () => {
 
 //////////////////////////////////////////////////
 // REVEAL FUNCTIONALITY
-// Reveal button and section function
+// Reveal cards, buttons, and sections function
 const reveal = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  const target = entry.target.classList;
-  target.contains("section--hidden") && target.remove("section--hidden");
-  target.contains("btn--observe") && target.remove("opacity-0");
-  observer.unobserve(entry.target);
-};
-
-const revealCard = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  entry.target.classList.contains("card--1") &&
-    entry.target.classList.add("reveal-card--1");
-  entry.target.classList.contains("card--2") &&
-    entry.target.classList.add("reveal-card--2");
-  entry.target.classList.contains("card--3") &&
-    entry.target.classList.add("reveal-card--3");
+  const targetC = entry.target.classList;
+  targetC.contains("section--hidden") && targetC.remove("section--hidden");
+  targetC.contains("btn--observe") && targetC.remove("opacity-0");
+  targetC.contains("card--1") && targetC.add("reveal-card--1");
+  targetC.contains("card--2") && targetC.add("reveal-card--2");
+  targetC.contains("card--3") && targetC.add("reveal-card--3");
   observer.unobserve(entry.target);
 };
 
@@ -165,9 +156,8 @@ const revealButtonObserver = new IntersectionObserver(reveal, {
 });
 allRevealButtons.forEach((btn) => revealButtonObserver.observe(btn));
 
-const revealCardObserver = new IntersectionObserver(revealCard, {
+const revealCardObserver = new IntersectionObserver(reveal, {
   root: null,
-  threshold: 0,
+  threshold: 0.2,
 });
-
 allRevealCards.forEach((card) => revealCardObserver.observe(card));

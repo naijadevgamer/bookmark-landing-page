@@ -41,7 +41,7 @@
 }
 
 .card {
-  @apply max-w-[32rem] w-[100%] text-center overflow-hidden text-18/[normal] rounded-xl shadow-lg duration-1000;
+  @apply max-w-[32rem] w-[100%] text-center overflow-hidden opacity-0 text-18/[normal] rounded-xl shadow-lg duration-1000;
 }
 
 .dotted-line {
@@ -85,7 +85,7 @@
 }
 
 .section--hidden {
-  @apply opacity-0 translate-y-1/4;
+  @apply opacity-0 translate-y-1/2;
 }
 /* Custom CSS */
 
@@ -168,42 +168,49 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 
 /* revealcard: "revealCard 2s ease both"; */
 
+/* Card reveal  */
 .reveal-card--1 {
-  animation: revealCard1 2s ease forwards;
+  animation: revealCard1 2s ease both;
 }
 
 .reveal-card--2 {
-  animation: revealCard2 2s ease 0.5s forwards;
+  animation: revealCard2 2s ease 0.5s both;
 }
 
 .reveal-card--3 {
-  animation: revealCard3 2s ease 1s forwards;
+  animation: revealCard3 2s ease 1s both;
 }
 
 @keyframes revealCard1 {
   from {
-    transform: translateY(20%);
+    transform: translateY(40%);
+    opacity: 0;
   }
   to {
     transform: translateY(-10%);
+    opacity: 1;
   }
 }
 
 @keyframes revealCard2 {
   from {
-    transform: translateY(30%);
+    transform: translateY(50%);
+    opacity: 0;
   }
   to {
     transform: translateY(0%);
+    opacity: 1;
   }
 }
 
 @keyframes revealCard3 {
   from {
-    transform: translateY(40%);
+    transform: translateY(60%);
+    opacity: 0;
   }
   to {
     transform: translateY(10%);
+    opacity: 1;
   }
 }
 /* npm-run-all --parallel devserver watch:tailwind */
