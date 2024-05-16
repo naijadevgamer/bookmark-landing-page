@@ -1,16 +1,18 @@
 "use strict";
 
-// import { gsap } from "gsap";
-// import { TextPlugin } from "gsap/TextPlugin";
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
 
-// gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(TextPlugin);
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
 const section1 = document.querySelector("#section--1");
 const logoHeader = document.querySelector(".logo-header");
 const logoPhone = document.querySelector(".logo-phone");
-const navLinks = document.querySelectorAll(".nav-links, .phone-nav-list");
+const navLinks = document.querySelectorAll(
+  ".nav-links, .phone-nav-list, footer ul"
+);
 const allRevealSection = document.querySelectorAll(".sect");
 const allRevealButtons = document.querySelectorAll(".btn--observe");
 const allRevealCards = document.querySelectorAll(".card");
@@ -19,13 +21,12 @@ const section1Height = section1.getBoundingClientRect().height;
 let lastScroll = 0;
 
 // Parcel config to maintain state
-// if (module.hot) {
-//   module.hot.accept();
-// }
+if (module.hot) {
+  module.hot.accept();
+}
 
 /////////////////////////////////////////////////////
-// PAGE NAVIGATION SMOOTH SCROLL
-
+// SMOOTH SCROLL PAGE NAVIGATION FUNCTIONALITY
 // Function to handle checkbox change in phone nav
 const checkChange = function () {
   document.body.style.overflow = checkHeader.checked ? "hidden" : "auto";
@@ -60,20 +61,16 @@ checkHeader.addEventListener("change", checkChange);
 /////////////////////////////////////////////////////
 // STICKY NAVIGATION FUNCTIONALITY
 // Function to calculate rootMargin based on screen width
-const calculateRootMargin = () => {
+function calculateRootMargin() {
   const screenWidth = window.innerWidth;
   let rootMargin = "";
   // Compare breakpoints
-  if (screenWidth > 900)
-    // For larger screens
-    rootMargin = `-${section1Height + 50}px 0px 0px 0px`;
+  if (screenWidth > 900) rootMargin = `-${section1Height + 50}px 0px 0px 0px`;
   else if (screenWidth > 640)
-    // For medium screens
     rootMargin = `-${section1Height + 43}px 0px 0px 0px`;
-  // For smaller screens (e.g., mobile)
   else rootMargin = `-${section1Height + 33}px 0px 0px 0px`;
   return rootMargin;
-};
+}
 
 // Intersection Observer callback
 const stickyNav = function (entries) {
@@ -121,12 +118,12 @@ window.addEventListener("orientationchange", () => {
 
 /////////////////////////////////////////////////////
 // TEXT TRICK FUNCTIONALITY
-// gsap.to("#section--1__header", {
-//   duration: 2,
-//   delay: 3,
-//   text: "A Simple Bookmark Manager",
-//   ease: "none",
-// });
+gsap.to("#section--1__header", {
+  duration: 2,
+  delay: 3,
+  text: "A Simple Bookmark Manager",
+  ease: "rough",
+});
 
 //////////////////////////////////////////////////
 // REVEAL FUNCTIONALITY

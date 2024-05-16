@@ -1603,8 +1603,10 @@ video {
   transition-duration: 700ms;
 }
 
+/* Section animation */
+
 .section--hidden {
-  --tw-translate-y: 33.333333%;
+  --tw-translate-y: 10%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 0;
 }
@@ -1779,7 +1781,7 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 
 /* revealcard: "revealCard 2s ease both"; */
 
-/* Card reveal  */
+/* Card reveal Animation */
 
 .reveal-card--1 {
   animation: revealCard1 2s ease both;
