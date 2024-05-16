@@ -2,8 +2,20 @@
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".card--1", {
+  scrollTrigger: {
+    trigger: ".card--1",
+    scrub: true,
+  }, // start the animation when ".box" enters the viewport (once)
+  x: 500,
+  backgroundColor: "red",
+  duration: 3,
+});
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
@@ -122,7 +134,7 @@ gsap.to("#section--1__header", {
   duration: 2,
   delay: 3,
   text: "A Simple Bookmark Manager",
-  ease: "rough",
+  ease: "sine.inOut",
 });
 
 //////////////////////////////////////////////////
