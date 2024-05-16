@@ -1551,6 +1551,8 @@ video {
   }
 }
 
+/* Nav animation functionality  */
+
 @keyframes show {
   0% {
     opacity: 0;
@@ -1602,7 +1604,7 @@ video {
 }
 
 .section--hidden {
-  --tw-translate-y: 50%;
+  --tw-translate-y: 33.333333%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 0;
 }
@@ -1789,6 +1791,13 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 
 .reveal-card--3 {
   animation: revealCard3 2s ease 1s both;
+}
+
+@media (max-width: 900px) {
+  .reveal-card--1,
+  .reveal-card--3 {
+    animation: revealCard2 2s ease both;
+  }
 }
 
 @keyframes revealCard1 {
@@ -2044,8 +2053,8 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .max-tp\:translate-y-0 {
-    --tw-translate-y: 0px;
+  .max-tp\:translate-y-\[50\%\] {
+    --tw-translate-y: 50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
