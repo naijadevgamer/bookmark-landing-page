@@ -161,3 +161,11 @@ const revealCardObserver = new IntersectionObserver(reveal, {
   threshold: 0.2,
 });
 allRevealCards.forEach((card) => revealCardObserver.observe(card));
+
+// For Viewport 900 and below
+const revealCardObserverSpecial = new IntersectionObserver(reveal, {
+  root: null,
+  threshold: 0.2,
+});
+window.innerWidth <= 900 &&
+  revealCardObserverSpecial.observe(document.querySelector(".card--2"));
