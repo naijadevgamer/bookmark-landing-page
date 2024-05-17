@@ -1286,6 +1286,26 @@ video {
   transition-delay: 0.6s;
 }
 
+.delay-\[2s\] {
+  transition-delay: 2s;
+}
+
+.delay-\[5s\] {
+  transition-delay: 5s;
+}
+
+.delay-\[1s\] {
+  transition-delay: 1s;
+}
+
+.delay-\[3s\] {
+  transition-delay: 3s;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1301,6 +1321,10 @@ video {
 .duration-\[2s\] {
   transition-duration: 2s;
 }
+
+/* .class2 {
+  @apply text-[5rem]/[normal];
+} */
 
 .btn {
   border-radius: 0.5rem;
@@ -1606,7 +1630,7 @@ video {
 /* Section animation */
 
 .section--hidden {
-  --tw-translate-y: 10%;
+  --tw-translate-y: 20%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   opacity: 0;
 }

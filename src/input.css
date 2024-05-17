@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .class2 {
+  @apply text-[5rem]/[normal];
+} */
 .btn {
   @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem] border-2 border-b-[2.5px] border-transparent hover:bg-white duration-500;
 }
@@ -87,7 +90,7 @@
 
 /* Section animation */
 .section--hidden {
-  @apply opacity-0 translate-y-[10%];
+  @apply opacity-0 translate-y-[20%];
 }
 
 /* Custom CSS */

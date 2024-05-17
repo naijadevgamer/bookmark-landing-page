@@ -10,12 +10,44 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".card--1", {
   scrollTrigger: {
     trigger: ".card--1",
-    scrub: true,
+    scrub: 0.5,
+    start: "top 70%",
+    end: "top 40%",
   }, // start the animation when ".box" enters the viewport (once)
-  x: 500,
-  backgroundColor: "red",
-  duration: 3,
+  backgroundColor: "#e6fff5",
 });
+gsap.to(".card--2", {
+  scrollTrigger: {
+    trigger: ".card--2",
+    scrub: 0.5,
+    start: "top 70%",
+    end: "top 40%",
+  }, // start the animation when ".box" enters the viewport (once)
+  backgroundColor: "#E0F7FA",
+});
+gsap.to(".card--3", {
+  scrollTrigger: {
+    trigger: ".card--3",
+    scrub: 0.5,
+    start: "top 70%",
+    end: "top 40%",
+  }, // start the animation when ".box" enters the viewport (once)
+  backgroundColor: "#fff9e6",
+});
+
+// gsap.to(".disp-img", {
+//   scrollTrigger: {
+//     trigger: ".disp-img",
+//     scrub: true,
+//     // start: "top 120%",
+//     end: "top 40%",
+//   }, // start the animation when ".box" enters the viewport (once)
+//   // scale: 1.3,
+//   // yPercent: 50,
+//   // start: "top 200%",
+//   // end: "top 20%",
+//   duration: 1,
+// });
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
@@ -149,6 +181,7 @@ const reveal = function (entries, observer) {
   targetC.contains("card--1") && targetC.add("reveal-card--1");
   targetC.contains("card--2") && targetC.add("reveal-card--2");
   targetC.contains("card--3") && targetC.add("reveal-card--3");
+
   observer.unobserve(entry.target);
 };
 
@@ -178,3 +211,27 @@ const revealCardObserverSpecial = new IntersectionObserver(reveal, {
 });
 window.innerWidth <= 900 &&
   revealCardObserverSpecial.observe(document.querySelector(".card--2"));
+
+//////////////////////////////////////////////////
+// ASIDE FUNCTIONALITY
+const handleAside = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  // const targetC = entry.target.classList;
+  gsap.to("aside h2", {
+    duration: 2,
+    text: "Stay up-to-date with what we’re doing",
+    ease: "sine.inOut",
+  });
+  observer.unobserve(entry.target);
+
+  document.querySelector("aside form").classList.remove("opacity-0");
+  document.querySelector("aside p").classList.remove("opacity-0");
+};
+
+const asideObserver = new IntersectionObserver(handleAside, {
+  root: null,
+  threshold: 1,
+});
+
+asideObserver.observe(document.querySelector("aside"));
