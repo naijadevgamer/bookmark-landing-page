@@ -690,8 +690,8 @@ video {
   margin-top: 6rem;
 }
 
-.mt-60 {
-  margin-top: 15rem;
+.mt-96 {
+  margin-top: 24rem;
 }
 
 .mt-\[10rem\] {
@@ -1091,6 +1091,11 @@ video {
   background-color: hsl(229 31% 21% / 0.9);
 }
 
+.bg-orange-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
 .bg-primary-softBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(231 69% 60% / var(--tw-bg-opacity));
@@ -1284,14 +1289,6 @@ video {
 
 .delay-\[0\.6s\] {
   transition-delay: 0.6s;
-}
-
-.delay-\[2s\] {
-  transition-delay: 2s;
-}
-
-.delay-\[5s\] {
-  transition-delay: 5s;
 }
 
 .delay-\[1s\] {
@@ -2001,6 +1998,10 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 
   .max-tl\:-mr-\[10rem\] {
     margin-right: -10rem;
+  }
+
+  .max-tl\:mt-60 {
+    margin-top: 15rem;
   }
 
   .max-tl\:h-52 {
