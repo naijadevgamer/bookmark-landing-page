@@ -35,19 +35,19 @@ gsap.to(".card--3", {
   backgroundColor: "#fff9e6",
 });
 
-// gsap.to(".disp-img", {
-//   scrollTrigger: {
-//     trigger: ".disp-img",
-//     scrub: true,
-//     // start: "top 120%",
-//     end: "top 40%",
-//   }, // start the animation when ".box" enters the viewport (once)
-//   // scale: 1.3,
-//   // yPercent: 50,
-//   // start: "top 200%",
-//   // end: "top 20%",
-//   duration: 1,
-// });
+gsap.to(".disp-img", {
+  scrollTrigger: {
+    trigger: ".disp-img",
+    scrub: 1,
+    start: "top 20%",
+    // end: "top 40%",
+    markers: true,
+  }, // start the animation when ".box" enters the viewport (once)
+  scale: 1.2,
+  yPercent: 20,
+  ease: "circ",
+  duration: 1,
+});
 
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
@@ -62,6 +62,7 @@ const allRevealButtons = document.querySelectorAll(".btn--observe");
 const allRevealCards = document.querySelectorAll(".card");
 
 const section1Height = section1.getBoundingClientRect().height;
+
 let lastScroll = 0;
 
 // Parcel config to maintain state
