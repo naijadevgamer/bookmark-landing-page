@@ -138,8 +138,8 @@ const stickyNav = function (entries) {
 
 const option = {
   root: null,
-  threshold: 1,
-  // rootMargin: calculateRootMargin(),
+  threshold: 0,
+  rootMargin: calculateRootMargin(),
 };
 const section1Observer = new IntersectionObserver(stickyNav, option);
 
@@ -148,7 +148,6 @@ section1Observer.observe(section1);
 // Function to handle scrolling up and down
 const handleScroll = function () {
   const currentScroll = window.scrollY;
-  console.log(currentScroll, lastScroll);
   // Scroll direction functionality
   header.classList.toggle("nav-show", currentScroll <= lastScroll);
   // Add transition when nav is passed
