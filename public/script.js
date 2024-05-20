@@ -33,7 +33,7 @@ gsap.to(".card--1", {
     scrub: 0.5,
     start: "top 70%",
     end: "top 40%",
-  }, // start the animation when ".box" enters the viewport (once)
+  },
   backgroundColor: "#e6fff5",
 });
 gsap.to(".card--2", {
@@ -42,7 +42,7 @@ gsap.to(".card--2", {
     scrub: 0.5,
     start: "top 70%",
     end: "top 40%",
-  }, // start the animation when ".box" enters the viewport (once)
+  },
   backgroundColor: "#E0F7FA",
 });
 gsap.to(".card--3", {
@@ -51,23 +51,23 @@ gsap.to(".card--3", {
     scrub: 0.5,
     start: "top 70%",
     end: "top 40%",
-  }, // start the animation when ".box" enters the viewport (once)
+  },
   backgroundColor: "#fff9e6",
 });
 
-gsap.to(".disp-img", {
-  scrollTrigger: {
-    trigger: ".disp-img",
-    scrub: 1,
-    start: "top 20%",
-    // end: "top 40%",
-    markers: true,
-  }, // start the animation when ".box" enters the viewport (once)
-  scale: 1.2,
-  yPercent: 20,
-  ease: "circ",
-  duration: 1,
-});
+// gsap.to(null, {
+//   scrollTrigger: {
+//     // trigger: ".disp-img",
+//     // scrub: 1,
+//     // start: "top 40%",
+//     // end: "top 40%",
+//     markers: true,
+//   },
+//   // scale: 1.2,
+//   // yPercent: 20,
+//   // ease: "circ",
+//   // duration: 1,
+// });
 
 // Parcel config to maintain state
 if (module.hot) {
@@ -124,6 +124,7 @@ function calculateRootMargin() {
 // Intersection Observer callback
 const stickyNav = function (entries) {
   const [entry] = entries;
+  console.log("stick");
   header.classList.toggle("nav-stick", !entry.isIntersecting);
   logoHeader.style.opacity = entry.isIntersecting ? 1 : 0;
   logoPhone.style.opacity = entry.isIntersecting ? 0 : 1;
@@ -137,8 +138,8 @@ const stickyNav = function (entries) {
 
 const option = {
   root: null,
-  threshold: 0,
-  rootMargin: calculateRootMargin(),
+  threshold: 1,
+  // rootMargin: calculateRootMargin(),
 };
 const section1Observer = new IntersectionObserver(stickyNav, option);
 
@@ -147,6 +148,7 @@ section1Observer.observe(section1);
 // Function to handle scrolling up and down
 const handleScroll = function () {
   const currentScroll = window.scrollY;
+  console.log(currentScroll, lastScroll);
   // Scroll direction functionality
   header.classList.toggle("nav-show", currentScroll <= lastScroll);
   // Add transition when nav is passed
@@ -255,7 +257,6 @@ const showError = function (msg) {
 const showSuccess = function () {
   form.classList.add("item-start");
   form.classList.remove("item-center");
-  // formDiv.classList.add("success");
   formDiv.classList.remove("error");
   errorText.classList.add("hidden");
   errorIcon.classList.add("hidden");

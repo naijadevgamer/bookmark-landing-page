@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .class2 {
-  @apply text-[5rem]/[normal];
-} */
 .btn {
   @apply rounded-lg px-10 py-4 shadow-lg text-[1.6rem] border-2 border-b-[2.5px] border-transparent hover:bg-white duration-500;
 }
@@ -97,18 +94,6 @@
 .error {
   @apply shadow-lg bg-primary-softRed border-primary-softRed max-sm:mb-4;
 }
-/* .error p {
-}
-.error .icon {
-} */
-.success {
-  @apply bg-transparent border-transparent;
-}
-/* .success p {
-  
-}
-.success .icon {
-} */
 
 /* Custom CSS */
 
@@ -243,4 +228,3 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
     opacity: 1;
   }
 }
-/* npm-run-all --parallel devserver watch:tailwind */

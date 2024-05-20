@@ -1294,10 +1294,6 @@ video {
   transition-duration: 2s;
 }
 
-/* .class2 {
-  @apply text-[5rem]/[normal];
-} */
-
 .btn {
   border-radius: 0.5rem;
   border-width: 2px;
@@ -1625,22 +1621,6 @@ video {
   }
 }
 
-/* .error p {
-}
-.error .icon {
-} */
-
-.success {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-/* .success p {
-  
-}
-.success .icon {
-} */
-
 /* Custom CSS */
 
 /*=============== Menu trigger bar checked =============== */
@@ -1867,8 +1847,6 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
     opacity: 1;
   }
 }
-
-/* npm-run-all --parallel devserver watch:tailwind */
 
 .before\:absolute::before {
   content: var(--tw-content);
