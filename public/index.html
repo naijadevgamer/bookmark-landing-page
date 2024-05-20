@@ -551,24 +551,26 @@
         </h2>
 
         <form
-          class="flex justify-between max-sm:flex-col items-center opacity-0 duration-1000 delay-[1s]"
+          class="flex justify-between max-sm:flex-col items-start opacity-0 duration-1000 delay-[1s]"
         >
           <!-- items-start for form instead of items center when error-->
           <!-- <div
-            class="w-[70%] rounded-lg shadow-lg bg-primary-softRed border-2 border-b-[2.5px] border-primary-softRed relative max-sm:w-[100%] max-sm:mb-4"
+            class="w-[70%] rounded-lg shadow-lg bg-primary-softRed border-2 border-b-[2.5px] border-primary-softRed relative max-sm:w-[100%] max-sm:mb-4 duration-500"
+          >
+            <div
+            class="w-[70%] rounded-lg border-2 border-b-[2.5px] relative max-sm:w-[100%] error"
           > -->
           <div
-            class="w-[70%] rounded-lg bg-transparent border-2 border-b-[2.5px] border-transparent relative max-sm:w-[100%]"
+            class="w-[70%] rounded-lg border-transparent border-2 border-b-[2.5px] relative max-sm:w-[100%] duration-500"
           >
             <input
               class="w-full rounded-lg px-10 py-4 shadow-lg text-[1.6rem] text-neutral-grayishBlue outline-none max-sm:mb-8"
-              type="email"
               placeholder="Enter your email address"
             />
             <p class="text-xl italic py-2 px-6 text-start hidden">
               Whoops, make sure it's an email
             </p>
-            <div class="absolute top-4 right-6 hidden">
+            <div class="absolute top-4 right-6 icon hidden">
               <img src="./images/icon-error.svg" alt="Error-icon" />
             </div>
           </div>

@@ -93,6 +93,23 @@
   @apply opacity-0 translate-y-[20%];
 }
 
+/* Form error and success */
+.error {
+  @apply shadow-lg bg-primary-softRed border-primary-softRed max-sm:mb-4;
+}
+/* .error p {
+}
+.error .icon {
+} */
+.success {
+  @apply bg-transparent border-transparent;
+}
+/* .success p {
+  
+}
+.success .icon {
+} */
+
 /* Custom CSS */
 
 /*=============== Menu trigger bar checked =============== */

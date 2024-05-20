@@ -4,6 +4,26 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+const header = document.querySelector("header");
+const checkHeader = document.querySelector("#header-checkbox");
+const section1 = document.querySelector("#section--1");
+const logoHeader = document.querySelector(".logo-header");
+const logoPhone = document.querySelector(".logo-phone");
+const navLinks = document.querySelectorAll(
+  ".nav-links, .phone-nav-list, footer ul"
+);
+const allRevealSection = document.querySelectorAll(".sect");
+const allRevealButtons = document.querySelectorAll(".btn--observe");
+const allRevealCards = document.querySelectorAll(".card");
+const form = document.querySelector("form");
+const formDiv = document.querySelector("form div");
+const errorText = document.querySelector("form p");
+const errorIcon = document.querySelector("form .icon");
+
+const section1Height = section1.getBoundingClientRect().height;
+
+let lastScroll = 0;
+
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,22 +68,6 @@ gsap.to(".disp-img", {
   ease: "circ",
   duration: 1,
 });
-
-const header = document.querySelector("header");
-const checkHeader = document.querySelector("#header-checkbox");
-const section1 = document.querySelector("#section--1");
-const logoHeader = document.querySelector(".logo-header");
-const logoPhone = document.querySelector(".logo-phone");
-const navLinks = document.querySelectorAll(
-  ".nav-links, .phone-nav-list, footer ul"
-);
-const allRevealSection = document.querySelectorAll(".sect");
-const allRevealButtons = document.querySelectorAll(".btn--observe");
-const allRevealCards = document.querySelectorAll(".card");
-
-const section1Height = section1.getBoundingClientRect().height;
-
-let lastScroll = 0;
 
 // Parcel config to maintain state
 if (module.hot) {
@@ -214,7 +218,7 @@ window.innerWidth <= 900 &&
   revealCardObserverSpecial.observe(document.querySelector(".card--2"));
 
 //////////////////////////////////////////////////
-// ASIDE FUNCTIONALITY
+// ASIDE ANIMATION
 const handleAside = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
@@ -236,3 +240,44 @@ const asideObserver = new IntersectionObserver(handleAside, {
 });
 
 asideObserver.observe(document.querySelector("aside"));
+
+//////////////////////////////////////////////////
+// FORM FUNCTIONALITY
+const showError = function (msg) {
+  form.classList.remove("item-start");
+  form.classList.add("item-center");
+  formDiv.classList.add("error");
+  errorText.textContent = msg;
+  errorText.classList.remove("hidden");
+  errorIcon.classList.remove("hidden");
+};
+
+const showSuccess = function () {
+  form.classList.add("item-start");
+  form.classList.remove("item-center");
+  // formDiv.classList.add("success");
+  formDiv.classList.remove("error");
+  errorText.classList.add("hidden");
+  errorIcon.classList.add("hidden");
+};
+
+const handleError = function () {
+  // this.preventDefault();
+  const input = document.querySelector("form input");
+  const reg = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+  // Check if empty
+  if (input.value === "") return showError("Field is empty");
+
+  // check if email
+  if (!reg.test(input.value))
+    return showError("Whoops, make sure it's an email");
+
+  showSuccess();
+  input.value = "";
+};
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  handleError();
+});
