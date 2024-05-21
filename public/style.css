@@ -950,22 +950,6 @@ video {
   animation: showFromUp 2s ease 2s both;
 }
 
-@keyframes showFromUp {
-  0% {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-showPara {
-  animation: showFromUp 2s ease 2.5s both;
-}
-
 @keyframes scaleUp {
   0% {
     opacity: 0;
@@ -980,6 +964,22 @@ video {
 
 .animate-showImg {
   animation: scaleUp 2s ease 2s both;
+}
+
+@keyframes showFromUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-showPara {
+  animation: showFromUp 2s ease 2.5s both;
 }
 
 .cursor-pointer {
@@ -2212,10 +2212,6 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 
   .max-sm\:text-\[1\.8rem\] {
     font-size: 1.8rem;
-  }
-
-  .max-sm\:text-\[4rem\] {
-    font-size: 4rem;
   }
 
   .max-sm\:text-\[3\.9rem\] {

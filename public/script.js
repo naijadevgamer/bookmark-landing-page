@@ -175,6 +175,46 @@ gsap.to("#section--1__header", {
   ease: "sine.inOut",
 });
 
+// gsap.to("#features h2", {
+//   duration: 2,
+//   delay: 3,
+//   text: "Features",
+//   ease: "sine.inOut",
+// });
+
+gsap.to("#download h2", {
+  duration: 2,
+  delay: 3,
+  text: "Download the extension",
+  ease: "sine.inOut",
+});
+gsap.to("#faq h2", {
+  duration: 2,
+  delay: 3,
+  text: "Frequently Asked Questions",
+  ease: "sine.inOut",
+});
+
+const handleTextTrick = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  // const targetC = entry.target.classList;
+  gsap.to("#features h2", {
+    duration: 2,
+    delay: 3,
+    text: "Features",
+    ease: "sine.inOut",
+  });
+  observer.unobserve(entry.target);
+};
+
+const textObserver = new IntersectionObserver(handleTextTrick, {
+  root: null,
+  threshold: 1,
+});
+
+textObserver.observe(document.querySelector("#features h2"));
+
 //////////////////////////////////////////////////
 // REVEAL FUNCTIONALITY
 // Reveal cards, buttons, and sections function
