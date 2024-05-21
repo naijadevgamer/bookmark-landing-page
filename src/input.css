@@ -86,7 +86,7 @@
 }
 
 .trans {
-  transition: height 1s ease, background-color 1s ease, opacity 1s ease;
+  transition: height 1s ease;
 }
 .trans2 {
   transition: all 0.7s ease;

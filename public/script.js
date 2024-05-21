@@ -35,7 +35,7 @@ gsap.to(".disp", {
     trigger: ".disp-img",
     scrub: true,
     start: calcStart(),
-    markers: true,
+    // markers: true,
   },
   yPercent: 33,
   scale: 1.1,
@@ -107,7 +107,6 @@ function calculateRootMargin() {
 const stickyNav = function (entries) {
   const [entry] = entries;
   header.classList.toggle("nav-stick", !entry.isIntersecting);
-  // header.classList.add("trans", !entry.isIntersecting);
   logoHeader.style.opacity = entry.isIntersecting ? 1 : 0;
   logoPhone.style.opacity = entry.isIntersecting ? 0 : 1;
   header.style.backgroundColor =
@@ -132,20 +131,14 @@ const handleScroll = function () {
   header.classList.toggle("nav-show", currentScroll <= lastScroll);
   // Add transition when nav is passed
   // header.classList.toggle("duration-300", currentScroll > 300);
-  header.classList.toggle("trans", currentScroll < 300);
-  header.classList.toggle("trans2", currentScroll > 300);
+  header.classList.toggle("trans", currentScroll >= 300);
+  header.classList.toggle("trans2", currentScroll >= 300);
 
   lastScroll = currentScroll;
 };
 
 // -- Attach scroll event listener
 window.addEventListener("scroll", handleScroll);
-// -- Update rootMargin on resize
-// window.addEventListener("resize", () => {
-//   option.rootMargin = calculateRootMargin();
-//   console.log(option.rootMargin);
-//   // calcStart();
-// });
 // -- Update rootMargin on orientation change
 window.addEventListener("orientationchange", () => {
   option.rootMargin = calculateRootMargin();

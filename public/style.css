@@ -1006,10 +1006,6 @@ video {
   overflow: hidden;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1595,7 +1591,7 @@ video {
 }
 
 .trans {
-  transition: height 1s ease, background-color 1s ease, opacity 1s ease;
+  transition: height 1s ease;
 }
 
 .trans2 {
