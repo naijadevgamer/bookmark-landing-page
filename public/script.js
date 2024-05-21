@@ -28,19 +28,28 @@ let lastScroll = 0;
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to(null, {
-//   scrollTrigger: {
-//     // trigger: ".disp-img",
-//     // scrub: 1,
-//     // start: "top 40%",
-//     // end: "top 40%",
-//     markers: true,
-//   },
-//   // scale: 1.2,
-//   // yPercent: 20,
-//   // ease: "circ",
-//   // duration: 1,
-// });
+/////////////////////////////////////////////////////
+// HEADER IMAGE SCRUB SCROLL TRIGGER
+gsap.to(".disp", {
+  scrollTrigger: {
+    trigger: ".disp-img",
+    scrub: true,
+    start: calcStart(),
+    markers: true,
+  },
+  yPercent: 33,
+  scale: 1.1,
+});
+
+function calcStart() {
+  const screenWidth = window.innerWidth;
+  let start = "";
+  // Compare breakpoints
+  if (screenWidth > 900) start = "top 240px";
+  else if (screenWidth > 640) start = "top 150px";
+  else start = "top 200px";
+  return start;
+}
 
 // Parcel config to maintain state
 if (module.hot) {
@@ -98,6 +107,7 @@ function calculateRootMargin() {
 const stickyNav = function (entries) {
   const [entry] = entries;
   header.classList.toggle("nav-stick", !entry.isIntersecting);
+  // header.classList.add("trans", !entry.isIntersecting);
   logoHeader.style.opacity = entry.isIntersecting ? 1 : 0;
   logoPhone.style.opacity = entry.isIntersecting ? 0 : 1;
   header.style.backgroundColor =
@@ -121,16 +131,21 @@ const handleScroll = function () {
   // Scroll direction functionality
   header.classList.toggle("nav-show", currentScroll <= lastScroll);
   // Add transition when nav is passed
-  header.classList.toggle("duration-300", currentScroll > 300);
+  // header.classList.toggle("duration-300", currentScroll > 300);
+  header.classList.toggle("trans", currentScroll < 300);
+  header.classList.toggle("trans2", currentScroll > 300);
+
   lastScroll = currentScroll;
 };
 
 // -- Attach scroll event listener
 window.addEventListener("scroll", handleScroll);
 // -- Update rootMargin on resize
-window.addEventListener("resize", () => {
-  option.rootMargin = calculateRootMargin();
-});
+// window.addEventListener("resize", () => {
+//   option.rootMargin = calculateRootMargin();
+//   console.log(option.rootMargin);
+//   // calcStart();
+// });
 // -- Update rootMargin on orientation change
 window.addEventListener("orientationchange", () => {
   option.rootMargin = calculateRootMargin();

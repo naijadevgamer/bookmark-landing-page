@@ -85,6 +85,13 @@
   @apply opacity-100 visible translate-y-0 duration-700;
 }
 
+.trans {
+  transition: height 1s ease, background-color 1s ease, opacity 1s ease;
+}
+.trans2 {
+  transition: all 0.7s ease;
+}
+
 /* Section animation */
 .section--hidden {
   @apply opacity-0 translate-y-[20%];
