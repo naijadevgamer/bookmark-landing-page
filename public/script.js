@@ -14,6 +14,7 @@ const navLinks = document.querySelectorAll(
 );
 const allRevealSection = document.querySelectorAll(".sect");
 const allRevealButtons = document.querySelectorAll(".btn--observe");
+const allRevealHeading = document.querySelectorAll(".sect-h");
 const allRevealCards = document.querySelectorAll(".card");
 const form = document.querySelector("form");
 const formDiv = document.querySelector("form div");
@@ -76,7 +77,7 @@ if (module.hot) {
 
 /////////////////////////////////////////////////////
 // SMOOTH SCROLL PAGE NAVIGATION FUNCTIONALITY
-// Function to handle checkbox change in phone nav
+// -- Function to handle checkbox change in phone nav
 const checkChange = function () {
   document.body.style.overflow = checkHeader.checked ? "hidden" : "auto";
   header.style.backgroundColor = checkHeader.checked
@@ -86,7 +87,7 @@ const checkChange = function () {
     : "";
 };
 
-// Scroll to view
+// -- Scroll to view
 const scrollToView = function (navsParent) {
   navsParent.addEventListener("click", function (e) {
     e.preventDefault();
@@ -109,7 +110,7 @@ checkHeader.addEventListener("change", checkChange);
 
 /////////////////////////////////////////////////////
 // STICKY NAVIGATION FUNCTIONALITY
-// Function to calculate rootMargin based on screen width
+// -- Function to calculate rootMargin based on screen width
 function calculateRootMargin() {
   const screenWidth = window.innerWidth;
   let rootMargin = "";
@@ -121,10 +122,9 @@ function calculateRootMargin() {
   return rootMargin;
 }
 
-// Intersection Observer callback
+// -- Intersection Observer callback
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log("stick");
   header.classList.toggle("nav-stick", !entry.isIntersecting);
   logoHeader.style.opacity = entry.isIntersecting ? 1 : 0;
   logoPhone.style.opacity = entry.isIntersecting ? 0 : 1;
@@ -137,15 +137,13 @@ const stickyNav = function (entries) {
 };
 
 const option = {
-  root: null,
   threshold: 0,
   rootMargin: calculateRootMargin(),
 };
 const section1Observer = new IntersectionObserver(stickyNav, option);
-
 section1Observer.observe(section1);
 
-// Function to handle scrolling up and down
+// -- Scroll direction detection function
 const handleScroll = function () {
   const currentScroll = window.scrollY;
   // Scroll direction functionality
@@ -155,19 +153,20 @@ const handleScroll = function () {
   lastScroll = currentScroll;
 };
 
-// Attach scroll event listener
+// -- Attach scroll event listener
 window.addEventListener("scroll", handleScroll);
-// Update rootMargin on resize
+// -- Update rootMargin on resize
 window.addEventListener("resize", () => {
   option.rootMargin = calculateRootMargin();
 });
-// Update rootMargin on orientation change
+// -- Update rootMargin on orientation change
 window.addEventListener("orientationchange", () => {
   option.rootMargin = calculateRootMargin();
 });
 
 /////////////////////////////////////////////////////
 // TEXT TRICK FUNCTIONALITY
+// -- Header heading text trick
 gsap.to("#section--1__header", {
   duration: 2,
   delay: 3,
@@ -175,49 +174,28 @@ gsap.to("#section--1__header", {
   ease: "sine.inOut",
 });
 
-// gsap.to("#features h2", {
-//   duration: 2,
-//   delay: 3,
-//   text: "Features",
-//   ease: "sine.inOut",
-// });
-
-gsap.to("#download h2", {
-  duration: 2,
-  delay: 3,
-  text: "Download the extension",
-  ease: "sine.inOut",
-});
-gsap.to("#faq h2", {
-  duration: 2,
-  delay: 3,
-  text: "Frequently Asked Questions",
-  ease: "sine.inOut",
-});
-
+// -- Other section Heading text trick functionality
 const handleTextTrick = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  // const targetC = entry.target.classList;
-  gsap.to("#features h2", {
+  gsap.to(entry.target, {
     duration: 2,
-    delay: 3,
-    text: "Features",
+    delay: 1,
+    text: entry.target.dataset.text,
     ease: "sine.inOut",
   });
   observer.unobserve(entry.target);
 };
 
 const textObserver = new IntersectionObserver(handleTextTrick, {
-  root: null,
-  threshold: 1,
+  threshold: 0,
 });
 
-textObserver.observe(document.querySelector("#features h2"));
+allRevealHeading.forEach((h) => textObserver.observe(h));
 
 //////////////////////////////////////////////////
 // REVEAL FUNCTIONALITY
-// Reveal cards, buttons, and sections function
+// -- Reveal cards, buttons, and sections function
 const reveal = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
@@ -232,27 +210,22 @@ const reveal = function (entries, observer) {
 };
 
 const revealSectionObserver = new IntersectionObserver(reveal, {
-  root: null,
   threshold: 0,
 });
-allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
-
 const revealButtonObserver = new IntersectionObserver(reveal, {
-  root: null,
   threshold: 1,
   rootMargin: "-50px",
 });
-allRevealButtons.forEach((btn) => revealButtonObserver.observe(btn));
-
 const revealCardObserver = new IntersectionObserver(reveal, {
-  root: null,
   threshold: 0.2,
 });
+
+allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
+allRevealButtons.forEach((btn) => revealButtonObserver.observe(btn));
 allRevealCards.forEach((card) => revealCardObserver.observe(card));
 
-// For Viewport 900 and below
+// -- For Viewport 900 and below
 const revealCardObserverSpecial = new IntersectionObserver(reveal, {
-  root: null,
   threshold: 0.2,
 });
 window.innerWidth <= 900 &&
@@ -276,7 +249,6 @@ const handleAside = function (entries, observer) {
 };
 
 const asideObserver = new IntersectionObserver(handleAside, {
-  root: null,
   threshold: 1,
 });
 
@@ -302,7 +274,6 @@ const showSuccess = function () {
 };
 
 const handleError = function () {
-  // this.preventDefault();
   const input = document.querySelector("form input");
   const reg = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
