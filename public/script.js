@@ -28,34 +28,6 @@ let lastScroll = 0;
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".card--1", {
-  scrollTrigger: {
-    trigger: ".card--1",
-    scrub: 0.5,
-    start: "top 70%",
-    end: "top 40%",
-  },
-  backgroundColor: "#e6fff5",
-});
-gsap.to(".card--2", {
-  scrollTrigger: {
-    trigger: ".card--2",
-    scrub: 0.5,
-    start: "top 70%",
-    end: "top 40%",
-  },
-  backgroundColor: "#E0F7FA",
-});
-gsap.to(".card--3", {
-  scrollTrigger: {
-    trigger: ".card--3",
-    scrub: 0.5,
-    start: "top 70%",
-    end: "top 40%",
-  },
-  backgroundColor: "#fff9e6",
-});
-
 // gsap.to(null, {
 //   scrollTrigger: {
 //     // trigger: ".disp-img",
@@ -231,6 +203,24 @@ const revealCardObserverSpecial = new IntersectionObserver(reveal, {
 window.innerWidth <= 900 &&
   revealCardObserverSpecial.observe(document.querySelector(".card--2"));
 
+/////////////////////////////////////////////////////
+// SCRUB WITH SCROLL TRIGGER FUNCTIONALITY
+const handleCardScrub = function (element, bg) {
+  gsap.to(element, {
+    scrollTrigger: {
+      trigger: element,
+      scrub: 0.5,
+      start: "top 70%",
+      end: "top 40%",
+    },
+    backgroundColor: bg,
+  });
+};
+
+handleCardScrub(".card--1", "#e6fff5");
+handleCardScrub(".card--2", "#E0F7FA");
+handleCardScrub(".card--3", "#fff9e6");
+
 //////////////////////////////////////////////////
 // ASIDE ANIMATION
 const handleAside = function (entries, observer) {
@@ -255,7 +245,7 @@ const asideObserver = new IntersectionObserver(handleAside, {
 asideObserver.observe(document.querySelector("aside"));
 
 //////////////////////////////////////////////////
-// FORM FUNCTIONALITY
+// FORM VALIDATION
 const showError = function (msg) {
   form.classList.remove("item-start");
   form.classList.add("item-center");
@@ -265,7 +255,7 @@ const showError = function (msg) {
   errorIcon.classList.remove("hidden");
 };
 
-const showSuccess = function () {
+const revertError = function () {
   form.classList.add("item-start");
   form.classList.remove("item-center");
   formDiv.classList.remove("error");
@@ -280,11 +270,11 @@ const handleError = function () {
   // Check if empty
   if (input.value === "") return showError("Field is empty");
 
-  // check if email
+  // check if valid email
   if (!reg.test(input.value))
     return showError("Whoops, make sure it's an email");
 
-  showSuccess();
+  revertError();
   input.value = "";
 };
 

@@ -1064,11 +1064,6 @@ video {
   border-color: inherit;
 }
 
-.border-primary-softRed {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 94% 66% / var(--tw-border-opacity));
-}
-
 .border-slate-200 {
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
@@ -1231,11 +1226,6 @@ video {
   letter-spacing: 0.1em;
 }
 
-.text-footerLink {
-  --tw-text-opacity: 1;
-  color: hsl(228 45% 44% / var(--tw-text-opacity));
-}
-
 .text-neutral-grayishBlue {
   --tw-text-opacity: 1;
   color: hsl(229 8% 60% / var(--tw-text-opacity));
@@ -1244,6 +1234,11 @@ video {
 .text-neutral-veryDarkBlue {
   --tw-text-opacity: 1;
   color: hsl(229 31% 21% / var(--tw-text-opacity));
+}
+
+.text-primary-softRed {
+  --tw-text-opacity: 1;
+  color: hsl(0 94% 66% / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -2142,10 +2137,6 @@ header #header-checkbox:checked ~ .wrap .logo-phone {
 
   .max-sm\:-mr-\[6\%\] {
     margin-right: -6%;
-  }
-
-  .max-sm\:mb-4 {
-    margin-bottom: 1rem;
   }
 
   .max-sm\:mb-8 {
