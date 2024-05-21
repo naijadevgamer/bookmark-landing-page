@@ -30,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 /////////////////////////////////////////////////////
 // HEADER IMAGE SCRUB SCROLL TRIGGER
-gsap.to(".disp", {
+gsap.to(".disp-img", {
   scrollTrigger: {
     trigger: ".disp-img",
     scrub: 0.1,
@@ -217,7 +217,7 @@ const handleCardScrub = function (element, bg) {
   gsap.to(element, {
     scrollTrigger: {
       trigger: element,
-      scrub: true,
+      scrub: 0.5,
       start: "top 70%",
       end: "top 40%",
     },
