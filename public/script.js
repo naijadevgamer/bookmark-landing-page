@@ -33,7 +33,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".disp", {
   scrollTrigger: {
     trigger: ".disp-img",
-    scrub: true,
+    scrub: 0.1,
     start: calcStart(),
     // markers: true,
   },
@@ -217,7 +217,7 @@ const handleCardScrub = function (element, bg) {
   gsap.to(element, {
     scrollTrigger: {
       trigger: element,
-      scrub: 0.5,
+      scrub: true,
       start: "top 70%",
       end: "top 40%",
     },
