@@ -109,7 +109,7 @@ section1Observer.observe(section1);
 const handleScroll = () => {
   const currentScroll = window.scrollY;
   header.classList.toggle("nav-show", currentScroll <= lastScroll);
-  header.classList.toggle("trans", currentScroll <= 300);
+  header.classList.toggle("trans", currentScroll >= 300);
   header.classList.toggle("trans2", currentScroll >= 300);
   lastScroll = currentScroll;
 };
