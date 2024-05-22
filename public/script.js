@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+// DOM Element Selectors
 const header = document.querySelector("header");
 const checkHeader = document.querySelector("#header-checkbox");
 const section1 = document.querySelector("#section--1");
@@ -22,44 +23,31 @@ const errorText = document.querySelector("form p");
 const errorIcon = document.querySelector("form .icon");
 
 const section1Height = section1.getBoundingClientRect().height;
-
 let lastScroll = 0;
 
-gsap.registerPlugin(TextPlugin);
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
-/////////////////////////////////////////////////////
-// HEADER IMAGE SCRUB SCROLL TRIGGER
+// Calculate Scroll Start based on screen width
+const calcStart = () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth > 900) return "top 240px";
+  if (screenWidth > 640) return "top 150px";
+  return "top 200px";
+};
+
+// Scroll trigger for header image
 gsap.to(".disp-img", {
   scrollTrigger: {
     trigger: ".disp-img",
     scrub: 0.1,
     start: calcStart(),
-    // markers: true,
   },
   yPercent: 33,
   scale: 1.1,
 });
 
-function calcStart() {
-  const screenWidth = window.innerWidth;
-  let start = "";
-  // Compare breakpoints
-  if (screenWidth > 900) start = "top 240px";
-  else if (screenWidth > 640) start = "top 150px";
-  else start = "top 200px";
-  return start;
-}
-
-// Parcel config to maintain state
-if (module.hot) {
-  module.hot.accept();
-}
-
-/////////////////////////////////////////////////////
-// SMOOTH SCROLL PAGE NAVIGATION FUNCTIONALITY
-// -- Function to handle checkbox change in phone nav
-const checkChange = function () {
+// Toggle body overflow and header background based on checkbox
+const toggleNav = () => {
   document.body.style.overflow = checkHeader.checked ? "hidden" : "auto";
   header.style.backgroundColor = checkHeader.checked
     ? "transparent"
@@ -68,15 +56,14 @@ const checkChange = function () {
     : "";
 };
 
-// -- Scroll to view
+// Smooth scroll functionality
 const scrollToView = function (navsParent) {
   navsParent.addEventListener("click", function (e) {
     e.preventDefault();
-
     // Check if Phone nav
     if (navsParent.classList.contains("phone-nav-list")) {
       checkHeader.checked = false;
-      checkChange();
+      toggleNav();
     }
     // Matching strategy
     if (e.target.classList.contains("nav-link")) {
@@ -87,23 +74,18 @@ const scrollToView = function (navsParent) {
 };
 
 navLinks.forEach((nav) => scrollToView(nav));
-checkHeader.addEventListener("change", checkChange);
+checkHeader.addEventListener("change", toggleNav);
 
-/////////////////////////////////////////////////////
-// STICKY NAVIGATION FUNCTIONALITY
-// -- Function to calculate rootMargin based on screen width
-function calculateRootMargin() {
+// Calculate root margin for sticky navigation based on screen width
+const calculateRootMargin = () => {
   const screenWidth = window.innerWidth;
-  let rootMargin = "";
   // Compare breakpoints
-  if (screenWidth > 900) rootMargin = `-${section1Height + 50}px 0px 0px 0px`;
-  else if (screenWidth > 640)
-    rootMargin = `-${section1Height + 43}px 0px 0px 0px`;
-  else rootMargin = `-${section1Height + 33}px 0px 0px 0px`;
-  return rootMargin;
-}
+  if (screenWidth > 900) return `-${section1Height + 50}px 0px 0px 0px`;
+  if (screenWidth > 640) return `-${section1Height + 43}px 0px 0px 0px`;
+  return `-${section1Height + 33}px 0px 0px 0px`;
+};
 
-// -- Intersection Observer callback
+// Intersection Observer callback for sticky navigation
 const stickyNav = function (entries) {
   const [entry] = entries;
   header.classList.toggle("nav-stick", !entry.isIntersecting);
@@ -117,36 +99,28 @@ const stickyNav = function (entries) {
       : "";
 };
 
-const option = {
+const section1Observer = new IntersectionObserver(stickyNav, {
   threshold: 0,
   rootMargin: calculateRootMargin(),
-};
-const section1Observer = new IntersectionObserver(stickyNav, option);
+});
 section1Observer.observe(section1);
 
-// -- Scroll direction detection function
-const handleScroll = function () {
+// Handle scroll direction detection
+const handleScroll = () => {
   const currentScroll = window.scrollY;
-  // Scroll direction functionality
   header.classList.toggle("nav-show", currentScroll <= lastScroll);
-  // Add transition when nav is passed
-  // header.classList.toggle("duration-300", currentScroll > 300);
-  header.classList.toggle("trans", currentScroll >= 300);
+  header.classList.toggle("trans", currentScroll <= 300);
   header.classList.toggle("trans2", currentScroll >= 300);
-
   lastScroll = currentScroll;
 };
 
-// -- Attach scroll event listener
+// Attach scroll event and update rootMargin on orientation change
 window.addEventListener("scroll", handleScroll);
-// -- Update rootMargin on orientation change
 window.addEventListener("orientationchange", () => {
-  option.rootMargin = calculateRootMargin();
+  section1Observer.rootMargin = calculateRootMargin();
 });
 
-/////////////////////////////////////////////////////
-// TEXT TRICK FUNCTIONALITY
-// -- Header heading text trick
+// GSAP text animation for header
 gsap.to("#section--1__header", {
   duration: 2,
   delay: 3,
@@ -154,8 +128,8 @@ gsap.to("#section--1__header", {
   ease: "sine.inOut",
 });
 
-// -- Other section Heading text trick functionality
-const handleTextTrick = function (entries, observer) {
+// Intersection observer callback for text trick functionality
+const handleTextTrick = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   gsap.to(entry.target, {
@@ -170,21 +144,18 @@ const handleTextTrick = function (entries, observer) {
 const textObserver = new IntersectionObserver(handleTextTrick, {
   threshold: 0,
 });
-
 allRevealHeading.forEach((h) => textObserver.observe(h));
 
-//////////////////////////////////////////////////
-// REVEAL FUNCTIONALITY
-// -- Reveal cards, buttons, and sections function
-const reveal = function (entries, observer) {
+// Intersection observer callback for reveal functionality
+const reveal = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   const targetC = entry.target.classList;
-  targetC.contains("section--hidden") && targetC.remove("section--hidden");
-  targetC.contains("btn--observe") && targetC.remove("opacity-0");
-  targetC.contains("card--1") && targetC.add("reveal-card--1");
-  targetC.contains("card--2") && targetC.add("reveal-card--2");
-  targetC.contains("card--3") && targetC.add("reveal-card--3");
+  if (targetC.contains("section--hidden")) targetC.remove("section--hidden");
+  if (targetC.contains("btn--observe")) targetC.remove("opacity-0");
+  if (targetC.contains("card--1")) targetC.add("reveal-card--1");
+  if (targetC.contains("card--2")) targetC.add("reveal-card--2");
+  if (targetC.contains("card--3")) targetC.add("reveal-card--3");
 
   observer.unobserve(entry.target);
 };
@@ -204,16 +175,16 @@ allRevealSection.forEach((sect) => revealSectionObserver.observe(sect));
 allRevealButtons.forEach((btn) => revealButtonObserver.observe(btn));
 allRevealCards.forEach((card) => revealCardObserver.observe(card));
 
-// -- For Viewport 900 and below
-const revealCardObserverSpecial = new IntersectionObserver(reveal, {
-  threshold: 0.2,
-});
-window.innerWidth <= 900 &&
+// Special observer for viewport 900 and below
+if (window.innerWidth <= 900) {
+  const revealCardObserverSpecial = new IntersectionObserver(reveal, {
+    threshold: 0.2,
+  });
   revealCardObserverSpecial.observe(document.querySelector(".card--2"));
+}
 
-/////////////////////////////////////////////////////
-// SCRUB WITH SCROLL TRIGGER FUNCTIONALITY
-const handleCardScrub = function (element, bg) {
+// GSAP scroll trigger for card scrubbing
+const handleCardScrub = (element, bg) => {
   gsap.to(element, {
     scrollTrigger: {
       trigger: element,
@@ -229,19 +200,16 @@ handleCardScrub(".card--1", "#e6fff5");
 handleCardScrub(".card--2", "#E0F7FA");
 handleCardScrub(".card--3", "#fff9e6");
 
-//////////////////////////////////////////////////
-// ASIDE ANIMATION
+// Intersection observer callback for aside animations
 const handleAside = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-  // const targetC = entry.target.classList;
   gsap.to("aside h2", {
     duration: 2,
     text: "Stay up-to-date with what we’re doing",
     ease: "sine.inOut",
   });
   observer.unobserve(entry.target);
-
   document.querySelector("aside form").classList.remove("opacity-0");
   document.querySelector("aside p").classList.remove("opacity-0");
 };
@@ -249,11 +217,9 @@ const handleAside = function (entries, observer) {
 const asideObserver = new IntersectionObserver(handleAside, {
   threshold: 1,
 });
-
 asideObserver.observe(document.querySelector("aside"));
 
-//////////////////////////////////////////////////
-// FORM VALIDATION
+// Form validation and error handling
 const showError = function (msg) {
   form.classList.remove("item-start");
   form.classList.add("item-center");
@@ -277,7 +243,6 @@ const handleError = function () {
 
   // Check if empty
   if (input.value === "") return showError("Field is empty");
-
   // check if valid email
   if (!reg.test(input.value))
     return showError("Whoops, make sure it's an email");
@@ -290,3 +255,8 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   handleError();
 });
+
+// Parcel config to maintain state
+// if (module.hot) {
+//   module.hot.accept();
+// }
