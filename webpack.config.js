@@ -1,21 +1,23 @@
 // webpack.config.js
-import { resolve } from "path";
+const path = require("path");
 
-export const entry = "./src/index.js";
-export const output = {
-  filename: "main.js",
-  path: resolve(__dirname, "dist"),
-};
-export const module = {
-  rules: [
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: "babel-loader",
+module.exports = {
+  entry: "./public/script.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
       },
-    },
-  ],
+    ],
+  },
+  plugins: [],
+  mode: "development",
 };
-export const plugins = [];
-export const mode = "development";
