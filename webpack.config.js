@@ -1,15 +1,16 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-// const MiniCssExtractPlugin = req
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/script.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   module: {
     rules: [
@@ -25,7 +26,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
       },
     ],
   },
@@ -34,9 +39,9 @@ module.exports = {
       template: "./src/index.html",
       filename: "index.html",
     }),
-    // new MiniCssExtractPlugin({
-    //   filename: "styles.css",
-    // }),
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    }),
   ],
   optimization: {
     minimize: true,

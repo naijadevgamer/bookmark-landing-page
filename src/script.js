@@ -1,5 +1,5 @@
 "use strict";
-
+import "./input.css";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -188,14 +188,12 @@ if (window.innerWidth <= 900) {
 
 // GSAP scroll trigger for card scrubbing
 const handleCardScrub = (element, bg) => {
-  console.log("hello");
   gsap.to(element, {
     scrollTrigger: {
       trigger: element,
       scrub: 0.5,
       start: "top 70%",
       end: "top 40%",
-      markers: true,
     },
     backgroundColor: bg,
   });
@@ -260,8 +258,3 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   handleError();
 });
-
-// Parcel config to maintain state
-// if (module.hot) {
-//   module.hot.accept();
-// }
