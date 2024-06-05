@@ -6,9 +6,8 @@
   "scripts": {
     "watch:tailwind": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
     "devserver": "live-server public",
-    "build": "webpack",
-    "start": "webpack serve --open",
-    "build:prod": "webpack --config webpack.prod.js",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
     "start2": "npm-run-all --parallel devserver watch:tailwind"
   },
   "author": "naijadevgamer",

@@ -1,9 +1,12 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const TerserPlugin = require("terser-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+// const MiniCssExtractPlugin = req
 
 module.exports = {
-  entry: "./public/script.js",
+  entry: "./src/script.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
@@ -15,6 +18,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
         },
       },
       {
@@ -25,14 +31,20 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: "./src/index.html",
       filename: "index.html",
     }),
+    // new MiniCssExtractPlugin({
+    //   filename: "styles.css",
+    // }),
   ],
-  mode: "development",
+  optimization: {
+    minimize: true,
+    minimizer: [`...`, new CssMinimizerPlugin()],
+  },
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.join(__dirname, "src"),
     },
     compress: true,
     port: 9000,

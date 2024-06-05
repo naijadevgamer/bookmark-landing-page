@@ -1,6 +1,5 @@
 "use strict";
 
-// import "./style.css";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
