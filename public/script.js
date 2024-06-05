@@ -1,6 +1,6 @@
 "use strict";
 
-import "./style.css";
+// import "./style.css";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -100,7 +100,7 @@ const stickyNav = function (entries) {
       : "";
 };
 
-const section1Observer = new IntersectionObserver(stickyNav, {
+let section1Observer = new IntersectionObserver(stickyNav, {
   threshold: 0,
   rootMargin: calculateRootMargin(),
 });
@@ -118,7 +118,10 @@ const handleScroll = () => {
 // Attach scroll event and update rootMargin on orientation change
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("orientationchange", () => {
-  section1Observer.rootMargin = calculateRootMargin();
+  section1Observer = new IntersectionObserver(stickyNav, {
+    threshold: 0,
+    rootMargin: calculateRootMargin(),
+  });
 });
 
 // GSAP text animation for header
@@ -186,12 +189,14 @@ if (window.innerWidth <= 900) {
 
 // GSAP scroll trigger for card scrubbing
 const handleCardScrub = (element, bg) => {
+  console.log("hello");
   gsap.to(element, {
     scrollTrigger: {
       trigger: element,
       scrub: 0.5,
       start: "top 70%",
       end: "top 40%",
+      markers: true,
     },
     backgroundColor: bg,
   });
