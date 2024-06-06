@@ -229,7 +229,8 @@ const showError = function (msg) {
   formDiv.classList.add("error");
   errorText.textContent = msg;
   errorText.classList.remove("hidden");
-  errorIcon.classList.remove("hidden");
+  errorIcon.classList.add("opacity-100");
+  errorIcon.classList.remove("opacity-0");
 };
 
 const revertError = function () {
@@ -237,7 +238,8 @@ const revertError = function () {
   form.classList.remove("item-center");
   formDiv.classList.remove("error");
   errorText.classList.add("hidden");
-  errorIcon.classList.add("hidden");
+  errorIcon.classList.add("opacity-0");
+  errorIcon.classList.remove("opacity-100");
 };
 
 const handleError = function () {

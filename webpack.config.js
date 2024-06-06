@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -32,6 +31,30 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              sources: {
+                list: [
+                  {
+                    tag: "img",
+                    attribute: "src",
+                    type: "src",
+                  },
+                  {
+                    tag: "use",
+                    attribute: "xlink:href",
+                    type: "src",
+                  },
+                ],
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -49,7 +72,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, "src"),
+      directory: path.join(__dirname, "dist"),
     },
     compress: true,
     port: 9000,
