@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/naijadevgamer/bookmark-landing-page)
-- Live Site URL: [Add live site URL here](https://naijadevgamer.github.io/bookmark-landing-page)
+- [Solution](https://github.com/naijadevgamer/bookmark-landing-page)
+- [Live Site](https://naijadevgamer.github.io/bookmark-landing-page)
 
 ## My process
 
