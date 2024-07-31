@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "tailwind.config.js",
+  "homepage": "https://naijadevgamer.github.io/bookmark-landing-page",
   "scripts": {
     "watch:tailwind": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
     "devserver": "live-server public",
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
-    "start2": "npm-run-all --parallel devserver watch:tailwind"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "naijadevgamer",
   "license": "ISC",
