@@ -140,7 +140,7 @@
 
 /* Display menu dropdown */
 #header-checkbox:checked ~ .phone-nav {
-  @apply max-sm:block h-[100vh] delay-[0.4s];
+  @apply max-sm:block h-[100dvh] delay-[0.4s];
 }
 
 /* Logo functionality  */
